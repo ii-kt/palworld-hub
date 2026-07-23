@@ -448,7 +448,7 @@ def main() -> None:
                 "Committed native runtime evidence drifted")
     else:
         args.output.parent.mkdir(parents=True, exist_ok=True)
-        args.output.write_text(rendered, encoding="utf-8")
+        args.output.write_bytes(rendered.encode("utf-8"))
     print(json.dumps({
         "status": evidence["status"],
         "serverBuildId": evidence["target"]["serverBuildId"],

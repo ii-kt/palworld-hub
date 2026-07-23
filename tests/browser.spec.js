@@ -1,4 +1,4 @@
-import {test,expect} from "@playwright/test";
+import {test,expect,devices} from "@playwright/test";
 import fs from "node:fs";
 import crypto from "node:crypto";
 import path from "node:path";
@@ -14,18 +14,17 @@ async function isolateExternalRequests(page,buildId="24181105"){
     contentType:"application/json",
     body:JSON.stringify({status:"success",data:{"2394010":{depots:{branches:{public:{buildid:buildId}}}}}})
   }));
-  await page.route("https://raw.githubusercontent.com/**",route=>route.fulfill({
-    status:200,
-    contentType:"image/png",
-    body:Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=","base64")
-  }));
+}
+
+async function expectReady(page){
+  await expect(page.locator("body")).toHaveAttribute("data-data-state","ready");
+  await expect(page.locator("#palCount")).toHaveText("288形態");
+  await expect(page.locator("#comboCount")).toHaveText("41,616組");
 }
 
 async function openReady(page){
   await page.goto(SITE);
-  await expect(page.locator("body")).toHaveAttribute("data-data-state","ready");
-  await expect(page.locator("#palCount")).toHaveText("288形態");
-  await expect(page.locator("#comboCount")).toHaveText("41,616組");
+  await expectReady(page);
 }
 
 async function selectPal(page,slot,id){
@@ -45,6 +44,19 @@ test("01 desktop Chromium first load shows the fixed-build counts",async({page})
   await expect(page.locator("#buildId")).toHaveText("Build 24181105");
   await expect(page.locator("body")).toHaveAttribute("data-build-state","current");
   await expect(page.locator("#dataStatus")).toContainText("対象ビルド一致");
+});
+
+test("01b rendering is local and never requests third-party Pal images",async({page})=>{
+  const thirdParty=[];
+  page.on("request",request=>{
+    if(/raw\.githubusercontent\.com|palcalc/i.test(request.url()))thirdParty.push(request.url());
+  });
+  await page.route("https://raw.githubusercontent.com/**",route=>route.abort("blockedbyclient"));
+  await openReady(page);
+  await page.locator('#tabs [data-tab="dex"]').click();
+  await expect(page.locator("#dexGrid .palmark")).toHaveCount(288);
+  await expect(page.locator(".palmark img")).toHaveCount(0);
+  expect(thirdParty).toEqual([]);
 });
 
 test("02 reload reconstructs all indexes",async({page})=>{
@@ -80,18 +92,27 @@ test("04 cache purge still loads the versioned dataset",async({page,context})=>{
 });
 
 test("05 JSON fetch failure fails closed",async({page})=>{
-  await page.route("**/data/verification.json?**",route=>route.fulfill({status:503,body:"unavailable"}));
+  const pattern="**/data/verification.json?**";
+  await page.route(pattern,route=>route.fulfill({status:503,body:"unavailable"}));
   await page.goto(SITE);
   await expect(page.locator("body")).toHaveAttribute("data-data-state","error");
   await expect(page.locator("#comboCount")).toHaveText("読込失敗");
   expect(await page.evaluate(()=>window.PalworldDataState.pairCount)).toBe(0);
+  await page.unroute(pattern);
+  await page.locator("#dataStatus").click();
+  await expectReady(page);
 });
 
 test("06 corrupt JSON fails closed",async({page})=>{
-  await page.route("**/data/pals.verified.json?**",route=>route.fulfill({status:200,contentType:"application/json",body:"not-json"}));
+  const pattern="**/data/pals.verified.json?**";
+  await page.route(pattern,route=>route.fulfill({status:200,contentType:"application/json",body:"not-json"}));
   await page.goto(SITE);
   await expect(page.locator("body")).toHaveAttribute("data-data-state","error");
   await expect(page.locator("#dataStatus")).toContainText("データ検証失敗");
+  expect((await page.evaluate(()=>window.PalworldDataState)).error).toContain("JSONが破損");
+  await page.unroute(pattern);
+  await page.locator("#dataStatus").click();
+  await expectReady(page);
 });
 
 test("07 schema or app-data version mismatch fails closed",async({page})=>{
@@ -130,12 +151,51 @@ test("09 English-name search filters the Pal list",async({page})=>{
   await expect(page.locator("#dexGrid")).toContainText("クレメーナ");
 });
 
+test("09b exact form IDs disambiguate and find the two Gumoss forms",async({page})=>{
+  await openReady(page);
+  await page.locator("#parentA").click();
+  await page.locator("#pickerSearch").fill("ナエモチ");
+  await expect(page.locator("#pickerList .picker-item")).toHaveCount(2);
+  await expect(page.locator('#pickerList [data-id="plantslime"] .form-id')).toHaveText("形態ID PlantSlime");
+  await expect(page.locator('#pickerList [data-id="plantslime_flower"] .form-id')).toHaveText("形態ID PlantSlime_Flower");
+  await page.locator("#pickerSearch").fill("PlantSlime_Flower");
+  await expect(page.locator("#pickerList .picker-item")).toHaveCount(1);
+  await expect(page.locator('#pickerList [data-id="plantslime_flower"]')).toContainText("ナエモチ");
+});
+
+test("09c Pal-list and picker filters honor aptitude presence and levels through 8",async({page})=>{
+  await openReady(page);
+  await page.locator('#tabs [data-tab="dex"]').click();
+  await page.locator("#dexWork").selectOption("mining");
+  await expect(page.locator("#dexCount")).toHaveText("57形態");
+  await expect(page.locator("#dexGrid .pal-card")).toHaveCount(57);
+  await page.locator("#dexWorkLevel").selectOption("8");
+  await expect(page.locator("#dexCount")).toHaveText("1形態");
+  await expect(page.locator('#dexGrid [data-id="domearmordragon"]')).toContainText("採掘Lv.8");
+  await page.locator("#dexWorkLevel").selectOption("0");
+  await page.locator("#dexWork").selectOption("");
+  await page.locator("#dexVariant").selectOption("variant");
+  await expect(page.locator("#dexCount")).toHaveText("84形態");
+  await page.locator("#dexVariant").selectOption("all");
+  await page.locator("#dexElement").selectOption("Fire");
+  await expect(page.locator("#dexCount")).toHaveText("43形態");
+
+  await page.locator('#tabs [data-tab="parents"]').click();
+  await page.locator("#parentA").click();
+  await page.locator("#pickerWork").selectOption("mining");
+  await expect(page.locator("#pickerList .picker-item")).toHaveCount(57);
+  await page.locator("#pickerLevel").selectOption("8");
+  await expect(page.locator("#pickerList .picker-item")).toHaveCount(1);
+  await expect(page.locator('#pickerList [data-id="domearmordragon"]')).toContainText("DomeArmorDragon");
+});
+
 test("10 selecting two parents produces a child from the table",async({page})=>{
   await openReady(page);
   await selectPal(page,"#parentA","sheepball");
   await selectPal(page,"#parentB","chickenpal");
-  await expect(page.locator("#childSlot .jpname")).not.toHaveText("結果");
-  await expect(page.locator("#childSlot .enname")).not.toBeEmpty();
+  await expect(page.locator("#childSlot .jpname")).toHaveText("チョロゾウ");
+  await expect(page.locator("#childSlot .enname")).toHaveText("Teafant");
+  await expect(page.locator("#childSlot .form-id")).toHaveText("形態ID Ganesha");
 });
 
 test("11 reversing parent order preserves the result",async({page})=>{
@@ -169,9 +229,17 @@ test("12 gender-dependent breeding displays both exact conditions",async({page})
   await selectPal(page,"#parentA","catmage");
   await selectPal(page,"#parentB","foxmage");
   await expect(page.locator("#parentResults .result-row")).toHaveCount(2);
-  await expect(page.locator("#parentResults")).toContainText("クレメーナ");
-  await expect(page.locator("#parentResults")).toContainText("フォレーナ♂");
-  await expect(page.locator("#parentResults")).toContainText("クレメーオ♂");
+  const dark=page.locator('#parentResults [data-child="foxmage_dark"]');
+  const fire=page.locator('#parentResults [data-child="catmage_fire"]');
+  await expect(dark).toContainText("フォレーオ");
+  await expect(dark.locator(".note")).toHaveText("フォレーナ♀ × クレメーオ♂ の場合");
+  await expect(fire).toContainText("クレメーナ");
+  await expect(fire.locator(".note")).toHaveText("フォレーナ♂ × クレメーオ♀ の場合");
+  await page.locator("#swapParents").click();
+  await expect(page.locator("#parentA")).toContainText("フォレーナ");
+  await expect(page.locator("#parentB")).toContainText("クレメーオ");
+  await expect(page.locator('#parentResults [data-child="foxmage_dark"] .note')).toHaveText("フォレーナ♀ × クレメーオ♂ の場合");
+  await expect(page.locator('#parentResults [data-child="catmage_fire"] .note')).toHaveText("フォレーナ♂ × クレメーオ♀ の場合");
 });
 
 test("13 copied result retains both gender conditions",async({page,context})=>{
@@ -179,12 +247,14 @@ test("13 copied result retains both gender conditions",async({page,context})=>{
   await openReady(page);
   await selectPal(page,"#parentA","catmage");
   await selectPal(page,"#parentB","foxmage");
+  await page.locator("#swapParents").click();
   await page.locator("#copyParents").click();
   await expect(page.locator("#toast")).toContainText("コピーしました");
-  const copied=await page.evaluate(()=>navigator.clipboard.readText());
-  expect(copied).toContain("クレメーナ");
-  expect(copied).toContain("フォレーナ♂");
-  expect(copied.split("\n")).toHaveLength(2);
+  const copied=(await page.evaluate(()=>navigator.clipboard.readText())).replace(/\r\n/g,"\n");
+  expect(copied).toBe([
+    "フォレーナ [FoxMage] + クレメーオ [CatMage] → フォレーオ [FoxMage_Dark]（フォレーナ♀ × クレメーオ♂ の場合）",
+    "フォレーナ [FoxMage] + クレメーオ [CatMage] → クレメーナ [CatMage_Fire]（フォレーナ♂ × クレメーオ♀ の場合）"
+  ].join("\n"));
 });
 
 test("14 child-to-parent tab roundtrips its rows",async({page})=>{
@@ -199,10 +269,13 @@ test("14 child-to-parent tab roundtrips its rows",async({page})=>{
 test("14b child-to-parent shows an honest empty result for native zero-candidate forms",async({page})=>{
   await openReady(page);
   await page.locator('#tabs [data-tab="target"]').click();
-  await selectPal(page,"#targetPick","kingwhale");
-  await expect(page.locator("#targetCount")).toHaveText("0組");
-  await expect(page.locator("#targetResults .result-row")).toHaveCount(0);
-  await expect(page.locator("#targetResults")).toContainText("該当する親候補がありません");
+  for(const id of ["kingwhale","plantslime_flower"]){
+    await selectPal(page,"#targetPick",id);
+    await expect(page.locator("#targetCount")).toHaveText("0組");
+    await expect(page.locator("#targetResults .result-row")).toHaveCount(0);
+    await expect(page.locator("#targetResults")).toContainText("該当する親候補がありません");
+    await expect(page.locator("#targetPick .form-id")).toContainText(id==="kingwhale"?"KingWhale":"PlantSlime_Flower");
+  }
 });
 
 test("15 single-parent list has 288 unique partners and groups gender outcomes",async({page})=>{
@@ -226,19 +299,86 @@ test("16 four-generation tree stops safely and retains gender labels",async({pag
   expect(await page.locator("#treeCanvas .tree-node").count()).toBeLessThanOrEqual(31);
 });
 
-test("17 iPhone-sized viewport remains operable without page overflow",async({page})=>{
-  const errors=[];
-  page.on("console",message=>{if(message.type()==="error")errors.push(message.text())});
-  page.on("pageerror",error=>errors.push(error.message));
-  await page.setViewportSize({width:390,height:844});
+test("16b parent-start tree supports depth, candidate navigation, and zoom controls",async({page})=>{
   await openReady(page);
-  const widths=await page.evaluate(()=>({viewport:document.documentElement.clientWidth,scroll:document.documentElement.scrollWidth}));
-  expect(widths.scroll).toBeLessThanOrEqual(widths.viewport+1);
-  await selectPal(page,"#parentA","sheepball");
-  await expect(page.locator("#parentA")).toContainText("モコロン");
-  await page.locator('#tabs [data-tab="dex"]').click();
-  await expect(page.locator("#view-dex")).toBeVisible();
-  expect(errors).toEqual([]);
+  await page.locator('#tabs [data-tab="tree"]').click();
+  await selectPal(page,"#treePick","catmage");
+  await page.locator('[data-orient="parent"]').click();
+  await expect(page.locator('[data-orient="parent"]')).toHaveClass(/active/);
+  await page.locator("#treeDepth").selectOption("1");
+  await expect(page.locator("#treeCanvas .tree-node")).toHaveCount(3);
+  const rootNav=page.locator('#treeCanvas [data-nav="d"]').first();
+  await expect(rootNav.locator("xpath=..").locator("span")).toContainText("1 /");
+  await page.locator('#treeCanvas [data-nav="d"][data-d="1"]').first().click();
+  await expect(page.locator('#treeCanvas [data-nav="d"]').first().locator("xpath=..").locator("span")).toContainText("2 /");
+  await page.locator("#zoomIn").click();
+  await expect(page.locator("#treeCanvas")).toHaveCSS("transform",/matrix\(1\.15/);
+  await page.locator("#zoomReset").click();
+  await expect(page.locator("#treeCanvas")).toHaveCSS("transform","matrix(1, 0, 0, 1, 0, 0)");
+  await page.locator("#treeDepth").selectOption("4");
+  expect(await page.locator("#treeCanvas .tree-node").count()).toBeGreaterThan(3);
+});
+
+const iphone13=devices["iPhone 13"];
+test.describe("iPhone 13 emulation on Chromium",()=>{
+  test.use({
+    viewport:iphone13.viewport,
+    screen:iphone13.screen,
+    userAgent:iphone13.userAgent,
+    deviceScaleFactor:iphone13.deviceScaleFactor,
+    isMobile:iphone13.isMobile,
+    hasTouch:iphone13.hasTouch
+  });
+
+  test("17 all main views remain operable without page overflow or console errors",async({page})=>{
+    const errors=[];
+    page.on("console",message=>{if(message.type()==="error")errors.push(message.text())});
+    page.on("pageerror",error=>errors.push(error.message));
+    const expectNoPageOverflow=async()=>{
+      const widths=await page.evaluate(()=>({
+        viewport:document.documentElement.clientWidth,
+        scroll:document.documentElement.scrollWidth
+      }));
+      expect(widths.scroll).toBeLessThanOrEqual(widths.viewport+1);
+    };
+
+    await openReady(page);
+    expect(await page.evaluate(()=>({
+      touch:navigator.maxTouchPoints,
+      ratio:devicePixelRatio,
+      userAgent:navigator.userAgent
+    }))).toMatchObject({touch:1,ratio:3});
+    expect(await page.evaluate(()=>navigator.userAgent)).toContain("iPhone");
+    await expectNoPageOverflow();
+
+    await selectPal(page,"#parentA","sheepball");
+    await selectPal(page,"#parentB","chickenpal");
+    await expect(page.locator("#childSlot")).toContainText("チョロゾウ");
+    await expectNoPageOverflow();
+
+    await page.locator('#tabs [data-tab="target"]').click();
+    await selectPal(page,"#targetPick","kingwhale");
+    await expect(page.locator("#targetCount")).toHaveText("0組");
+    await expectNoPageOverflow();
+
+    await page.locator('#tabs [data-tab="offspring"]').click();
+    await selectPal(page,"#singleParentPick","sheepball");
+    await expect(page.locator("#offspringCount")).toHaveText("288組");
+    await expectNoPageOverflow();
+
+    await page.locator('#tabs [data-tab="tree"]').click();
+    await selectPal(page,"#treePick","catmage_fire");
+    await page.locator("#treeDepth").selectOption("2");
+    await expect(page.locator("#treeCanvas .tree-node")).not.toHaveCount(0);
+    await expectNoPageOverflow();
+
+    await page.locator('#tabs [data-tab="dex"]').click();
+    await page.locator("#dexSearch").fill("Katress Ignis");
+    await expect(page.locator("#dexGrid .pal-card")).toHaveCount(1);
+    await expectNoPageOverflow();
+    await page.waitForTimeout(100);
+    expect(errors).toEqual([]);
+  });
 });
 
 test("18 normal desktop feature flow has zero console or page errors",async({page})=>{

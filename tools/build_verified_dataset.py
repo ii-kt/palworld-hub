@@ -38,7 +38,7 @@ SERVER_DEPOT_ID = "2394012"
 SERVER_DEPOT_MANIFEST_ID = "2167164727892555341"
 DATASET_ID = "pw-1.0.1.100619-24181105-cad80fe15c38"
 RAW_ASSETS_SHA256 = "e23a12ceffae5792b69c8faebe8ee3fbacbc09f0bd88572410d2b3b59aca1fe0"
-NATIVE_EVIDENCE_SHA256 = "2bab43353a81a08bb438686b728055f1a79cb4884b8b1aeaded08ff90e0f38f3"
+NATIVE_EVIDENCE_SHA256 = "ac079224cbadb33886092145de2d4f5e2d6da6ccc5ba4cb0374f1e2f552e2651"
 SERVER_PAK_SHA256 = "cad80fe15c38d74a795779fbab31f04bc2c15c37fb8a2188e4d89f3800fb0e68"
 SERVER_PAK_BYTES = 4_797_040_962
 RAW_EXTRACTOR_REPOSITORY = "Awy64/palworld-atlas-data"
@@ -109,6 +109,30 @@ EXPECTED_EXCLUSIONS = {
     "SUMMON_VARIANT": 3,
 }
 
+# These fixed-build source rows are excluded by the accepted catalog evidence,
+# not by interpreting substrings in their RowName.  Keeping every decision
+# explicit makes a new or renamed row fail closed instead of being silently
+# classified from its name.
+FIXED_CATALOG_EXCLUSIONS = {
+    "SUMMON_DarkAlien": "SUMMON_VARIANT",
+    "SUMMON_DarkAlien_MAX": "SUMMON_VARIANT",
+    "SUMMON_WhiteAlienDragon": "SUMMON_VARIANT",
+    "WingGolem_Oilrig": "OILRIG_VARIANT",
+    "DarkAlien_Oilrig": "OILRIG_VARIANT",
+    "Horus_Oilrig": "OILRIG_VARIANT",
+    "Baphomet_Dark_Oilrig": "OILRIG_VARIANT",
+    "HadesBird_Oilrig": "OILRIG_VARIANT",
+    "LizardMan_Oilrig": "OILRIG_VARIANT",
+    "Quest_Farmer03_SheepBall": "QUEST_VARIANT",
+    "Quest_Farmer03_PinkCat": "QUEST_VARIANT",
+    "PREDATOR_FlowerRabbit_Quest": "QUEST_VARIANT",
+    "AmaterasuWolf_Dark_Quest_Friend": "QUEST_VARIANT",
+    "AmaterasuWolf_Dark_Quest_Enemy": "QUEST_VARIANT",
+    "GYM_ElecPanda_Otomo": "GYM_VARIANT",
+    "POLICE_ThunderDog": "POLICE_VARIANT",
+    "POLICE_HawkBird": "POLICE_VARIANT",
+}
+
 ELEMENTS = {
     "normal": "Neutral",
     "fire": "Fire",
@@ -129,6 +153,11 @@ def require(condition: bool, message: str) -> None:
 
 def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def repository_text_bytes(path: Path) -> bytes:
+    """Return the LF-canonical bytes stored by Git on every platform."""
+    return path.read_bytes().replace(b"\r\n", b"\n")
 
 
 def stable_digest(value: Any) -> str:
@@ -209,18 +238,8 @@ def exclusion_reason(row: dict[str, Any], icon_ids: set[str]) -> str | None:
         return "NOT_A_PAL"
     if row["isBoss"] or row["isRaidBoss"] or row["isTowerBoss"]:
         return "BOSS_VARIANT"
-    if "quest" in lowered:
-        return "QUEST_VARIANT"
-    if "predator" in lowered:
-        return "RAMPAGING_VARIANT"
-    if "police" in lowered:
-        return "POLICE_VARIANT"
-    if lowered.startswith("gym_"):
-        return "GYM_VARIANT"
-    if lowered.startswith("summon_"):
-        return "SUMMON_VARIANT"
-    if lowered.endswith("_oilrig"):
-        return "OILRIG_VARIANT"
+    if source in FIXED_CATALOG_EXCLUSIONS:
+        return FIXED_CATALOG_EXCLUSIONS[source]
     if lowered not in icon_ids and tribe not in icon_ids:
         return "PAL_ICON_MISSING"
     if int(row["zukanIndex"]) <= 0:
@@ -362,10 +381,10 @@ def compare_pair_map(authoritative: dict[str, set[str]], candidate: dict[str, se
 def main() -> None:
     exact = exact_build.load_exact_build_evidence(write=True)
     raw_bytes = RAW_ASSETS.read_bytes()
-    native_bytes = NATIVE_EVIDENCE.read_bytes()
+    native_bytes = repository_text_bytes(NATIVE_EVIDENCE)
     require(sha256(raw_bytes) == RAW_ASSETS_SHA256, "Committed raw asset extraction hash mismatch")
     require(sha256(native_bytes) == NATIVE_EVIDENCE_SHA256, "Committed native breeding evidence hash mismatch")
-    require(sha256(RAW_EXTRACTOR_SOURCE.read_bytes()) == RAW_EXTRACTOR_SOURCE_SHA256,
+    require(sha256(repository_text_bytes(RAW_EXTRACTOR_SOURCE)) == RAW_EXTRACTOR_SOURCE_SHA256,
             "Committed raw asset extractor extension hash mismatch")
     raw = json.loads(raw_bytes)
     native = json.loads(native_bytes)
@@ -945,7 +964,12 @@ def main() -> None:
             "zeroParentCandidateChildren": len(zero_parent_candidate_child_ids),
         },
         "rosterSelection": {
-            "ruleSource": "fixed-build DT_PalMonsterParameter plus DT_PalCharacterIconDataTable",
+            "ruleSource": (
+                "fixed-build DT_PalMonsterParameter, DT_PalCharacterIconDataTable, "
+                "and the pinned accepted-catalog decision set"
+            ),
+            "rowNamePatternInferenceUsed": False,
+            "fixedCatalogExcludedSourceIds": FIXED_CATALOG_EXCLUSIONS,
             "exclusionCounts": exclusion_counts,
             "excluded": exclusions,
         },
@@ -1131,11 +1155,11 @@ def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     (DATA_DIR / "pals.verified.json").write_bytes(pals_bytes)
     (DATA_DIR / "breeding.verified.json").write_bytes(breeding_bytes)
-    (DATA_DIR / "verification.json").write_text(
-        json.dumps(verification, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    (DATA_DIR / "verification.json").write_bytes(
+        (json.dumps(verification, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
     )
-    (AUDIT_DIR / "exact-comparison.json").write_text(
-        json.dumps(exact_comparison, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    (AUDIT_DIR / "exact-comparison.json").write_bytes(
+        (json.dumps(exact_comparison, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
     )
 
     failed = any((

@@ -26,9 +26,10 @@ $("#swapParents").onclick=()=>{[selected.a,selected.b]=[selected.b,selected.a];r
 $("#clearParents").onclick=()=>{selected.a=selected.b=null;renderParents()};
 $("#copyParents").onclick=async()=>{
  const r=getResults(selected.a,selected.b);if(!r.length)return toast("コピーする結果がありません");
+ const copyName=p=>`${p.jp} [${formId(p)}]`;
  const text=r.map(x=>{
   const genderSpecific=x.parent1Gender!=="WILDCARD"||x.parent2Gender!=="WILDCARD";
-  return `${x.first.jp} + ${x.second.jp} → ${x.child.jp}${genderSpecific?`（${x.note}）`:""}`;
+  return `${copyName(x.first)} + ${copyName(x.second)} → ${copyName(x.child)}${genderSpecific?`（${x.note}）`:""}`;
  }).join("\n");
  try{
   if(!navigator.clipboard?.writeText)throw new Error("Clipboard API unavailable");

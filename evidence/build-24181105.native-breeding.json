@@ -126,7 +126,7 @@
     ]
   },
   "assetCorroboration": {
-    "rawEvidencePath": "palworld/evidence/build-24181105.assets.json",
+    "rawEvidencePath": "evidence/build-24181105.assets.json",
     "rawEvidenceSha256": "e23a12ceffae5792b69c8faebe8ee3fbacbc09f0bd88572410d2b3b59aca1fe0",
     "breedingItemEffectPackage": "Pal/Content/Pal/DataAsset/MapObject/Breeding/DA_BreedingItemEffectData",
     "effectEntryCount": 4,

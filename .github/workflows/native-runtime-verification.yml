@@ -1,0 +1,85 @@
+name: Palworld fixed-build native runtime verification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: palworld-fixed-native-runtime
+  cancel-in-progress: false
+
+jobs:
+  native-runtime:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - name: Checkout trusted main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Install native audit prerequisites
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential iproute2 lib32gcc-s1 lib32stdc++6
+
+      - name: Download the exact public Linux depot anonymously
+        shell: bash
+        env:
+          STEAMCMD_ROOT: ${{ runner.temp }}/steamcmd
+          STEAM_HOME: ${{ runner.temp }}/steam-home
+        run: |
+          set -euo pipefail
+          mkdir -p "$STEAMCMD_ROOT" "$STEAM_HOME"
+          curl --fail --location --retry 5 --retry-all-errors \
+            --proto '=https' --tlsv1.2 \
+            https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz \
+            --output "$RUNNER_TEMP/steamcmd_linux.tar.gz"
+          tar -xzf "$RUNNER_TEMP/steamcmd_linux.tar.gz" -C "$STEAMCMD_ROOT"
+          HOME="$STEAM_HOME" "$STEAMCMD_ROOT/steamcmd.sh" \
+            +login anonymous \
+            +download_depot 2394010 2394012 2167164727892555341 \
+            +quit
+
+          mapfile -t server_bins < <(
+            find "$RUNNER_TEMP" -type f \
+              -path '*/steamapps/content/app_2394010/depot_2394012/Pal/Binaries/Linux/PalServer-Linux-Shipping' \
+              -print
+          )
+          if [[ ${#server_bins[@]} -ne 1 ]]; then
+            printf 'Expected exactly one depot executable, found %s\n' "${#server_bins[@]}" >&2
+            exit 1
+          fi
+          server_root="${server_bins[0]%/Pal/Binaries/Linux/PalServer-Linux-Shipping}"
+          printf 'SERVER_ROOT=%s\n' "$server_root" >> "$GITHUB_ENV"
+          df -h "$RUNNER_TEMP"
+
+      - name: Run all 41,616 pairs through the fixed native function
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo /usr/bin/unshare --net -- /bin/bash -c '
+            set -euo pipefail
+            ip link set lo up
+            ulimit -c 0
+            cd "$1"
+            exec /usr/bin/python3 tools/verify_native_breeding_runtime.py "$2" \
+              --output audit/native-runtime-comparison.json \
+              --timeout 1200
+          ' native-runtime "$GITHUB_WORKSPACE" "$SERVER_ROOT"
+
+      - name: Upload JSON evidence only
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-runtime-comparison-${{ github.sha }}
+          path: audit/native-runtime-comparison.json
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 9

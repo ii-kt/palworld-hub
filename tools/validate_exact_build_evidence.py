@@ -18,7 +18,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "audit" / "exact-build-evidence.json"
 NATIVE_EVIDENCE = ROOT / "evidence" / "build-24181105.native-breeding.json"
-NATIVE_EVIDENCE_SHA256 = "2bab43353a81a08bb438686b728055f1a79cb4884b8b1aeaded08ff90e0f38f3"
+NATIVE_EVIDENCE_SHA256 = "ac079224cbadb33886092145de2d4f5e2d6da6ccc5ba4cb0374f1e2f552e2651"
 
 REPOSITORY = "MetalLee/PalHatchHelper"
 COMMIT = "b41dbd54f371502b7d24bdc368420248a418f437"
@@ -64,6 +64,11 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def repository_text_bytes(path: Path) -> bytes:
+    """Return the LF-canonical bytes stored by Git on every platform."""
+    return path.read_bytes().replace(b"\r\n", b"\n")
+
+
 def fetch(path: str, expected_hash: str) -> tuple[str, dict[str, Any]]:
     url = f"https://raw.githubusercontent.com/{REPOSITORY}/{COMMIT}/{path}"
     request = urllib.request.Request(url, headers={"User-Agent": "palworld-hub-exact-build-audit/5"})
@@ -93,7 +98,7 @@ def load_exact_build_evidence(*, write: bool = True) -> dict[str, Any]:
     acceptance = texts["acceptance"]
     extractor = texts["extractor"]
     acceptance_test = texts["acceptanceTest"]
-    native_bytes = NATIVE_EVIDENCE.read_bytes()
+    native_bytes = repository_text_bytes(NATIVE_EVIDENCE)
     require(sha256(native_bytes) == NATIVE_EVIDENCE_SHA256, "Native breeding evidence hash mismatch")
     native = json.loads(native_bytes)
     require(native.get("schemaVersion") == 1, "Native breeding evidence schema mismatch")
@@ -202,7 +207,7 @@ def load_exact_build_evidence(*, write: bool = True) -> dict[str, Any]:
     }
     if write:
         OUT.parent.mkdir(parents=True, exist_ok=True)
-        OUT.write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        OUT.write_bytes((json.dumps(evidence, ensure_ascii=False, indent=2) + "\n").encode("utf-8"))
     return evidence
 
 

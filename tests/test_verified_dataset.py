@@ -11,10 +11,33 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PALWORLD = ROOT
 DATASET_ID = "pw-1.0.1.100619-24181105-cad80fe15c38"
+FIXED_CATALOG_EXCLUSIONS = {
+    "SUMMON_DarkAlien": "SUMMON_VARIANT",
+    "SUMMON_DarkAlien_MAX": "SUMMON_VARIANT",
+    "SUMMON_WhiteAlienDragon": "SUMMON_VARIANT",
+    "WingGolem_Oilrig": "OILRIG_VARIANT",
+    "DarkAlien_Oilrig": "OILRIG_VARIANT",
+    "Horus_Oilrig": "OILRIG_VARIANT",
+    "Baphomet_Dark_Oilrig": "OILRIG_VARIANT",
+    "HadesBird_Oilrig": "OILRIG_VARIANT",
+    "LizardMan_Oilrig": "OILRIG_VARIANT",
+    "Quest_Farmer03_SheepBall": "QUEST_VARIANT",
+    "Quest_Farmer03_PinkCat": "QUEST_VARIANT",
+    "PREDATOR_FlowerRabbit_Quest": "QUEST_VARIANT",
+    "AmaterasuWolf_Dark_Quest_Friend": "QUEST_VARIANT",
+    "AmaterasuWolf_Dark_Quest_Enemy": "QUEST_VARIANT",
+    "GYM_ElecPanda_Otomo": "GYM_VARIANT",
+    "POLICE_ThunderDog": "POLICE_VARIANT",
+    "POLICE_HawkBird": "POLICE_VARIANT",
+}
 
 
 def load(path: str):
     return json.loads((PALWORLD / path).read_text(encoding="utf-8"))
+
+
+def repository_text_bytes(path: Path) -> bytes:
+    return path.read_bytes().replace(b"\r\n", b"\n")
 
 
 def tail(value):
@@ -100,18 +123,8 @@ class VerifiedDatasetTests(unittest.TestCase):
                 return "NOT_A_PAL"
             if row["isBoss"] or row["isRaidBoss"] or row["isTowerBoss"]:
                 return "BOSS_VARIANT"
-            if "quest" in source:
-                return "QUEST_VARIANT"
-            if "predator" in source:
-                return "RAMPAGING_VARIANT"
-            if "police" in source:
-                return "POLICE_VARIANT"
-            if source.startswith("gym_"):
-                return "GYM_VARIANT"
-            if source.startswith("summon_"):
-                return "SUMMON_VARIANT"
-            if source.endswith("_oilrig"):
-                return "OILRIG_VARIANT"
+            if row["rowName"] in FIXED_CATALOG_EXCLUSIONS:
+                return FIXED_CATALOG_EXCLUSIONS[row["rowName"]]
             if source not in icons and tribe not in icons:
                 return "PAL_ICON_MISSING"
             if row["zukanIndex"] <= 0:
@@ -288,9 +301,32 @@ class VerifiedDatasetTests(unittest.TestCase):
         self.assertFalse(self.special_children & {pal["id"] for pal in self.normal_candidates})
 
     def test_16_parent_order_is_invariant_for_all_pairs(self):
-        for key, rows in self.pairs.items():
-            first, second = key.split("|")
-            self.assertIs(rows, self.pairs[pkey(second, first)])
+        def resolve(first, second):
+            first_index, second_index = self.index[first], self.index[second]
+            pair_position = triangle(len(self.order), first_index, second_index)
+            override = self.override_by_index.get(pair_position)
+            if not override:
+                return {(self.order[self.compact["children"][pair_position]], "WILDCARD", "WILDCARD")}
+            resolved = set()
+            for row in override["rows"]:
+                if first_index <= second_index:
+                    first_gender, second_gender = row["parent1Gender"], row["parent2Gender"]
+                else:
+                    first_gender, second_gender = row["parent2Gender"], row["parent1Gender"]
+                resolved.add((self.order[row["child"]], first_gender, second_gender))
+            return resolved
+
+        for first in self.order:
+            for second in self.order:
+                forward = resolve(first, second)
+                reverse = resolve(second, first)
+                self.assertEqual(
+                    {(child, first_gender, second_gender)
+                     for child, first_gender, second_gender in forward},
+                    {(child, second_gender, first_gender)
+                     for child, first_gender, second_gender in reverse},
+                    (first, second),
+                )
 
     def test_17_exact_reference_comparison_has_no_differences(self):
         comparison = self.audit["exactReferenceComparison"]
@@ -346,6 +382,14 @@ class VerifiedDatasetTests(unittest.TestCase):
         self.assertEqual(len(self.by_parent["catmage"]["foxmage"]), 2)
 
     def test_24_four_generation_ancestor_tree_edges_are_valid_and_cycle_safe(self):
+        direct_edges = 0
+        for child in self.order:
+            for edge in self.reverse[child]:
+                self.assertIn(edge, self.row_set)
+                self.assertEqual(edge[4], child)
+                direct_edges += 1
+        self.assertEqual(direct_edges, 41617)
+
         def visit(pal_id, depth, ancestors):
             if pal_id in ancestors or depth >= 4:
                 return depth
@@ -365,6 +409,15 @@ class VerifiedDatasetTests(unittest.TestCase):
             self.assertLessEqual(visit(pal_id, 0, set()), 4)
 
     def test_25_four_generation_descendant_tree_edges_are_valid_and_cycle_safe(self):
+        direct_edges = 0
+        for parent in self.order:
+            for rows in self.by_parent[parent].values():
+                for edge in rows:
+                    self.assertIn(edge, self.row_set)
+                    self.assertIn(parent, (edge[0], edge[2]))
+                    direct_edges += 1
+        self.assertEqual(direct_edges, 82946)
+
         def visit(pal_id, depth, ancestors):
             if pal_id in ancestors or depth >= 4:
                 return depth
@@ -381,8 +434,8 @@ class VerifiedDatasetTests(unittest.TestCase):
             self.assertLessEqual(visit(pal_id, 0, set()), 4)
 
     def test_26_native_binary_evidence_is_fixed_to_the_target_build(self):
-        self.assertEqual(hashlib.sha256(self.native_path.read_bytes()).hexdigest(),
-                         "2bab43353a81a08bb438686b728055f1a79cb4884b8b1aeaded08ff90e0f38f3")
+        self.assertEqual(hashlib.sha256(repository_text_bytes(self.native_path)).hexdigest(),
+                         "ac079224cbadb33886092145de2d4f5e2d6da6ccc5ba4cb0374f1e2f552e2651")
         self.assertEqual(self.native["target"]["serverBuildId"], "24181105")
         self.assertEqual(self.native["executable"]["sha256"],
                          "788649fa1592160faa7bcf07ccd16d474ebeaae954717bc32284b5a43028d8e7")
@@ -458,8 +511,8 @@ class VerifiedDatasetTests(unittest.TestCase):
         ])
 
     def test_31_browser_manifest_pins_exact_generated_files_and_dataset(self):
-        pal_bytes = (PALWORLD / "data/pals.verified.json").read_bytes()
-        breeding_bytes = (PALWORLD / "data/breeding.verified.json").read_bytes()
+        pal_bytes = repository_text_bytes(PALWORLD / "data/pals.verified.json")
+        breeding_bytes = repository_text_bytes(PALWORLD / "data/breeding.verified.json")
         self.assertEqual(hashlib.sha256(pal_bytes).hexdigest(), self.verification["palDataSha256"])
         self.assertEqual(hashlib.sha256(breeding_bytes).hexdigest(), self.verification["breedingDataSha256"])
         self.assertEqual(self.verification["generatedDataSha256"],

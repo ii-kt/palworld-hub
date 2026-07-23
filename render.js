@@ -1,25 +1,30 @@
-const PAL_ICON_BASE="https://raw.githubusercontent.com/tylercamp/palcalc/b822c7fda4f019bd7c57f45437f14a74061a29bc/PalCalc.UI/Resources/Pals/";
 function initials(p){return (p.jp||p.en).replace(/[（）()・\s]/g,"").slice(0,2)}
-function iconUrl(p){return p.icon||PAL_ICON_BASE+encodeURIComponent(p.en)+".png"}
+function formId(p){return String(p.sourceId||p.id)}
+function formIdHTML(p){return `<div class="form-id">形態ID ${esc(formId(p))}</div>`}
+function matchesWorkFilter(p,work,minimumLevel){
+ if(!work)return true;
+ const actual=Number(p.work?.[work])||0;
+ return actual>0&&(minimumLevel<=0||actual>=minimumLevel);
+}
 function displayNo(p,padded=false){
  const raw=String(p.displayNo||`${p.no}${p.suffix||""}`);
  if(!padded)return raw;
  const match=raw.match(/^(\d+)(.*)$/);return match?match[1].padStart(3,"0")+match[2]:raw;
 }
 function mark(p,sm=false){
- if(!p)return `<span class="palmark ${sm?"sm":""} placeholder"><span class="palmark-fallback">?</span></span>`;
- return `<span class="palmark ${sm?"sm":""}"><img src="${esc(iconUrl(p))}" alt="${esc(p.jp)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="palmark-fallback" hidden>${esc(initials(p))}</span></span>`;
+ if(!p)return `<span class="palmark ${sm?"sm":""} placeholder" aria-hidden="true"><span class="palmark-fallback">?</span></span>`;
+ return `<span class="palmark ${sm?"sm":""}" aria-hidden="true"><span class="palmark-fallback">${esc(initials(p))}</span></span>`;
 }
-function palHTML(p,sm=true){return `<div class="pal-inline">${mark(p,sm)}<div style="min-width:0"><strong>${esc(p.jp)}</strong><div class="enname">${esc(p.en)} · No.${esc(displayNo(p,true))}</div></div></div>`}
+function palHTML(p,sm=true){return `<div class="pal-inline">${mark(p,sm)}<div style="min-width:0"><strong>${esc(p.jp)}</strong><div class="enname">${esc(p.en)} · No.${esc(displayNo(p,true))}</div>${formIdHTML(p)}</div></div>`}
 function slotHTML(p,label){
- return p?`${mark(p)}<div class="jpname">${esc(p.jp)}</div><div class="enname">${esc(p.en)}</div><div class="no">No.${esc(displayNo(p,true))}　配合値 ${p.power}</div>`
+ return p?`${mark(p)}<div class="jpname">${esc(p.jp)}</div><div class="enname">${esc(p.en)}</div><div class="no">No.${esc(displayNo(p,true))}　配合値 ${p.power}</div>${formIdHTML(p)}`
  :`${mark(null)}<div class="jpname">${label}</div><div class="enname">タップして検索</div>`;
 }
 function multiResultSlotHTML(results){
  const icons=results.map(r=>mark(r.child,true)).join("");
  return `<div style="display:flex;gap:8px;justify-content:center;align-items:center">${icons}</div><div class="jpname">性別で${results.length}通り</div><div class="enname">下の条件別結果を確認してください</div>`;
 }
-function pickButtonHTML(p,label){return p?`${mark(p,true)}<span class="grow"><small>${label}</small><strong>${esc(p.jp)}</strong><small>${esc(p.en)} · No.${esc(displayNo(p))}</small></span><b>変更</b>`:`${mark(null,true)}<span class="grow"><small>${label}</small><strong>パルを選択</strong><small>日本語名・番号で検索</small></span><b>選択</b>`}
+function pickButtonHTML(p,label){return p?`${mark(p,true)}<span class="grow"><small>${label}</small><strong>${esc(p.jp)}</strong><small>${esc(p.en)} · No.${esc(displayNo(p))}</small><small class="form-id">形態ID ${esc(formId(p))}</small></span><b>変更</b>`:`${mark(null,true)}<span class="grow"><small>${label}</small><strong>パルを選択</strong><small>日本語名・英語名・番号・形態IDで検索</small></span><b>選択</b>`}
 function resultRow(r){
  return `<article class="result-row" data-pair="${esc(pairKey(r.first.uid,r.second.uid))}" data-child="${esc(r.child.uid)}">${palHTML(r.first)}<span class="arrow">＋</span>${palHTML(r.second)}<span class="arrow">→</span>${palHTML(r.child)}<div class="note">${esc(r.note||"")}</div></article>`;
 }
@@ -38,7 +43,7 @@ function renderParents(){
  $("#childSlot").innerHTML=rs.length===1?slotHTML(rs[0].child,"子パル"):rs.length>1?multiResultSlotHTML(rs):`${mark(null)}<div class="jpname">結果</div><div class="enname">親を2体選択</div>`;
  $("#parentResults").innerHTML=rs.length>1?rs.map(resultRow).join(""):"";
 }
-function searchable(p,q){q=q.trim().toLowerCase();return !q||p.jp.toLowerCase().includes(q)||p.en.toLowerCase().includes(q)||p.id.includes(q)||displayNo(p).toLowerCase().includes(q)||String(p.no).includes(q)}
+function searchable(p,q){q=q.trim().toLowerCase();return !q||p.jp.toLowerCase().includes(q)||p.en.toLowerCase().includes(q)||p.id.includes(q)||formId(p).toLowerCase().includes(q)||displayNo(p).toLowerCase().includes(q)||String(p.no).includes(q)}
 function renderTarget(){
  $("#targetPick").innerHTML=pickButtonHTML(selected.target,"作りたいパル");
  let list=selected.target?[...(parentsByChild.get(selected.target.uid)||[])]:[];
@@ -60,10 +65,10 @@ function renderOffspring(){
 }
 function renderDex(){
  let list=[...pals],q=$("#dexSearch").value||"",v=$("#dexVariant").value,el=$("#dexElement").value,w=$("#dexWork").value,l=+$("#dexWorkLevel").value;
- list=list.filter(p=>searchable(p,q)&&(v==="all"||(v==="variant")===p.variant)&&(!el||p.elements.includes(el))&&(!w||(+p.work[w]||0)>=l));
+ list=list.filter(p=>searchable(p,q)&&(v==="all"||(v==="variant")===p.variant)&&(!el||p.elements.includes(el))&&matchesWorkFilter(p,w,l));
  const s=$("#dexSort").value;list.sort((a,b)=>s==="desc"?palSort(b,a):s==="jp"?a.jp.localeCompare(b.jp,"ja"):s==="power"?a.power-b.power:palSort(a,b));
  $("#dexCount").textContent=`${list.length}形態`;
- $("#dexGrid").innerHTML=list.map(p=>`<article class="pal-card">${mark(p,true)}<div style="min-width:0;flex:1"><strong>${esc(p.jp)}</strong><div class="enname">${esc(p.en)}</div><div class="no">No.${esc(displayNo(p))} · 配合値 ${p.power}</div><div class="tags">${p.elements.map(e=>`<span class="tag">${esc(ELEMENT_JP[e]||e)}</span>`).join("")}${Object.entries(p.work).filter(([,x])=>x).map(([k,x])=>`<span class="tag">${esc(WORK_JP[k]||k)}Lv.${x}</span>`).join("")}</div></div></article>`).join("");
+ $("#dexGrid").innerHTML=list.map(p=>`<article class="pal-card" data-id="${esc(p.uid)}">${mark(p,true)}<div style="min-width:0;flex:1"><strong>${esc(p.jp)}</strong><div class="enname">${esc(p.en)}</div><div class="no">No.${esc(displayNo(p))} · 配合値 ${p.power}</div>${formIdHTML(p)}<div class="tags">${p.elements.map(e=>`<span class="tag">${esc(ELEMENT_JP[e]||e)}</span>`).join("")}${Object.entries(p.work).filter(([,x])=>x).map(([k,x])=>`<span class="tag">${esc(WORK_JP[k]||k)}Lv.${x}</span>`).join("")}</div></div></article>`).join("");
 }
 function fillFilterOptions(){
  const elements=[...new Set(pals.flatMap(p=>p.elements))].sort(),works=[...new Set(pals.flatMap(p=>Object.keys(p.work)))].sort();

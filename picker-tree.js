@@ -5,12 +5,12 @@ function openPicker(cb){
 function closePicker(){$("#pickerModal").classList.remove("open");pickerCallback=null}
 function pickerFiltered(){
  const q=$("#pickerSearch").value||"",v=$("#pickerVariant").value,el=$("#pickerElement").value,w=$("#pickerWork").value,l=+$("#pickerLevel").value,s=$("#pickerSort").value;
- let list=pals.filter(p=>searchable(p,q)&&(v==="all"||(v==="variant")===p.variant)&&(!el||p.elements.includes(el))&&(!w||(+p.work[w]||0)>=l));
+ let list=pals.filter(p=>searchable(p,q)&&(v==="all"||(v==="variant")===p.variant)&&(!el||p.elements.includes(el))&&matchesWorkFilter(p,w,l));
  list.sort((a,b)=>s==="desc"?palSort(b,a):s==="jp"?a.jp.localeCompare(b.jp,"ja"):palSort(a,b));return list;
 }
 function renderPicker(){
  const list=pickerFiltered();
- $("#pickerList").innerHTML=list.map(p=>`<button class="picker-item" data-id="${esc(p.uid)}">${mark(p,true)}<span style="min-width:0"><strong>${esc(p.jp)}</strong><small class="enname">${esc(p.en)} · No.${esc(displayNo(p))} · 配合値${p.power}</small></span></button>`).join("");
+ $("#pickerList").innerHTML=list.map(p=>`<button class="picker-item" data-id="${esc(p.uid)}">${mark(p,true)}<span style="min-width:0"><strong>${esc(p.jp)}</strong><small class="enname">${esc(p.en)} · No.${esc(displayNo(p))} · 配合値${p.power}</small><small class="form-id">形態ID ${esc(formId(p))}</small></span></button>`).join("");
 }
 function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800)}
 function renderTree(){
@@ -59,3 +59,7 @@ function descendantNode(p,level,max,path,ancestors=new Set()){
 }
 function applyTreeTransform(){$("#treeCanvas").style.transform=`translate(${panX}px,${panY}px) scale(${zoom})`}
 function renderAll(){renderParents();renderTarget();renderOffspring();renderDex();renderTree()}
+
+$("#treeCanvas").addEventListener("pointerdown",event=>{
+ if(event.target.closest("[data-nav]"))event.stopPropagation();
+});
