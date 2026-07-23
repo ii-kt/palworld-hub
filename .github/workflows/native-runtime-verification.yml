@@ -30,27 +30,29 @@ jobs:
           sudo apt-get install -y --no-install-recommends \
             build-essential iproute2 lib32gcc-s1 lib32stdc++6
 
-      - name: Download the exact public Linux depot anonymously
+      - name: Download the hash-pinned public Linux build anonymously
         shell: bash
         env:
           STEAMCMD_ROOT: ${{ runner.temp }}/steamcmd
           STEAM_HOME: ${{ runner.temp }}/steam-home
+          STEAM_INSTALL: ${{ runner.temp }}/palserver
         run: |
           set -euo pipefail
-          mkdir -p "$STEAMCMD_ROOT" "$STEAM_HOME"
+          mkdir -p "$STEAMCMD_ROOT" "$STEAM_HOME" "$STEAM_INSTALL"
           curl --fail --location --retry 5 --retry-all-errors \
             --proto '=https' --tlsv1.2 \
             https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz \
             --output "$RUNNER_TEMP/steamcmd_linux.tar.gz"
           tar -xzf "$RUNNER_TEMP/steamcmd_linux.tar.gz" -C "$STEAMCMD_ROOT"
           HOME="$STEAM_HOME" "$STEAMCMD_ROOT/steamcmd.sh" \
+            +force_install_dir "$STEAM_INSTALL" \
             +login anonymous \
-            +download_depot 2394010 2394012 2167164727892555341 \
+            +app_update 2394010 validate \
             +quit
 
           mapfile -t server_bins < <(
-            find "$RUNNER_TEMP" -type f \
-              -path '*/steamapps/content/app_2394010/depot_2394012/Pal/Binaries/Linux/PalServer-Linux-Shipping' \
+            find "$STEAM_INSTALL" -type f \
+              -path '*/Pal/Binaries/Linux/PalServer-Linux-Shipping' \
               -print
           )
           if [[ ${#server_bins[@]} -ne 1 ]]; then
