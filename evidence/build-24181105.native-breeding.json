@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "status": "fixed-build-native-static-analysis",
+  "target": {
+    "gameVersion": "v1.0.1.100619",
+    "serverAppId": "2394010",
+    "serverBuildId": "24181105",
+    "serverDepotId": "2394012",
+    "serverDepotManifestId": "2167164727892555341",
+    "depotManifestSha256": "3bab93b8c70d612ca5bd1a827be3d7f2d1bf92a2c1829507eca60c81a8f605ca"
+  },
+  "executable": {
+    "relativeDepotPath": "Pal/Binaries/Linux/PalServer-Linux-Shipping",
+    "bytes": 196285592,
+    "sha256": "788649fa1592160faa7bcf07ccd16d474ebeaae954717bc32284b5a43028d8e7",
+    "elfBuildId": "7f7e167407984ec3",
+    "textSection": {
+      "virtualAddress": "0x43b3000",
+      "fileOffset": "0x41b2000"
+    },
+    "rodataSection": {
+      "virtualAddress": "0x7346c0",
+      "fileOffset": "0x5346c0"
+    }
+  },
+  "verifiedRegions": [
+    {
+      "name": "normal-child-candidate-selection",
+      "virtualAddress": "0x7118960",
+      "fileOffset": "0x6f17960",
+      "bytes": 721,
+      "sha256": "c848a73cd60ba129a20134ba8a206b379580a2ee39bb27af0f33fb94504c6806"
+    },
+    {
+      "name": "breeding-result-orchestration",
+      "virtualAddress": "0x71168c0",
+      "fileOffset": "0x6f158c0",
+      "bytes": 990,
+      "sha256": "3ad294646be1a591a9670ce7deea9ffaf5dd878b8f364b34a11e5477459d756f"
+    },
+    {
+      "name": "unique-combination-child-membership",
+      "virtualAddress": "0x71420e0",
+      "fileOffset": "0x6f410e0",
+      "bytes": 306,
+      "sha256": "10da184dca21d64bb167f69757f0e4a4eca6027b9fa78f8db87d5ce5b9274b4e"
+    }
+  ],
+  "reflectedFields": [
+    {
+      "name": "IsBoss",
+      "descriptorFileOffset": "0x12f1e80",
+      "reflectedOffset": "0xc8",
+      "descriptorBytes": "15000000000010000300000045000000010000000000000000000000000000000000000000000000c80000000000000036ddcc00000000000000000000000000"
+    },
+    {
+      "name": "CombiRank",
+      "descriptorFileOffset": "0x12f24c0",
+      "reflectedOffset": "0xfc",
+      "descriptorBytes": "15000000000010000300000045000000010000000000000000000000000000000000000000000000fc00000000000000e91ac300000000000000000000000000"
+    },
+    {
+      "name": "CombiDuplicatePriority",
+      "descriptorFileOffset": "0x12f2500",
+      "reflectedOffset": "0x100",
+      "descriptorBytes": "150000000000100003000000450000000100000000000000000000000000000000000000000000000001000000000000f211c200000000000000000000000000"
+    },
+    {
+      "name": "IgnoreCombi",
+      "descriptorFileOffset": "0x12f2540",
+      "reflectedOffset": "0x104",
+      "descriptorBytes": "150000000000100003000000450000000100000000000000000000000000000000000000000000000401000000000000b13cc500000000000000000000000000"
+    }
+  ],
+  "instructionEvidence": [
+    {
+      "name": "candidate-filters",
+      "virtualAddress": "0x7118a89",
+      "fileOffset": "0x6f17a89",
+      "bytes": "80bdcc000000000f855affffff80bd08010000000f854dffffff807c243c007415488b7c24304c89f6e82996020084c00f8531ffffff",
+      "meaning": "Reject IsBoss and IgnoreCombi rows; when requested, reject rows present as DT_PalCombiUnique children."
+    },
+    {
+      "name": "rank-distance",
+      "virtualAddress": "0x7118abf",
+      "fileOffset": "0x6f17abf",
+      "bytes": "8b85000100002b44243889c5f7dd0f4ce88b4c242839cd7d2c",
+      "meaning": "Compute the absolute distance between candidate CombiRank and the target."
+    },
+    {
+      "name": "duplicate-priority",
+      "virtualAddress": "0x7118bbd",
+      "fileOffset": "0x6f17bbd",
+      "bytes": "8b8804010000ebbb",
+      "meaning": "Read CombiDuplicatePriority for equal-distance candidates; strictly greater replaces the current winner."
+    },
+    {
+      "name": "parent-ranks",
+      "virtualAddress": "0x7116bed",
+      "fileOffset": "0x6f15bed",
+      "bytes": "8ba800010000488b7c2430e8737815004c89e74889c6e8783602004885c074068b980001000001eb0f57c0",
+      "meaning": "Read both parents' CombiRank values without testing IgnoreCombi on either parent."
+    },
+    {
+      "name": "special-miss-falls-through-to-normal",
+      "virtualAddress": "0x7116bc2",
+      "fileOffset": "0x6f15bc2",
+      "bytes": "41f6c0010f85a7000000488b7c2428e89a7815004c89e74889c6e89f36020031",
+      "meaning": "After the special-combination scan, only a saved matching child branches to the return path; a miss immediately loads both parents for normal selection. The complete orchestration region contains no parent-equality shortcut."
+    },
+    {
+      "name": "target-and-normal-call",
+      "virtualAddress": "0x7116c13",
+      "fileOffset": "0x6f15c13",
+      "bytes": "01eb0f57c0f30f2ac3f30f590514e461f9f30f58c0f30f100d78e361f9f30f5cc8f30f2dc1d1f8498b4d004885c974178b490c83f90aba0a0000000f4cd131f685d20f49f2eb0231f629c64c89e7ba01000000e8f51c0000",
+      "meaning": "Compute ceil((rankA + rankB) / 2), add CombiRankBonus clamped to 0..10, then call candidate selection with unique-child exclusion enabled. Every fixed-build breeding-item effect has CombiRankBonus 0."
+    }
+  ],
+  "rowPointerLayout": {
+    "machinePointerRelativeToReflectedStruct": -4,
+    "corroboration": [
+      "machine +0xcc maps to reflected IsBoss +0xc8",
+      "machine +0x100 maps to reflected CombiRank +0xfc",
+      "machine +0x104 maps to reflected CombiDuplicatePriority +0x100",
+      "machine +0x108 maps to reflected IgnoreCombi +0x104"
+    ]
+  },
+  "assetCorroboration": {
+    "rawEvidencePath": "palworld/evidence/build-24181105.assets.json",
+    "rawEvidenceSha256": "e23a12ceffae5792b69c8faebe8ee3fbacbc09f0bd88572410d2b3b59aca1fe0",
+    "breedingItemEffectPackage": "Pal/Content/Pal/DataAsset/MapObject/Breeding/DA_BreedingItemEffectData",
+    "effectEntryCount": 4,
+    "itemIds": [
+      "Cake02",
+      "Cake03",
+      "Cake04",
+      "Cake05"
+    ],
+    "combiRankBonusValues": [
+      0
+    ]
+  },
+  "conclusions": {
+    "sameSpeciesShortcut": false,
+    "sameSpeciesResolution": "special combination first; otherwise normal candidate selection, including equal parents",
+    "specialCombinationCheckedBeforeNormalSelection": true,
+    "specialChildrenExcludedFromNormalCandidates": true,
+    "ignoreCombiScope": "normal-child-candidate-only",
+    "ignoreCombiParentExclusion": false,
+    "normalTarget": "floor((parentA.CombiRank + parentB.CombiRank + 1) / 2)",
+    "combiRankBonusClamp": "clamp(breedingItemEffect.CombiRankBonus, 0, 10)",
+    "fixedBuildCombiRankBonusValues": [
+      0
+    ],
+    "firstTieBreaker": "higher CombiDuplicatePriority",
+    "rarityUsedAsTieBreaker": false,
+    "variantFlagUsedAsTieBreaker": false,
+    "finalTieBreaker": "DT_PalMonsterParameter row enumeration order"
+  },
+  "limits": {
+    "analysisType": "static machine-code and reflected-field analysis",
+    "nativeFunctionInvokedForEveryPair": false,
+    "inGameHatchObservedForEveryPair": false
+  }
+}

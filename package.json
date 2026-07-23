@@ -1,0 +1,13 @@
+{
+  "name": "palworld-hub",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test tests/browser.spec.js",
+    "test:palworld": "playwright test tests/browser.spec.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1"
+  }
+}

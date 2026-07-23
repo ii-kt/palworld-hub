@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 3,
+  "status": "fixed-build-evidence-validated",
+  "repository": "MetalLee/PalHatchHelper",
+  "commit": "b41dbd54f371502b7d24bdc368420248a418f437",
+  "files": {
+    "acceptance": {
+      "path": "docs/reviews/phase-4-full-catalog-acceptance.md",
+      "url": "https://raw.githubusercontent.com/MetalLee/PalHatchHelper/b41dbd54f371502b7d24bdc368420248a418f437/docs/reviews/phase-4-full-catalog-acceptance.md",
+      "bytes": 21853,
+      "sha256": "b7298d5e41ae2f8c611afa84da3e0b9f38b6d983310f88489611c3b50ac55ade"
+    },
+    "extractor": {
+      "path": "tools/palworld-catalog-extractor/src/PalworldCatalogExtractor/Readers/ConfirmedCatalogReaders.cs",
+      "url": "https://raw.githubusercontent.com/MetalLee/PalHatchHelper/b41dbd54f371502b7d24bdc368420248a418f437/tools/palworld-catalog-extractor/src/PalworldCatalogExtractor/Readers/ConfirmedCatalogReaders.cs",
+      "bytes": 34589,
+      "sha256": "8ddacf0e27eb5fcf2f8bf5ebbd0aba0882dbe92feae22cf1b709c33c4f25a53e"
+    },
+    "acceptanceTest": {
+      "path": "apps/agent/tests/game_catalog/test_real_catalog_acceptance.py",
+      "url": "https://raw.githubusercontent.com/MetalLee/PalHatchHelper/b41dbd54f371502b7d24bdc368420248a418f437/apps/agent/tests/game_catalog/test_real_catalog_acceptance.py",
+      "bytes": 12832,
+      "sha256": "f7d16d178ac6c2bde4ebc0ed99480f30328979bd32b024e38f04c070c26d8beb"
+    }
+  },
+  "sourceClient": {
+    "appId": "1623730",
+    "buildId": "24181527",
+    "gameVersion": "v1.0.1.100619",
+    "appmanifestSha256": "e0751824680f7de12cf79ee77ec888b8d2cdba9f682d7667c0562bb05f6450c6"
+  },
+  "targetServer": {
+    "appId": "2394010",
+    "buildId": "24181105",
+    "gameVersion": "v1.0.1.100619",
+    "appmanifestSha256": "98ef29829ebfde6d71528f5a83883e6bfda96fa77ce363e52630205353c1a189"
+  },
+  "catalog": {
+    "packageSha256": "8c36cb60e4f78c3e4c7681cde602539b4b85f160d26392ed0144f728c6f191a9",
+    "contentHash": "872e4a79af5b5043ee97d9a4287a41bba407afc96ff3b0a6de56fff827d334b3",
+    "sourcePackageManifestSha256": "ed7d9aefb8cae7f4e29810bc7bcd5155f0dec147ac25527eb24a10a30f6b182a",
+    "mappingsUsmapSha256": "561ef13c8ee3cf785e4de8aa5bc9b3ad1646e416d895f1d1166fa27ebdfd26b0",
+    "extractorCommit": "705f9144a0f1c8891a3129e7db1db597ab97a109",
+    "palCalcReferenceCommit": "b822c7fda4f019bd7c57f45437f14a74061a29bc"
+  },
+  "counts": {
+    "pals": 288,
+    "breedingRecipes": 41617
+  },
+  "auxiliaryExtractorSemantics": {
+    "releasedPalFilter": true,
+    "sameSpeciesFirst": true,
+    "specialBeforeNormal": true,
+    "specialChildrenExcluded": true,
+    "targetPowerFormula": true,
+    "duplicatePriorityTie": true,
+    "variantTie": true,
+    "sourceOrderTie": true,
+    "bothGenderOrientations": true
+  },
+  "nativeStaticAnalysis": {
+    "evidencePath": "palworld/evidence/build-24181105.native-breeding.json",
+    "evidenceSha256": "2bab43353a81a08bb438686b728055f1a79cb4884b8b1aeaded08ff90e0f38f3",
+    "serverExecutableSha256": "788649fa1592160faa7bcf07ccd16d474ebeaae954717bc32284b5a43028d8e7",
+    "serverExecutableBytes": 196285592,
+    "serverExecutableElfBuildId": "7f7e167407984ec3",
+    "verifiedRegionCount": 3,
+    "reflectedFieldCount": 4,
+    "conclusions": {
+      "sameSpeciesShortcut": false,
+      "sameSpeciesResolution": "special combination first; otherwise normal candidate selection, including equal parents",
+      "specialCombinationCheckedBeforeNormalSelection": true,
+      "specialChildrenExcludedFromNormalCandidates": true,
+      "ignoreCombiScope": "normal-child-candidate-only",
+      "ignoreCombiParentExclusion": false,
+      "normalTarget": "floor((parentA.CombiRank + parentB.CombiRank + 1) / 2)",
+      "combiRankBonusClamp": "clamp(breedingItemEffect.CombiRankBonus, 0, 10)",
+      "fixedBuildCombiRankBonusValues": [
+        0
+      ],
+      "firstTieBreaker": "higher CombiDuplicatePriority",
+      "rarityUsedAsTieBreaker": false,
+      "variantFlagUsedAsTieBreaker": false,
+      "finalTieBreaker": "DT_PalMonsterParameter row enumeration order"
+    }
+  },
+  "runtimeHatchExhaustive": false
+}

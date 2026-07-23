@@ -1,0 +1,109 @@
+name: Palworld fixed-build breeding verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**"
+      - "package.json"
+      - "package-lock.json"
+      - "playwright.config.js"
+      - ".github/workflows/palworld-breeding-source-audit.yml"
+  workflow_dispatch:
+  schedule:
+    - cron: "23 3 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: palworld-fixed-build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  current-build:
+    name: Detect a newer public server build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Compare Steam public Build ID with the pinned build
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          expected = "24181105"
+          summary = os.environ["GITHUB_STEP_SUMMARY"]
+          try:
+              request = urllib.request.Request(
+                  "https://api.steamcmd.net/v1/info/2394010",
+                  headers={"User-Agent": "palworld-hub-build-monitor/2"},
+              )
+              with urllib.request.urlopen(request, timeout=60) as response:
+                  payload = json.load(response)
+              actual = str(payload["data"]["2394010"]["depots"]["branches"]["public"]["buildid"])
+          except Exception as error:
+              message = f"Steam Build ID lookup failed without changing the fixed dataset: {error}"
+              print(f"::warning::{message}")
+              with open(summary, "a", encoding="utf-8") as output:
+                  output.write(f"### Palworld build monitor\n\n{message}\n")
+          else:
+              if actual != expected:
+                  message = (
+                      f"New public server build detected: {actual}; fixed verified dataset: {expected}. "
+                      "The site will automatically present the fixed table as not verified for the current build."
+                  )
+                  print(f"::warning::{message}")
+              else:
+                  message = f"Public server build remains pinned build {expected}."
+                  print(message)
+              with open(summary, "a", encoding="utf-8") as output:
+                  output.write(f"### Palworld build monitor\n\n{message}\n")
+          PY
+
+  verify:
+    name: Rebuild, exhaustively test, and compare
+    needs: current-build
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Compile deterministic generators
+        run: python -m py_compile tools/audit_breeding_sources.py tools/validate_exact_build_evidence.py tools/build_verified_dataset.py tools/verify_native_breeding_binary.py tools/verify_native_breeding_runtime.py
+      - name: Rebuild from fixed-build asset evidence
+        run: python tools/build_verified_dataset.py
+      - name: Enforce comparison-only auxiliary source policy
+        run: python tools/audit_breeding_sources.py
+      - name: Reject generated drift
+        run: git diff --exit-code -- data audit
+      - name: Run exhaustive data, reverse-index, parent-list, and tree tests
+        run: python -m unittest -v tests.test_verified_dataset
+      - name: Install browser test dependency
+        run: npm ci
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run Chromium desktop and iPhone-viewport browser tests
+        run: npm run test:palworld
+      - name: Upload diagnostics only after failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: palworld-verification-failure-${{ github.sha }}
+          path: |
+            audit/exact-build-evidence.json
+            audit/exact-comparison.json
+            data/verification.json
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 14

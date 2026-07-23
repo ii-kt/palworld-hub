@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>Palworld 日本語配合計算機</title>
+<link rel="stylesheet" href="styles.css?v=pw-24181105-4">
+<style>
+.audit-notice{margin:0 0 14px;padding:14px 16px;border:1px solid #356d7a;border-radius:14px;background:#152a31;color:#dff9ff;line-height:1.7}.audit-notice strong{display:block;margin-bottom:4px;color:#8eeaff}.build-freshness{margin:10px 0 0;padding-top:10px;border-top:1px solid #8f6b2d;color:#ffe8b2}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero">
+ <div>
+  <h1>Palworld 日本語配合計算機</h1>
+  <p class="sub">親2体から子、子から親候補、親1体から全ての子、4世代配合ツリーを利用できます。</p>
+ </div>
+ <div class="status">
+  <span id="dataStatus" class="badge warn">配合データ読込中</span>
+  <span id="palCount" class="badge">0形態</span>
+  <span id="comboCount" class="badge">読込中</span>
+  <span id="buildId" class="badge">Build未確認</span>
+ </div>
+</header>
+<section class="audit-notice" role="note">
+ <strong>Palworld v1.0.1.100619の固定ゲーム資産から生成</strong>
+ クライアントBuild 24181527／サーバーBuild 24181105を固定し、サーバー実資産から抽出した公開済み288形態について、順不同の全41,616親ペア・41,617結果行を機械照合しています。この表が扱うのは公開形態の基礎結果で、ボス／Alpha行や個体状態の後段処理は対象外です。ゲーム本体の配合関数を全件実行する照合と、ゲーム内で全組を孵化させる照合は未実施です。
+ <p id="buildFreshness" class="build-freshness" hidden aria-live="polite"></p>
+</section>
+<section class="howto" aria-label="選択中機能の使い方" aria-live="polite">
+ <div><b>1</b><span>「親Aを選択」を押す</span></div>
+ <div><b>2</b><span>「親Bを選択」を押す</span></div>
+ <div><b>3</b><span>子パルが表示される</span></div>
+</section>
+
+<nav class="tabs" id="tabs">
+ <button data-tab="parents" class="active">親2体 → 子</button>
+ <button data-tab="target">子 → 親候補</button>
+ <button data-tab="offspring">親1体 → 全ての子</button>
+ <button data-tab="tree">4世代 配合ツリー</button>
+ <button data-tab="dex">パル一覧</button>
+</nav>
+
+<main>
+<section id="view-parents" class="view panel">
+ <div class="panel-title"><h2>親を2体選択</h2><small>性別で結果が変わる場合は条件別に表示</small></div>
+ <div class="equation"><button class="slot" id="parentA"></button><div class="op">＋</div><button class="slot" id="parentB"></button><div class="op">＝</div><div class="slot" id="childSlot"></div></div>
+ <div class="actions"><button class="action" id="swapParents">入れ替え</button><button class="action danger" id="clearParents">クリア</button><button class="action" id="copyParents">結果をコピー</button></div>
+ <div id="parentResults" class="results" style="margin-top:12px"></div>
+</section>
+
+<section id="view-target" class="view panel" hidden>
+ <div class="panel-title"><h2>作りたいパルから親を逆引き</h2><small id="targetCount"></small></div>
+ <div class="control-grid"><button id="targetPick" class="pick-button"></button></div>
+ <div class="list-toolbar"><input id="targetFilter" placeholder="親の日本語名・英語名・図鑑番号で絞り込み"><select id="targetSort"><option value="no">図鑑番号順</option><option value="name">日本語名順</option><option value="power">配合値順</option></select></div>
+ <div id="targetResults" class="results"></div>
+</section>
+
+<section id="view-offspring" class="view panel" hidden>
+ <div class="panel-title"><h2>1体の親から作れる子を一覧表示</h2><small id="offspringCount"></small></div>
+ <div class="control-grid"><button id="singleParentPick" class="pick-button"></button></div>
+ <div class="list-toolbar"><input id="offspringFilter" placeholder="相手または子の名前・番号で絞り込み"><select id="offspringSort"><option value="child">子の図鑑番号順</option><option value="partner">相手の図鑑番号順</option><option value="name">子の日本語名順</option></select></div>
+ <div id="offspringResults" class="results"></div>
+</section>
+
+<section id="view-tree" class="view panel" hidden>
+ <div class="panel-title"><h2>4世代 配合系譜</h2></div>
+ <div class="tree-toolbar"><div class="seg"><button data-orient="result" class="active">結果起点</button><button data-orient="parent">親起点</button></div><button id="treePick" class="action primary">起点パルを選択</button><label>世代 <select id="treeDepth" class="field"><option>1</option><option>2</option><option>3</option><option selected>4</option></select></label><button id="zoomOut" class="action">－</button><button id="zoomReset" class="action">100%</button><button id="zoomIn" class="action">＋</button></div>
+ <div class="tree-viewport" id="treeViewport"><div id="treeCanvas" class="tree-canvas"></div></div>
+</section>
+
+<section id="view-dex" class="view panel" hidden>
+ <div class="panel-title"><h2>パル一覧</h2><small id="dexCount"></small></div>
+ <div class="list-toolbar">
+  <input id="dexSearch" placeholder="日本語名・英語名・図鑑番号で検索">
+  <select id="dexSort"><option value="asc">図鑑番号 昇順</option><option value="desc">図鑑番号 降順</option><option value="jp">日本語名順</option><option value="power">配合値順</option></select>
+  <select id="dexVariant"><option value="all">通常・亜種すべて</option><option value="base">通常種のみ</option><option value="variant">亜種のみ</option></select>
+  <select id="dexElement"><option value="">全属性</option></select>
+  <select id="dexWork"><option value="">全作業適性</option></select>
+  <select id="dexWorkLevel"><option value="0">作業Lv指定なし</option><option value="1">Lv.1以上</option><option value="2">Lv.2以上</option><option value="3">Lv.3以上</option><option value="4">Lv.4以上</option><option value="5">Lv.5以上</option></select>
+ </div>
+ <div id="dexGrid" class="pal-grid"></div>
+</section>
+
+<details class="info-box info">
+ <summary>データの検証状況</summary>
+ <p>基準データはサーバーBuild 24181105の <code>DT_PalMonsterParameter</code>、<code>DT_PalCombiUnique</code>、アイコン表、日英名称表から直接抽出しました。ボス、レイド／タワーボス、クエスト・召喚・警察・Oilrig・Gym専用、図鑑未公開、アイコン欠落、必須設定不備を資産の項目から除外しています。</p>
+ <p>性別条件つき特殊配合を先に照合し、該当しなければ特殊配合の子を除いた通常候補から、<code>CombiRank</code>、<code>CombiDuplicatePriority</code>、資産内の行順で選ぶ実行ファイルの処理順を全41,616組へ適用しました。親2体、逆引き、親1体、配合ツリーはこの同じ確定表だけを参照します。</p>
+ <p>固定サーバー実行ファイルの命令列と反射フィールドを照合し、<code>IgnoreCombi</code> は通常配合の子候補だけから除外され、親の配合値読込には作用しないことを確認しました。trueの公開形態27体中26体は特殊配合の子でもあり、残るグランジーラの除外によって「グランジーラ同士」の結果がシェルガドラになります。通常配合の同距離判定ではレアリティや亜種フラグを使わず、<code>CombiDuplicatePriority</code>、さらに資産内の行順で決定します。配合アイテムによる配合値補正も確認し、このビルドの全4効果は補正値0です。</p>
+ <p>トップレベル処理には同種同士を無条件に同じパルへする分岐がなく、特殊配合、次に通常配合へ進みます。そのため全288同種ペアのうち、グランジーラ同士はシェルガドラ、花つきナエモチ同士は通常のナエモチになる2件を実行ファイル由来の結果として保持しています。この2形態を子にする公開親ペアは0件なので、逆引きは候補なしと表示し、架空の辺を追加しません。結果表は公開形態IDの基礎結果だけを扱い、ボス／Alpha行や個体状態の後段処理を含みません。抽出資産と全件生成表の機械照合は完了していますが、ネイティブ配合関数を41,616組すべて直接呼び出す照合と、ゲーム内孵化の全件照合は未実施です。</p>
+</details>
+</main>
+</div>
+
+<div class="modal" id="pickerModal">
+ <div class="dialog" role="dialog" aria-modal="true" aria-label="パルを選択">
+  <div class="dialog-head"><input id="pickerSearch" placeholder="日本語名・英語名・図鑑番号"><button id="pickerClose">閉じる</button></div>
+  <div class="filters"><select id="pickerSort"><option value="asc">図鑑番号 昇順</option><option value="desc">図鑑番号 降順</option><option value="jp">日本語名順</option></select><select id="pickerVariant"><option value="all">すべて</option><option value="base">通常種</option><option value="variant">亜種</option></select><select id="pickerElement"><option value="">全属性</option></select><select id="pickerWork"><option value="">全作業</option></select><select id="pickerLevel"><option value="0">作業Lv指定なし</option><option value="1">Lv.1+</option><option value="2">Lv.2+</option><option value="3">Lv.3+</option><option value="4">Lv.4+</option><option value="5">Lv.5+</option></select></div>
+  <div id="pickerList" class="picker-list"></div>
+ </div>
+</div>
+<div id="toast" class="toast"></div>
+
+<script src="data.js?v=pw-24181105-4" defer></script>
+<script src="render.js?v=pw-24181105-4" defer></script>
+<script src="picker-tree.js?v=pw-24181105-4" defer></script>
+<script src="events.js?v=pw-24181105-4" defer></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+GitHub Pages rebuild trigger after switching the publishing source to main / root.

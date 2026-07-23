@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 7,
+  "appDataSchemaVersion": 2,
+  "datasetId": "pw-1.0.1.100619-24181105-cad80fe15c38",
+  "status": "fixed-build-asset-table-matched",
+  "gameVersion": "v1.0.1.100619",
+  "sourceClientAppId": "1623730",
+  "sourceClientBuildId": "24181527",
+  "targetServerAppId": "2394010",
+  "targetServerBuildId": "24181105",
+  "targetServerDepotManifestId": "2167164727892555341",
+  "serverPakSha256": "cad80fe15c38d74a795779fbab31f04bc2c15c37fb8a2188e4d89f3800fb0e68",
+  "mappingsUsmapSha256": "561ef13c8ee3cf785e4de8aa5bc9b3ad1646e416d895f1d1166fa27ebdfd26b0",
+  "catalogContentHash": "872e4a79af5b5043ee97d9a4287a41bba407afc96ff3b0a6de56fff827d334b3",
+  "rawAssetExtractionSha256": "e23a12ceffae5792b69c8faebe8ee3fbacbc09f0bd88572410d2b3b59aca1fe0",
+  "nativeBreedingEvidenceSha256": "2bab43353a81a08bb438686b728055f1a79cb4884b8b1aeaded08ff90e0f38f3",
+  "serverExecutableSha256": "788649fa1592160faa7bcf07ccd16d474ebeaae954717bc32284b5a43028d8e7",
+  "breedingItemEffectDataPath": "Pal/Content/Pal/DataAsset/MapObject/Breeding/DA_BreedingItemEffectData",
+  "breedingItemCombiRankBonusValues": [
+    0
+  ],
+  "palCount": 288,
+  "unorderedPairCount": 41616,
+  "compactChildCount": 41616,
+  "resultRowCount": 41617,
+  "matchingResultRowCount": 41617,
+  "mismatchCount": 0,
+  "missingPairCount": 0,
+  "extraPairCount": 0,
+  "unreleasedPalContaminationCount": 0,
+  "duplicateCount": 0,
+  "zeroParentCandidateChildIds": [
+    "kingwhale",
+    "plantslime_flower"
+  ],
+  "genderDependentPairs": [
+    "catmage|foxmage"
+  ],
+  "exactGameAssetExtractionEvidence": true,
+  "nativeBreedingStaticAnalysisEvidence": true,
+  "nativeBreedingFunctionExhaustiveVerification": false,
+  "gameRuntimeHatchExhaustiveVerification": false,
+  "resultScope": "base-released-form-id",
+  "bossAlphaAndIndividualStatePostProcessingModeled": false,
+  "currentBuildEndpoint": "https://api.steamcmd.net/v1/info/2394010",
+  "palDataSha256": "77b300c10a1225f51e1c218ada7d03d236cc9fcb8b950ab79fa25a5b0e67fdf0",
+  "breedingDataSha256": "74f2ac2b7825ff9e4f0cea7426c0d22e701d53eb250ad78d2b2b28979dadc52c",
+  "generatedDataSha256": "d00bdc6286be2e0a53227fb7ceb677d79a13717ca2ae5bb4930cfcec3b275cb7"
+}
