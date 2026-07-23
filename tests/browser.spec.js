@@ -43,7 +43,10 @@ test("01 desktop Chromium first load shows the fixed-build counts",async({page})
   await openReady(page);
   await expect(page.locator("#buildId")).toHaveText("Build 24181105");
   await expect(page.locator("body")).toHaveAttribute("data-build-state","current");
-  await expect(page.locator("#dataStatus")).toContainText("対象ビルド一致");
+  await expect(page.locator("#dataStatus")).toContainText("対象サーバーBuild一致");
+  await expect(page.locator(".audit-notice")).toContainText("計166,464回");
+  await expect(page.locator(".audit-notice")).toContainText("差分0");
+  await expect(page.locator(".audit-notice")).toContainText("ゲーム内で全組を孵化させる照合は未実施");
 });
 
 test("01b rendering is local and never requests third-party Pal images",async({page})=>{
@@ -134,6 +137,19 @@ test("07b a replacement manifest cannot bless altered fixed-build data",async({p
   await expect(page.locator("body")).toHaveAttribute("data-data-state","error");
   expect((await page.evaluate(()=>window.PalworldDataState)).error).toContain("SHA-256");
 });
+
+for(const [claim,patch] of [
+  ["client build identity",{sourceClientBuildId:"other"}],
+  ["native runtime scope",{nativeRuntimeLivePakDataTablesReadDirectly:true}],
+]){
+  test(`07c ${claim} fails closed when altered`,async({page})=>{
+    const wrong={...verification,...patch};
+    await page.route("**/data/verification.json?**",route=>route.fulfill({status:200,contentType:"application/json",body:JSON.stringify(wrong)}));
+    await page.goto(SITE);
+    await expect(page.locator("body")).toHaveAttribute("data-data-state","error");
+    expect((await page.evaluate(()=>window.PalworldDataState)).error).toContain("確定配合表");
+  });
+}
 
 test("08 Japanese-name search filters the Pal list",async({page})=>{
   await openReady(page);

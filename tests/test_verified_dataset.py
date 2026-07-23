@@ -11,25 +11,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PALWORLD = ROOT
 DATASET_ID = "pw-1.0.1.100619-24181105-cad80fe15c38"
-FIXED_CATALOG_EXCLUSIONS = {
-    "SUMMON_DarkAlien": "SUMMON_VARIANT",
-    "SUMMON_DarkAlien_MAX": "SUMMON_VARIANT",
-    "SUMMON_WhiteAlienDragon": "SUMMON_VARIANT",
-    "WingGolem_Oilrig": "OILRIG_VARIANT",
-    "DarkAlien_Oilrig": "OILRIG_VARIANT",
-    "Horus_Oilrig": "OILRIG_VARIANT",
-    "Baphomet_Dark_Oilrig": "OILRIG_VARIANT",
-    "HadesBird_Oilrig": "OILRIG_VARIANT",
-    "LizardMan_Oilrig": "OILRIG_VARIANT",
-    "Quest_Farmer03_SheepBall": "QUEST_VARIANT",
-    "Quest_Farmer03_PinkCat": "QUEST_VARIANT",
-    "PREDATOR_FlowerRabbit_Quest": "QUEST_VARIANT",
-    "AmaterasuWolf_Dark_Quest_Friend": "QUEST_VARIANT",
-    "AmaterasuWolf_Dark_Quest_Enemy": "QUEST_VARIANT",
-    "GYM_ElecPanda_Otomo": "GYM_VARIANT",
-    "POLICE_ThunderDog": "POLICE_VARIANT",
-    "POLICE_HawkBird": "POLICE_VARIANT",
-}
 
 
 def load(path: str):
@@ -38,6 +19,13 @@ def load(path: str):
 
 def repository_text_bytes(path: Path) -> bytes:
     return path.read_bytes().replace(b"\r\n", b"\n")
+
+
+def stable_digest(value) -> str:
+    payload = json.dumps(
+        value, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+    ).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
 
 
 def tail(value):
@@ -79,6 +67,8 @@ class VerifiedDatasetTests(unittest.TestCase):
         cls.audit = load("audit/exact-comparison.json")
         cls.native_path = PALWORLD / "evidence/build-24181105.native-breeding.json"
         cls.native = json.loads(cls.native_path.read_text(encoding="utf-8"))
+        cls.runtime_path = PALWORLD / "audit/native-runtime-comparison.json"
+        cls.runtime = json.loads(cls.runtime_path.read_text(encoding="utf-8"))
         cls.raw_path = PALWORLD / "evidence/build-24181105.assets.json"
         cls.raw = json.loads(cls.raw_path.read_text(encoding="utf-8"))
         cls.pals = cls.pals_payload["pals"]
@@ -123,8 +113,6 @@ class VerifiedDatasetTests(unittest.TestCase):
                 return "NOT_A_PAL"
             if row["isBoss"] or row["isRaidBoss"] or row["isTowerBoss"]:
                 return "BOSS_VARIANT"
-            if row["rowName"] in FIXED_CATALOG_EXCLUSIONS:
-                return FIXED_CATALOG_EXCLUSIONS[row["rowName"]]
             if source not in icons and tribe not in icons:
                 return "PAL_ICON_MISSING"
             if row["zukanIndex"] <= 0:
@@ -133,8 +121,32 @@ class VerifiedDatasetTests(unittest.TestCase):
                 return "PAL_CONFIGURATION_INCOMPLETE"
             return None
 
-        cls.raw_exclusions = {pid(row["rowName"]): excluded(row) for row in cls.raw["pals"] if excluded(row)}
-        cls.raw_released = [row for row in cls.raw["pals"] if not excluded(row)]
+        cls.raw_exclusions = {}
+        individually_eligible = []
+        for row in cls.raw["pals"]:
+            reason = excluded(row)
+            if reason:
+                cls.raw_exclusions[pid(row["rowName"])] = reason
+            else:
+                individually_eligible.append(row)
+        form_groups = defaultdict(list)
+        for row in individually_eligible:
+            form_groups[(row["zukanIndex"], row["zukanIndexSuffix"], row["rarity"])].append(row)
+        cls.raw_released = []
+        cls.duplicate_form_groups = []
+        for key, rows in form_groups.items():
+            if len(rows) == 1:
+                cls.raw_released.append(rows[0])
+                continue
+            exact_icon_rows = [row for row in rows if pid(row["rowName"]) in icons]
+            if len(exact_icon_rows) != 1:
+                raise AssertionError(f"ambiguous form {key}: {exact_icon_rows}")
+            cls.raw_released.append(exact_icon_rows[0])
+            cls.duplicate_form_groups.append(rows)
+            for row in rows:
+                if row is not exact_icon_rows[0]:
+                    cls.raw_exclusions[pid(row["rowName"])] = "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
+        cls.raw_released.sort(key=lambda row: row["sourceOrder"])
         cls.raw_by_id = {pid(row["rowName"]): row for row in cls.raw_released}
         tribes = defaultdict(list)
         for row in cls.raw_released:
@@ -178,7 +190,7 @@ class VerifiedDatasetTests(unittest.TestCase):
     def test_01_all_schema_and_dataset_versions_match(self):
         self.assertEqual(self.pals_payload["schemaVersion"], 2)
         self.assertEqual(self.compact["schemaVersion"], 3)
-        self.assertEqual(self.verification["schemaVersion"], 7)
+        self.assertEqual(self.verification["schemaVersion"], 8)
         self.assertEqual({self.pals_payload["datasetId"], self.compact["datasetId"], self.verification["datasetId"]}, {DATASET_ID})
 
     def test_02_fixed_build_and_raw_input_hashes(self):
@@ -199,13 +211,34 @@ class VerifiedDatasetTests(unittest.TestCase):
     def test_03_asset_release_filter_selects_exactly_288(self):
         self.assertEqual(len(self.raw_released), 288)
         self.assertEqual({pid(row["rowName"]) for row in self.raw_released}, set(self.order))
+        self.assertEqual(
+            stable_digest(sorted(row["rowName"] for row in self.raw_released)),
+            "09b6c2e7db674ac1f48ebf6561c2d7e7f1e2d0d94ffbe0d7dfee5ae4c348ad46",
+        )
+        self.assertEqual(
+            self.audit["rosterSelection"]["releasedSourceIdsSha256"],
+            "09b6c2e7db674ac1f48ebf6561c2d7e7f1e2d0d94ffbe0d7dfee5ae4c348ad46",
+        )
 
     def test_04_release_exclusion_reasons_and_counts(self):
+        self.assertEqual(
+            self.audit["rosterSelection"]["publicFormKeyFields"],
+            ["ZukanIndex", "ZukanIndexSuffix", "Rarity"],
+        )
         self.assertEqual(Counter(self.raw_exclusions.values()), Counter({
-            "BOSS_VARIANT": 412, "PAL_ICON_MISSING": 23, "PALDEX_NOT_RELEASED": 12,
-            "OILRIG_VARIANT": 6, "QUEST_VARIANT": 5, "SUMMON_VARIANT": 3,
-            "POLICE_VARIANT": 2, "GYM_VARIANT": 1, "PAL_CONFIGURATION_INCOMPLETE": 1,
+            "BOSS_VARIANT": 412, "PAL_ICON_MISSING": 23, "PALDEX_NOT_RELEASED": 18,
+            "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW": 11,
+            "PAL_CONFIGURATION_INCOMPLETE": 1,
         }))
+        self.assertEqual(len(self.duplicate_form_groups), 9)
+        self.assertEqual(self.audit["rosterSelection"]["duplicateFormGroupCount"], 9)
+        self.assertEqual(self.audit["rosterSelection"]["duplicateFormRowsExcludedCount"], 11)
+        self.assertEqual(self.audit["rosterSelection"]["tribeIconFallbackReleasedCount"], 1)
+        self.assertEqual(
+            self.audit["rosterSelection"]["tribeIconFallbackReleasedSourceIds"],
+            ["PlantSlime_Flower"],
+        )
+        self.assertFalse(self.audit["rosterSelection"]["rowNamePatternInferenceUsed"])
         self.assertNotIn("worldtreedragon", self.order)
         self.assertIn("plantslime_flower", self.order)
 
@@ -485,6 +518,9 @@ class VerifiedDatasetTests(unittest.TestCase):
         self.assertFalse(auxiliary["palCalc"]["usedForAssetReleaseSelection"])
         self.assertEqual(auxiliary["palCalc"]["matchingLogicalRowCount"], 41615)
         self.assertEqual(auxiliary["palCalc"]["mismatchCount"], 4)
+        self.assertEqual(auxiliary["palCalc"]["releasedRosterMissing"], [])
+        self.assertEqual(auxiliary["palCalc"]["releasedRosterExtra"], [])
+        self.assertEqual(auxiliary["palCalc"]["metadataDifferences"], [])
         self.assertEqual(auxiliary["palworldSaveTools"]["role"], "advisory-overlap-comparison-only")
         self.assertEqual(auxiliary["palworldSaveTools"]["mismatchCount"], 1)
         self.assertEqual(auxiliary["paldeck"]["role"], "advisory-overlap-comparison-only")
@@ -493,6 +529,7 @@ class VerifiedDatasetTests(unittest.TestCase):
     def test_30_native_self_pair_control_flow_overrides_auxiliary_shortcut(self):
         analysis = self.audit["sameSpeciesNativeAnalysis"]
         self.assertFalse(analysis["nativeTopLevelHasSameSpeciesShortcut"])
+        self.assertTrue(analysis["nativeTopLevelFunctionInvokedForEveryPair"])
         self.assertEqual(analysis["allReleasedSelfPairsCompared"], 288)
         self.assertEqual(analysis["identityResultCount"], 286)
         self.assertEqual(analysis["identityExceptionCount"], 2)
@@ -518,10 +555,130 @@ class VerifiedDatasetTests(unittest.TestCase):
         self.assertEqual(self.verification["generatedDataSha256"],
                          self.audit["generated"]["datasetSha256"])
         self.assertEqual(self.verification["resultScope"], "base-released-form-id")
+        self.assertTrue(self.verification["nativeBreedingFunctionExhaustiveVerification"])
+        self.assertEqual(self.verification["nativeBreedingFunctionInvocationCount"], 166464)
+        self.assertEqual(self.verification["nativeRuntimeMismatchCount"], 0)
+        self.assertTrue(self.verification["nativeRuntimeFixedExtractedAssetTablesInjected"])
+        self.assertFalse(self.verification["nativeRuntimeLivePakDataTablesReadDirectly"])
+        self.assertFalse(self.verification["gameRuntimeHatchExhaustiveVerification"])
+        self.assertTrue(self.verification["bossAlphaSpeciesMappingVerified"])
         self.assertFalse(self.verification["bossAlphaAndIndividualStatePostProcessingModeled"])
         self.assertEqual(self.audit["runtimeVerification"]["resultScope"], "base-released-form-id")
+        self.assertTrue(self.audit["runtimeVerification"]["nativeBreedingFunctionExhaustive"])
+        self.assertEqual(self.audit["runtimeVerification"]
+                         ["nativeBreedingFunctionInvocationCount"], 166464)
+        self.assertEqual(self.audit["runtimeVerification"]["nativeRuntimeMismatchCount"], 0)
         self.assertFalse(self.audit["runtimeVerification"]
                          ["bossAlphaAndIndividualStatePostProcessingModeled"])
+
+    def test_32_native_runtime_evidence_matches_every_fixed_build_result(self):
+        self.assertEqual(
+            hashlib.sha256(repository_text_bytes(self.runtime_path)).hexdigest(),
+            "265bf315873f9d4f1e58ac8fec9544b912e7e6cea304cdc3b34cb1437be63bb1",
+        )
+        digest_payload = dict(self.runtime)
+        claimed_digest = digest_payload.pop("evidenceSha256")
+        self.assertEqual(
+            claimed_digest,
+            "08d7850d2bb566a77cd8734c93b7ed8f31563c287850e41450de2328c89a36a6",
+        )
+        self.assertEqual(stable_digest(digest_payload), claimed_digest)
+        self.assertEqual(self.runtime["schemaVersion"], 2)
+        self.assertEqual(self.runtime["status"], "fixed-build-native-runtime-matched")
+        self.assertEqual(self.runtime["target"], {
+            "gameVersion": "v1.0.1.100619",
+            "serverAppId": "2394010",
+            "serverBuildId": "24181105",
+            "serverDepotId": "2394012",
+            "serverDepotManifestId": "2167164727892555341",
+            "serverExecutableBytes": 196285592,
+            "serverExecutableSha256":
+                "788649fa1592160faa7bcf07ccd16d474ebeaae954717bc32284b5a43028d8e7",
+            "serverPakBytes": 4797040962,
+            "serverPakSha256":
+                "cad80fe15c38d74a795779fbab31f04bc2c15c37fb8a2188e4d89f3800fb0e68",
+        })
+        self.assertEqual(self.runtime["counts"], {
+            "rawPalRows": 753,
+            "releasedPals": 288,
+            "uniqueCombinationRows": 258,
+            "unorderedParentPairs": 41616,
+            "logicalResultRows": 41617,
+            "matchingLogicalResultRows": 41617,
+            "nativeInvocations": 166464,
+            "bossVariantMappings": 288,
+        })
+        self.assertEqual(set(self.runtime["differences"]), {
+            "runtimeRowMetadata", "runtimeUniqueRows", "runtimeLogicalResults",
+            "runtimeCalls", "parentOrder", "hiddenGender", "sameSpecies",
+            "specialCombination", "normalSelection", "bossVariantMapping",
+        })
+        self.assertEqual(set(self.runtime["differences"].values()), {0})
+        self.assertEqual(self.runtime["allDifferences"], {
+            "rowMetadata": [], "uniqueRows": [], "logicalResults": [],
+        })
+        self.assertEqual(
+            self.runtime["runtimeTableIdentity"]["runtimeRowsSha256"],
+            "8b699bc10bfb8de85e026850f074d46c0785843ea4a3b2aebba75dd7d2d6595f",
+        )
+        invocation = self.runtime["invocation"]
+        self.assertEqual(invocation["nativeFunctionAddress"], "0x71168c0")
+        self.assertEqual(invocation["parentOrdersPerGenderOrientation"], 2)
+        self.assertEqual(invocation["genderOrientationsPerPair"], 2)
+        self.assertEqual(invocation["nativeInvocationCount"], 166464)
+        self.assertFalse(invocation["selectionOrRecipeLogicStubbed"])
+        self.assertTrue(invocation["internetEgressBlocked"])
+        inputs = self.runtime["inputs"]
+        self.assertEqual(inputs["rawAssetsSha256"],
+                         hashlib.sha256(self.raw_path.read_bytes()).hexdigest())
+        self.assertEqual(inputs["palsSha256"],
+                         hashlib.sha256(repository_text_bytes(
+                             PALWORLD / "data/pals.verified.json")).hexdigest())
+        self.assertEqual(inputs["breedingSha256"],
+                         hashlib.sha256(repository_text_bytes(
+                             PALWORLD / "data/breeding.verified.json")).hexdigest())
+        self.assertEqual(inputs["staticNativeEvidenceSha256"],
+                         hashlib.sha256(repository_text_bytes(self.native_path)).hexdigest())
+        self.assertEqual(inputs["runtimeProbeSourceSha256"],
+                         hashlib.sha256(repository_text_bytes(
+                             PALWORLD / "tools/native_breeding_runtime_probe.c")).hexdigest())
+        self.assertEqual(inputs["offlineShimSourceSha256"],
+                         hashlib.sha256(repository_text_bytes(
+                             PALWORLD / "tools/fixed_server_nonroot_shim.c")).hexdigest())
+        self.assertEqual(self.runtime["serverInitialization"], {
+            "reportedGameVersion": "v1.0.1.100619",
+            "reachedRunningState": True,
+            "processExitCode": 143,
+        })
+        boss = self.runtime["bossAlphaPostProcessing"]
+        self.assertEqual(boss["mappingCount"], len(self.pals))
+        self.assertEqual(boss["mismatchCount"], 0)
+        self.assertTrue(boss["speciesIdentityPreserved"])
+        raw_by_source = {row["rowName"]: row for row in self.raw["pals"]}
+        released_source_ids = {pal["sourceId"] for pal in self.pals}
+        for mapping, pal in zip(boss["mappings"], self.pals, strict=True):
+            self.assertEqual(mapping["palId"], pal["id"])
+            self.assertEqual(mapping["sourceId"], pal["sourceId"])
+            self.assertIn(mapping["bossSourceId"], raw_by_source)
+            self.assertTrue(any(
+                raw_by_source[mapping["bossSourceId"]][field]
+                for field in ("isBoss", "isRaidBoss", "isTowerBoss")
+            ))
+            self.assertNotIn(mapping["bossSourceId"], released_source_ids)
+            self.assertEqual(
+                tail(raw_by_source[mapping["bossSourceId"]]["tribe"]),
+                pal["tribe"],
+            )
+            self.assertIsInstance(mapping["baseTribeRuntimeId"], int)
+            self.assertEqual(
+                mapping["baseTribeRuntimeId"],
+                mapping["bossTribeRuntimeId"],
+            )
+            self.assertTrue(mapping["valid"])
+        runtime_audit = self.audit["nativeRuntimeComparison"]
+        self.assertEqual(runtime_audit["nativeInvocationCount"], 166464)
+        self.assertEqual(runtime_audit["matchingLogicalResultRows"], 41617)
+        self.assertEqual(runtime_audit["differenceCount"], 0)
 
 
 if __name__ == "__main__":

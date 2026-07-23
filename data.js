@@ -3,6 +3,9 @@
 const APP_DATASET_ID="pw-1.0.1.100619-24181105-cad80fe15c38";
 const APP_DATA_SCHEMA_VERSION=2;
 const EXPECTED_GAME_VERSION="v1.0.1.100619";
+const EXPECTED_CLIENT_APP_ID="1623730";
+const EXPECTED_CLIENT_BUILD_ID="24181527";
+const EXPECTED_SERVER_APP_ID="2394010";
 const EXPECTED_SERVER_BUILD_ID="24181105";
 const EXPECTED_SERVER_DEPOT_MANIFEST_ID="2167164727892555341";
 const EXPECTED_SERVER_PAK_SHA256="cad80fe15c38d74a795779fbab31f04bc2c15c37fb8a2188e4d89f3800fb0e68";
@@ -10,6 +13,8 @@ const EXPECTED_MAPPINGS_SHA256="561ef13c8ee3cf785e4de8aa5bc9b3ad1646e416d895f1d1
 const EXPECTED_CATALOG_CONTENT_HASH="872e4a79af5b5043ee97d9a4287a41bba407afc96ff3b0a6de56fff827d334b3";
 const EXPECTED_RAW_ASSET_SHA256="e23a12ceffae5792b69c8faebe8ee3fbacbc09f0bd88572410d2b3b59aca1fe0";
 const EXPECTED_NATIVE_EVIDENCE_SHA256="ac079224cbadb33886092145de2d4f5e2d6da6ccc5ba4cb0374f1e2f552e2651";
+const EXPECTED_NATIVE_RUNTIME_EVIDENCE_SHA256="265bf315873f9d4f1e58ac8fec9544b912e7e6cea304cdc3b34cb1437be63bb1";
+const EXPECTED_NATIVE_RUNTIME_EVIDENCE_DIGEST="08d7850d2bb566a77cd8734c93b7ed8f31563c287850e41450de2328c89a36a6";
 const EXPECTED_SERVER_EXECUTABLE_SHA256="788649fa1592160faa7bcf07ccd16d474ebeaae954717bc32284b5a43028d8e7";
 const EXPECTED_PAL_DATA_SHA256="77b300c10a1225f51e1c218ada7d03d236cc9fcb8b950ab79fa25a5b0e67fdf0";
 const EXPECTED_BREEDING_DATA_SHA256="74f2ac2b7825ff9e4f0cea7426c0d22e701d53eb250ad78d2b2b28979dadc52c";
@@ -154,9 +159,9 @@ function buildIndexes(compact){
  for(const parent of pals)offspringByParent.set(parent.uid,[...(offspringGroups.get(parent.uid)?.values()||[])]);
 }
 function validateIndexes(compact,check){
- assertHeader(check,7,"検証情報");
+ assertHeader(check,8,"検証情報");
  const expectedPairs=pals.length*(pals.length+1)/2;
- if(check.appDataSchemaVersion!==APP_DATA_SCHEMA_VERSION||check.status!=="fixed-build-asset-table-matched"||check.targetServerDepotManifestId!==EXPECTED_SERVER_DEPOT_MANIFEST_ID||check.serverPakSha256!==EXPECTED_SERVER_PAK_SHA256||check.mappingsUsmapSha256!==EXPECTED_MAPPINGS_SHA256||check.catalogContentHash!==EXPECTED_CATALOG_CONTENT_HASH||check.rawAssetExtractionSha256!==EXPECTED_RAW_ASSET_SHA256||check.nativeBreedingEvidenceSha256!==EXPECTED_NATIVE_EVIDENCE_SHA256||check.serverExecutableSha256!==EXPECTED_SERVER_EXECUTABLE_SHA256||check.breedingItemEffectDataPath!=="Pal/Content/Pal/DataAsset/MapObject/Breeding/DA_BreedingItemEffectData"||JSON.stringify(check.breedingItemCombiRankBonusValues)!=="[0]"||check.palDataSha256!==EXPECTED_PAL_DATA_SHA256||check.breedingDataSha256!==EXPECTED_BREEDING_DATA_SHA256||check.generatedDataSha256!==EXPECTED_GENERATED_DATA_SHA256||check.palCount!==288||check.palCount!==pals.length||check.unorderedPairCount!==41616||check.unorderedPairCount!==expectedPairs||check.compactChildCount!==compact.children.length||check.resultRowCount!==41617||check.matchingResultRowCount!==41617||check.mismatchCount!==0||check.missingPairCount!==0||check.extraPairCount!==0||check.unreleasedPalContaminationCount!==0||check.duplicateCount!==0||check.exactGameAssetExtractionEvidence!==true||check.nativeBreedingStaticAnalysisEvidence!==true||check.nativeBreedingFunctionExhaustiveVerification!==false||check.gameRuntimeHatchExhaustiveVerification!==false||check.resultScope!=="base-released-form-id"||check.bossAlphaAndIndividualStatePostProcessingModeled!==false)throw new Error("検証情報と確定配合表が一致しません");
+  if(check.appDataSchemaVersion!==APP_DATA_SCHEMA_VERSION||check.status!=="fixed-build-native-runtime-matched"||check.gameVersion!==EXPECTED_GAME_VERSION||check.sourceClientAppId!==EXPECTED_CLIENT_APP_ID||check.sourceClientBuildId!==EXPECTED_CLIENT_BUILD_ID||check.targetServerAppId!==EXPECTED_SERVER_APP_ID||check.targetServerBuildId!==EXPECTED_SERVER_BUILD_ID||check.targetServerDepotManifestId!==EXPECTED_SERVER_DEPOT_MANIFEST_ID||check.serverPakSha256!==EXPECTED_SERVER_PAK_SHA256||check.mappingsUsmapSha256!==EXPECTED_MAPPINGS_SHA256||check.catalogContentHash!==EXPECTED_CATALOG_CONTENT_HASH||check.rawAssetExtractionSha256!==EXPECTED_RAW_ASSET_SHA256||check.nativeBreedingEvidenceSha256!==EXPECTED_NATIVE_EVIDENCE_SHA256||check.nativeRuntimeEvidenceSha256!==EXPECTED_NATIVE_RUNTIME_EVIDENCE_SHA256||check.nativeRuntimeEvidenceDigest!==EXPECTED_NATIVE_RUNTIME_EVIDENCE_DIGEST||check.serverExecutableSha256!==EXPECTED_SERVER_EXECUTABLE_SHA256||check.breedingItemEffectDataPath!=="Pal/Content/Pal/DataAsset/MapObject/Breeding/DA_BreedingItemEffectData"||JSON.stringify(check.breedingItemCombiRankBonusValues)!=="[0]"||check.palDataSha256!==EXPECTED_PAL_DATA_SHA256||check.breedingDataSha256!==EXPECTED_BREEDING_DATA_SHA256||check.generatedDataSha256!==EXPECTED_GENERATED_DATA_SHA256||check.palCount!==288||check.palCount!==pals.length||check.unorderedPairCount!==41616||check.unorderedPairCount!==expectedPairs||check.compactChildCount!==compact.children.length||check.resultRowCount!==41617||check.matchingResultRowCount!==41617||check.mismatchCount!==0||check.missingPairCount!==0||check.extraPairCount!==0||check.unreleasedPalContaminationCount!==0||check.duplicateCount!==0||check.exactGameAssetExtractionEvidence!==true||check.nativeBreedingStaticAnalysisEvidence!==true||check.nativeBreedingFunctionExhaustiveVerification!==true||check.nativeBreedingFunctionInvocationCount!==166464||check.nativeRuntimeMismatchCount!==0||check.nativeRuntimeFixedExtractedAssetTablesInjected!==true||check.nativeRuntimeLivePakDataTablesReadDirectly!==false||check.gameRuntimeHatchExhaustiveVerification!==false||check.resultScope!=="base-released-form-id"||check.bossAlphaSpeciesMappingVerified!==true||check.bossAlphaAndIndividualStatePostProcessingModeled!==false)throw new Error("検証情報と確定配合表が一致しません");
  if(pairMap.size!==expectedPairs)throw new Error(`配合表が不完全です: ${pairMap.size}/${expectedPairs}組`);
  const zeroParentIds=pals.filter(pal=>!parentsByChild.has(pal.uid)).map(pal=>pal.uid).sort();
  if(JSON.stringify(zeroParentIds)!==JSON.stringify(check.zeroParentCandidateChildIds)||parentsByChild.size!==pals.length-zeroParentIds.length)throw new Error(`逆引き表の0候補形態が検証情報と一致しません: ${zeroParentIds.join(",")}`);
@@ -200,7 +205,7 @@ async function checkCurrentBuild(check){
    return;
   }
   document.body.dataset.buildState="current";
-  setDataStatus("対象ビルド一致・資産表照合済み","ok");
+   setDataStatus("対象サーバーBuild一致・資産表照合済み","ok");
   freshness.hidden=true;
  }catch{
   document.body.dataset.buildState="unknown";
@@ -225,7 +230,7 @@ async function load(){
  try{
   const checkDocument=await fetchDocument(DATA_URLS.verification);
   const check=checkDocument.value;
-  assertHeader(check,7,"検証情報");
+  assertHeader(check,8,"検証情報");
   if(check.appDataSchemaVersion!==APP_DATA_SCHEMA_VERSION)throw new Error("アプリとデータのバージョンが一致しません");
   const [palDocument,compactDocument]=await Promise.all([fetchDocument(DATA_URLS.pals),fetchDocument(DATA_URLS.breeding)]);
   const [palHash,breedingHash]=await Promise.all([sha256Hex(palDocument.text),sha256Hex(compactDocument.text)]);

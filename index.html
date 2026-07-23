@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="dark">
 <title>Palworld 日本語配合計算機</title>
-<link rel="stylesheet" href="styles.css?v=pw-24181105-5">
+<link rel="stylesheet" href="styles.css?v=pw-24181105-6">
 <style>
 .audit-notice{margin:0 0 14px;padding:14px 16px;border:1px solid #356d7a;border-radius:14px;background:#152a31;color:#dff9ff;line-height:1.7}.audit-notice strong{display:block;margin-bottom:4px;color:#8eeaff}.build-freshness{margin:10px 0 0;padding-top:10px;border-top:1px solid #8f6b2d;color:#ffe8b2}
 </style>
@@ -26,7 +26,7 @@
 </header>
 <section class="audit-notice" role="note">
  <strong>Palworld v1.0.1.100619の固定ゲーム資産から生成</strong>
- クライアントBuild 24181527／サーバーBuild 24181105を固定し、サーバー実資産から抽出した公開済み288形態について、順不同の全41,616親ペア・41,617結果行を機械照合しています。この表が扱うのは公開形態の基礎結果で、ボス／Alpha行や個体状態の後段処理は対象外です。ゲーム本体の配合関数を全件実行する照合と、ゲーム内で全組を孵化させる照合は未実施です。
+ クライアントBuild 24181527／サーバーBuild 24181105を固定し、サーバー実資産から抽出した公開済み288形態について、順不同の全41,616親ペア・41,617結果行を機械照合しています。固定実行ファイルへ抽出表を注入する監査ハーネスで、親順2通り・性別向き2通りの計166,464回をネイティブ配合関数へ直接入力し、差分0を確認しました。この表が扱うのは公開形態の基礎結果です。実行中PAKのDataTableをフックなしで直接読む照合、個体状態の後段処理、ゲーム内で全組を孵化させる照合は未実施です。
  <p id="buildFreshness" class="build-freshness" hidden aria-live="polite"></p>
 </section>
 <section class="howto" aria-label="選択中機能の使い方" aria-live="polite">
@@ -86,10 +86,10 @@
 
 <details class="info-box info">
  <summary>データの検証状況</summary>
- <p>基準データはサーバーBuild 24181105の <code>DT_PalMonsterParameter</code>、<code>DT_PalCombiUnique</code>、アイコン表、日英名称表から直接抽出しました。ボス、レイド／タワーボス、クエスト・召喚・警察・Oilrig・Gym専用、図鑑未公開、アイコン欠落、必須設定不備を資産の項目から除外しています。</p>
+ <p>基準データはサーバーBuild 24181105の <code>DT_PalMonsterParameter</code>、<code>DT_PalCombiUnique</code>、アイコン表、日英名称表から直接抽出しました。ボス属性、図鑑番号、レア度、アイコンID、必須設定を資産項目として検査し、同じ図鑑番号・枝番・レア度の行が重なる場合は固有の完全一致アイコンIDを持つ行だけを採用しています。RowNameの接頭辞・接尾辞から用途を推測していません。</p>
  <p>性別条件つき特殊配合を先に照合し、該当しなければ特殊配合の子を除いた通常候補から、<code>CombiRank</code>、<code>CombiDuplicatePriority</code>、資産内の行順で選ぶ実行ファイルの処理順を全41,616組へ適用しました。親2体、逆引き、親1体、配合ツリーはこの同じ確定表だけを参照します。</p>
  <p>固定サーバー実行ファイルの命令列と反射フィールドを照合し、<code>IgnoreCombi</code> は通常配合の子候補だけから除外され、親の配合値読込には作用しないことを確認しました。trueの公開形態27体中26体は特殊配合の子でもあり、残るグランジーラの除外によって「グランジーラ同士」の結果がシェルガドラになります。通常配合の同距離判定ではレアリティや亜種フラグを使わず、<code>CombiDuplicatePriority</code>、さらに資産内の行順で決定します。配合アイテムによる配合値補正も確認し、このビルドの全4効果は補正値0です。</p>
- <p>トップレベル処理には同種同士を無条件に同じパルへする分岐がなく、特殊配合、次に通常配合へ進みます。そのため全288同種ペアのうち、グランジーラ同士はシェルガドラ、花つきナエモチ同士は通常のナエモチになる2件を実行ファイル由来の結果として保持しています。この2形態を子にする公開親ペアは0件なので、逆引きは候補なしと表示し、架空の辺を追加しません。結果表は公開形態IDの基礎結果だけを扱い、ボス／Alpha行や個体状態の後段処理を含みません。抽出資産と全件生成表の機械照合は完了していますが、ネイティブ配合関数を41,616組すべて直接呼び出す照合と、ゲーム内孵化の全件照合は未実施です。</p>
+ <p>トップレベル処理には同種同士を無条件に同じパルへする分岐がなく、特殊配合、次に通常配合へ進みます。そのため全288同種ペアのうち、グランジーラ同士はシェルガドラ、花つきナエモチ同士は通常のナエモチになる2件を実行ファイル由来の結果として保持しています。この2形態を子にする公開親ペアは0件なので、逆引きは候補なしと表示し、架空の辺を追加しません。固定ビルドのネイティブ配合関数には全41,616組を親順2通り・性別向き2通り、合計166,464回直接入力し、結果・親順・性別・同種・特殊配合・通常選択の差分はすべて0でした。監査入力は固定ゲーム資産から抽出した表を実行ファイルへ注入したものです。結果表は公開形態IDの基礎結果だけを扱い、実行中PAKのDataTableをフックなしで直接読む照合、個体状態の後段処理、ゲーム内孵化の全件照合は含みません。</p>
 </details>
 </main>
 </div>
@@ -103,9 +103,9 @@
 </div>
 <div id="toast" class="toast"></div>
 
-<script src="data.js?v=pw-24181105-5" defer></script>
-<script src="render.js?v=pw-24181105-5" defer></script>
-<script src="picker-tree.js?v=pw-24181105-5" defer></script>
-<script src="events.js?v=pw-24181105-5" defer></script>
+<script src="data.js?v=pw-24181105-6" defer></script>
+<script src="render.js?v=pw-24181105-6" defer></script>
+<script src="picker-tree.js?v=pw-24181105-6" defer></script>
+<script src="events.js?v=pw-24181105-6" defer></script>
 </body>
 </html>

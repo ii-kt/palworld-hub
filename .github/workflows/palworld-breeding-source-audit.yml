@@ -103,6 +103,7 @@ jobs:
           path: |
             audit/exact-build-evidence.json
             audit/exact-comparison.json
+            audit/native-runtime-comparison.json
             data/verification.json
             test-results/
           if-no-files-found: ignore

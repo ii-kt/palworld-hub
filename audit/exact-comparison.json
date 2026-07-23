@@ -22,6 +22,13 @@
     "rawAssetExtractorSourceSha256": "79d44cd07efcf767d5be0153763333249229e798c86444f21ca48d7826423eb8",
     "rawAssetExtractionSha256": "e23a12ceffae5792b69c8faebe8ee3fbacbc09f0bd88572410d2b3b59aca1fe0",
     "nativeBreedingEvidenceSha256": "ac079224cbadb33886092145de2d4f5e2d6da6ccc5ba4cb0374f1e2f552e2651",
+    "nativeRuntimeEvidencePath": "audit/native-runtime-comparison.json",
+    "nativeRuntimeEvidenceSha256": "265bf315873f9d4f1e58ac8fec9544b912e7e6cea304cdc3b34cb1437be63bb1",
+    "nativeRuntimeEvidenceDigest": "08d7850d2bb566a77cd8734c93b7ed8f31563c287850e41450de2328c89a36a6",
+    "nativeRuntimeWorkflowRunId": 30018308091,
+    "nativeRuntimeWorkflowHeadSha": "9c79baa3f1f3ddda60f20a79399a1d4c91fb5f14",
+    "nativeRuntimeArtifactId": 8568465293,
+    "nativeRuntimeArtifactZipSha256": "e3985f60f66b115d9cee71fe15adab71c54d6b277cf997329555f3fa9471e6a9",
     "serverExecutableSha256": "788649fa1592160faa7bcf07ccd16d474ebeaae954717bc32284b5a43028d8e7",
     "serverExecutableBytes": 196285592,
     "serverExecutableElfBuildId": "7f7e167407984ec3",
@@ -46,37 +53,27 @@
     "zeroParentCandidateChildren": 2
   },
   "rosterSelection": {
-    "ruleSource": "fixed-build DT_PalMonsterParameter, DT_PalCharacterIconDataTable, and the pinned accepted-catalog decision set",
+    "ruleSource": "fixed-build DT_PalMonsterParameter and DT_PalCharacterIconDataTable fields only",
     "rowNamePatternInferenceUsed": false,
-    "fixedCatalogExcludedSourceIds": {
-      "SUMMON_DarkAlien": "SUMMON_VARIANT",
-      "SUMMON_DarkAlien_MAX": "SUMMON_VARIANT",
-      "SUMMON_WhiteAlienDragon": "SUMMON_VARIANT",
-      "WingGolem_Oilrig": "OILRIG_VARIANT",
-      "DarkAlien_Oilrig": "OILRIG_VARIANT",
-      "Horus_Oilrig": "OILRIG_VARIANT",
-      "Baphomet_Dark_Oilrig": "OILRIG_VARIANT",
-      "HadesBird_Oilrig": "OILRIG_VARIANT",
-      "LizardMan_Oilrig": "OILRIG_VARIANT",
-      "Quest_Farmer03_SheepBall": "QUEST_VARIANT",
-      "Quest_Farmer03_PinkCat": "QUEST_VARIANT",
-      "PREDATOR_FlowerRabbit_Quest": "QUEST_VARIANT",
-      "AmaterasuWolf_Dark_Quest_Friend": "QUEST_VARIANT",
-      "AmaterasuWolf_Dark_Quest_Enemy": "QUEST_VARIANT",
-      "GYM_ElecPanda_Otomo": "GYM_VARIANT",
-      "POLICE_ThunderDog": "POLICE_VARIANT",
-      "POLICE_HawkBird": "POLICE_VARIANT"
-    },
+    "publicFormKeyFields": [
+      "ZukanIndex",
+      "ZukanIndexSuffix",
+      "Rarity"
+    ],
+    "duplicateFormResolution": "within an identical public-form key, retain the single row with its own exact DT_PalCharacterIconDataTable ID; do not classify RowName prefixes or suffixes",
+    "duplicateFormGroupCount": 9,
+    "duplicateFormRowsExcludedCount": 11,
+    "tribeIconFallbackReleasedCount": 1,
+    "tribeIconFallbackReleasedSourceIds": [
+      "PlantSlime_Flower"
+    ],
+    "releasedSourceIdsSha256": "09b6c2e7db674ac1f48ebf6561c2d7e7f1e2d0d94ffbe0d7dfee5ae4c348ad46",
     "exclusionCounts": {
       "BOSS_VARIANT": 412,
-      "GYM_VARIANT": 1,
-      "OILRIG_VARIANT": 6,
-      "PALDEX_NOT_RELEASED": 12,
+      "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW": 11,
+      "PALDEX_NOT_RELEASED": 18,
       "PAL_CONFIGURATION_INCOMPLETE": 1,
-      "PAL_ICON_MISSING": 23,
-      "POLICE_VARIANT": 2,
-      "QUEST_VARIANT": 5,
-      "SUMMON_VARIANT": 3
+      "PAL_ICON_MISSING": 23
     },
     "excluded": [
       {
@@ -1812,17 +1809,17 @@
       {
         "id": "summon_darkalien",
         "sourceId": "SUMMON_DarkAlien",
-        "reason": "SUMMON_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "summon_darkalien_max",
         "sourceId": "SUMMON_DarkAlien_MAX",
-        "reason": "SUMMON_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "summon_whitealiendragon",
         "sourceId": "SUMMON_WhiteAlienDragon",
-        "reason": "SUMMON_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "summon_whitealiendragon_max",
@@ -2057,32 +2054,32 @@
       {
         "id": "winggolem_oilrig",
         "sourceId": "WingGolem_Oilrig",
-        "reason": "OILRIG_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "darkalien_oilrig",
         "sourceId": "DarkAlien_Oilrig",
-        "reason": "OILRIG_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "horus_oilrig",
         "sourceId": "Horus_Oilrig",
-        "reason": "OILRIG_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "baphomet_dark_oilrig",
         "sourceId": "Baphomet_Dark_Oilrig",
-        "reason": "OILRIG_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "hadesbird_oilrig",
         "sourceId": "HadesBird_Oilrig",
-        "reason": "OILRIG_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "lizardman_oilrig",
         "sourceId": "LizardMan_Oilrig",
-        "reason": "OILRIG_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "kingcrab",
@@ -2172,17 +2169,17 @@
       {
         "id": "quest_farmer03_sheepball",
         "sourceId": "Quest_Farmer03_SheepBall",
-        "reason": "QUEST_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "quest_farmer03_pinkcat",
         "sourceId": "Quest_Farmer03_PinkCat",
-        "reason": "QUEST_VARIANT"
+        "reason": "DUPLICATE_PUBLIC_FORM_PARAMETER_ROW"
       },
       {
         "id": "gym_elecpanda_otomo",
         "sourceId": "GYM_ElecPanda_Otomo",
-        "reason": "GYM_VARIANT"
+        "reason": "PALDEX_NOT_RELEASED"
       },
       {
         "id": "raid_yakushimaboss002_head",
@@ -2317,17 +2314,17 @@
       {
         "id": "predator_flowerrabbit_quest",
         "sourceId": "PREDATOR_FlowerRabbit_Quest",
-        "reason": "QUEST_VARIANT"
+        "reason": "PALDEX_NOT_RELEASED"
       },
       {
         "id": "police_thunderdog",
         "sourceId": "POLICE_ThunderDog",
-        "reason": "POLICE_VARIANT"
+        "reason": "PALDEX_NOT_RELEASED"
       },
       {
         "id": "police_hawkbird",
         "sourceId": "POLICE_HawkBird",
-        "reason": "POLICE_VARIANT"
+        "reason": "PALDEX_NOT_RELEASED"
       },
       {
         "id": "boss_elecpanda_bossrush",
@@ -2397,12 +2394,12 @@
       {
         "id": "amaterasuwolf_dark_quest_friend",
         "sourceId": "AmaterasuWolf_Dark_Quest_Friend",
-        "reason": "QUEST_VARIANT"
+        "reason": "PALDEX_NOT_RELEASED"
       },
       {
         "id": "amaterasuwolf_dark_quest_enemy",
         "sourceId": "AmaterasuWolf_Dark_Quest_Enemy",
-        "reason": "QUEST_VARIANT"
+        "reason": "PALDEX_NOT_RELEASED"
       }
     ]
   },
@@ -2852,8 +2849,8 @@
     ],
     "siteMismatchCount": 0,
     "siteMismatches": [],
-    "nativeTopLevelFunctionInvokedForEveryPair": false,
-    "conclusion": "The fixed executable's complete top-level orchestration checks special combinations and then falls through to normal candidate selection without a parent-equality branch. Applying that control flow to all 288 self pairs yields 286 identity results and two asset-derived exceptions. The auxiliary same-species shortcut is therefore not treated as authoritative."
+    "nativeTopLevelFunctionInvokedForEveryPair": true,
+    "conclusion": "The fixed executable's complete top-level orchestration checks special combinations and then falls through to normal candidate selection without a parent-equality branch. Applying that control flow to all 288 self pairs yields 286 identity results and two asset-derived exceptions. All released parent pairs were also invoked directly in the fixed native function. The auxiliary same-species shortcut is therefore not treated as authoritative."
   },
   "reverseIndexAnalysis": {
     "releasedChildCount": 288,
@@ -35494,6 +35491,7 @@
   },
   "exactReferenceComparison": {
     "reference": "logical rows regenerated directly from the fixed-build asset extraction using the committed native-static semantics; compared with the site's decoded compact table",
+    "independentNativeOracle": false,
     "referenceLogicalRows": 41617,
     "siteLogicalRows": 41617,
     "matchingLogicalRows": 41617,
@@ -35524,10 +35522,70 @@
     "unreleasedPalIds": [],
     "referenceDuplicates": []
   },
+  "nativeRuntimeComparison": {
+    "evidencePath": "audit/native-runtime-comparison.json",
+    "evidenceFileSha256": "265bf315873f9d4f1e58ac8fec9544b912e7e6cea304cdc3b34cb1437be63bb1",
+    "evidenceDigest": "08d7850d2bb566a77cd8734c93b7ed8f31563c287850e41450de2328c89a36a6",
+    "workflowRunId": 30018308091,
+    "workflowHeadSha": "9c79baa3f1f3ddda60f20a79399a1d4c91fb5f14",
+    "artifactId": 8568465293,
+    "artifactZipSha256": "e3985f60f66b115d9cee71fe15adab71c54d6b277cf997329555f3fa9471e6a9",
+    "scope": "fixed native breeding function with exact extracted asset tables injected by the audit harness",
+    "instrumentedLookupPoints": [
+      "raw DT FindRow at 0x713d270",
+      "unique-combination DT FindRow at 0x7118880",
+      "DT row-key generation at 0xa2f9f40",
+      "manager FindRow at 0x713a280",
+      "manager helper at 0x76459e0"
+    ],
+    "livePakDataTablesReadDirectly": false,
+    "selectionOrRecipeLogicStubbed": false,
+    "unorderedParentPairs": 41616,
+    "logicalResultRows": 41617,
+    "matchingLogicalResultRows": 41617,
+    "nativeInvocationCount": 166464,
+    "differenceCount": 0,
+    "differences": {
+      "runtimeRowMetadata": 0,
+      "runtimeUniqueRows": 0,
+      "runtimeLogicalResults": 0,
+      "runtimeCalls": 0,
+      "parentOrder": 0,
+      "hiddenGender": 0,
+      "sameSpecies": 0,
+      "specialCombination": 0,
+      "normalSelection": 0,
+      "bossVariantMapping": 0
+    },
+    "allDifferences": {
+      "rowMetadata": [],
+      "uniqueRows": [],
+      "logicalResults": []
+    },
+    "runtimeTableIdentity": {
+      "rawTribeCount": 333,
+      "runtimeTribeCount": 333,
+      "rawToRuntimeAmbiguityCount": 0,
+      "runtimeToRawAmbiguityCount": 0,
+      "runtimeRowsSha256": "8b699bc10bfb8de85e026850f074d46c0785843ea4a3b2aebba75dd7d2d6595f"
+    },
+    "serverInitialization": {
+      "reportedGameVersion": "v1.0.1.100619",
+      "reachedRunningState": true,
+      "processExitCode": 143
+    },
+    "bossAlphaSpeciesMapping": {
+      "mappingCount": 288,
+      "mismatchCount": 0,
+      "speciesIdentityPreserved": true
+    }
+  },
   "auxiliaryImplementations": {
     "palCalc": {
       "role": "pinned-comparison-only",
       "releasedRosterCount": 288,
+      "releasedRosterMissing": [],
+      "releasedRosterExtra": [],
       "logicalRowCount": 41617,
       "matchingLogicalRowCount": 41615,
       "mismatchCount": 4,
@@ -51736,6 +51794,7 @@
           "child": "yakushimamonster003"
         }
       ],
+      "metadataDifferences": [],
       "variantModelDifferences": [
         {
           "pal": "plantslime_flower",
@@ -51757,6 +51816,13 @@
         "yakushimamonster003",
         "yakushimamonster003_purple"
       ],
+      "calculationSemanticsObserved": {
+        "sameSpeciesShortcut": true,
+        "specialCombinationLookup": true,
+        "specialChildrenExcluded": true,
+        "duplicatePriorityTieBreak": true,
+        "duplicatePriorityAssetRead": true
+      },
       "usedForAssetReleaseSelection": false
     },
     "palworldSaveTools": {
@@ -52462,8 +52528,13 @@
   "runtimeVerification": {
     "resultScope": "base-released-form-id",
     "nativeBreedingStaticAnalysis": true,
-    "nativeBreedingFunctionExhaustive": false,
+    "nativeBreedingFunctionExhaustive": true,
+    "nativeBreedingFunctionInvocationCount": 166464,
+    "nativeRuntimeMismatchCount": 0,
+    "fixedExtractedAssetTablesInjected": true,
+    "livePakDataTablesReadDirectly": false,
     "inGameHatchExhaustive": false,
+    "bossAlphaSpeciesMappingVerified": true,
     "bossAlphaAndIndividualStatePostProcessingModeled": false
   }
 }

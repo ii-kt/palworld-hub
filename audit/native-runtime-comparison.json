@@ -1,0 +1,2403 @@
+{
+  "schemaVersion": 2,
+  "status": "fixed-build-native-runtime-matched",
+  "target": {
+    "gameVersion": "v1.0.1.100619",
+    "serverAppId": "2394010",
+    "serverBuildId": "24181105",
+    "serverDepotId": "2394012",
+    "serverDepotManifestId": "2167164727892555341",
+    "serverExecutableBytes": 196285592,
+    "serverExecutableSha256": "788649fa1592160faa7bcf07ccd16d474ebeaae954717bc32284b5a43028d8e7",
+    "serverPakBytes": 4797040962,
+    "serverPakSha256": "cad80fe15c38d74a795779fbab31f04bc2c15c37fb8a2188e4d89f3800fb0e68"
+  },
+  "invocation": {
+    "nativeFunctionAddress": "0x71168c0",
+    "managerHelperAddress": "0x76459e0",
+    "method": "direct native function invocation in initialized fixed-build server",
+    "parentOrdersPerGenderOrientation": 2,
+    "genderOrientationsPerPair": 2,
+    "nativeInvocationCount": 166464,
+    "harnessHelperScope": "data-table-manager lookup for two synthetic parent records only",
+    "selectionOrRecipeLogicStubbed": false,
+    "internetEgressBlocked": true
+  },
+  "counts": {
+    "rawPalRows": 753,
+    "releasedPals": 288,
+    "uniqueCombinationRows": 258,
+    "unorderedParentPairs": 41616,
+    "logicalResultRows": 41617,
+    "matchingLogicalResultRows": 41617,
+    "nativeInvocations": 166464,
+    "bossVariantMappings": 288
+  },
+  "differences": {
+    "runtimeRowMetadata": 0,
+    "runtimeUniqueRows": 0,
+    "runtimeLogicalResults": 0,
+    "runtimeCalls": 0,
+    "parentOrder": 0,
+    "hiddenGender": 0,
+    "sameSpecies": 0,
+    "specialCombination": 0,
+    "normalSelection": 0,
+    "bossVariantMapping": 0
+  },
+  "gender": {
+    "maleRuntimeCode": 1,
+    "femaleRuntimeCode": 2,
+    "genderDependentPair": "catmage|foxmage"
+  },
+  "runtimeTableIdentity": {
+    "rawTribeCount": 333,
+    "runtimeTribeCount": 333,
+    "rawToRuntimeAmbiguityCount": 0,
+    "runtimeToRawAmbiguityCount": 0,
+    "runtimeRowsSha256": "8b699bc10bfb8de85e026850f074d46c0785843ea4a3b2aebba75dd7d2d6595f"
+  },
+  "bossAlphaPostProcessing": {
+    "nativeFunctionAddress": "0x7118c40",
+    "modeled": true,
+    "mappingCount": 288,
+    "mismatchCount": 0,
+    "speciesIdentityPreserved": true,
+    "mappings": [
+      {
+        "palId": "sheepball",
+        "sourceId": "SheepBall",
+        "bossSourceId": "BOSS_SheepBall",
+        "baseTribeRuntimeId": 143,
+        "bossTribeRuntimeId": 143,
+        "valid": true
+      },
+      {
+        "palId": "pinkcat",
+        "sourceId": "PinkCat",
+        "bossSourceId": "BOSS_PinkCat",
+        "baseTribeRuntimeId": 124,
+        "bossTribeRuntimeId": 124,
+        "valid": true
+      },
+      {
+        "palId": "chickenpal",
+        "sourceId": "ChickenPal",
+        "bossSourceId": "BOSS_ChickenPal",
+        "baseTribeRuntimeId": 39,
+        "bossTribeRuntimeId": 39,
+        "valid": true
+      },
+      {
+        "palId": "carbunclo",
+        "sourceId": "Carbunclo",
+        "bossSourceId": "BOSS_Carbunclo",
+        "baseTribeRuntimeId": 34,
+        "bossTribeRuntimeId": 34,
+        "valid": true
+      },
+      {
+        "palId": "blueplatypus",
+        "sourceId": "BluePlatypus",
+        "bossSourceId": "BOSS_BluePlatypus",
+        "baseTribeRuntimeId": 30,
+        "bossTribeRuntimeId": 30,
+        "valid": true
+      },
+      {
+        "palId": "blueplatypus_fire",
+        "sourceId": "BluePlatypus_Fire",
+        "bossSourceId": "BOSS_BluePlatypus_Fire",
+        "baseTribeRuntimeId": 265,
+        "bossTribeRuntimeId": 265,
+        "valid": true
+      },
+      {
+        "palId": "cutefox",
+        "sourceId": "CuteFox",
+        "bossSourceId": "BOSS_CuteFox",
+        "baseTribeRuntimeId": 43,
+        "bossTribeRuntimeId": 43,
+        "valid": true
+      },
+      {
+        "palId": "flyingmanta",
+        "sourceId": "FlyingManta",
+        "bossSourceId": "BOSS_FlyingManta",
+        "baseTribeRuntimeId": 68,
+        "bossTribeRuntimeId": 68,
+        "valid": true
+      },
+      {
+        "palId": "flyingmanta_thunder",
+        "sourceId": "FlyingManta_Thunder",
+        "bossSourceId": "BOSS_FlyingManta_Thunder",
+        "baseTribeRuntimeId": 264,
+        "bossTribeRuntimeId": 264,
+        "valid": true
+      },
+      {
+        "palId": "woolfox",
+        "sourceId": "WoolFox",
+        "bossSourceId": "BOSS_WoolFox",
+        "baseTribeRuntimeId": 171,
+        "bossTribeRuntimeId": 171,
+        "valid": true
+      },
+      {
+        "palId": "kendofrog",
+        "sourceId": "KendoFrog",
+        "bossSourceId": "BOSS_KendoFrog",
+        "baseTribeRuntimeId": 174,
+        "bossTribeRuntimeId": 174,
+        "valid": true
+      },
+      {
+        "palId": "kendofrog_dark",
+        "sourceId": "KendoFrog_Dark",
+        "bossSourceId": "BOSS_KendoFrog_Dark",
+        "baseTribeRuntimeId": 268,
+        "bossTribeRuntimeId": 268,
+        "valid": true
+      },
+      {
+        "palId": "leafmomonga",
+        "sourceId": "LeafMomonga",
+        "bossSourceId": "BOSS_LeafMomonga",
+        "baseTribeRuntimeId": 230,
+        "bossTribeRuntimeId": 230,
+        "valid": true
+      },
+      {
+        "palId": "ganesha",
+        "sourceId": "Ganesha",
+        "bossSourceId": "BOSS_Ganesha",
+        "baseTribeRuntimeId": 71,
+        "bossTribeRuntimeId": 71,
+        "valid": true
+      },
+      {
+        "palId": "plantslime",
+        "sourceId": "PlantSlime",
+        "bossSourceId": "BOSS_PlantSlime",
+        "baseTribeRuntimeId": 128,
+        "bossTribeRuntimeId": 128,
+        "valid": true
+      },
+      {
+        "palId": "plantslime_flower",
+        "sourceId": "PlantSlime_Flower",
+        "bossSourceId": "BOSS_PlantSlime",
+        "baseTribeRuntimeId": 128,
+        "bossTribeRuntimeId": 128,
+        "valid": true
+      },
+      {
+        "palId": "samuraidog",
+        "sourceId": "SamuraiDog",
+        "bossSourceId": "BOSS_SamuraiDog",
+        "baseTribeRuntimeId": 257,
+        "bossTribeRuntimeId": 257,
+        "valid": true
+      },
+      {
+        "palId": "cloverfairy",
+        "sourceId": "CloverFairy",
+        "bossSourceId": "BOSS_CloverFairy",
+        "baseTribeRuntimeId": 240,
+        "bossTribeRuntimeId": 240,
+        "valid": true
+      },
+      {
+        "palId": "hedgehog",
+        "sourceId": "Hedgehog",
+        "bossSourceId": "BOSS_Hedgehog",
+        "baseTribeRuntimeId": 86,
+        "bossTribeRuntimeId": 86,
+        "valid": true
+      },
+      {
+        "palId": "hedgehog_ice",
+        "sourceId": "Hedgehog_Ice",
+        "bossSourceId": "BOSS_Hedgehog_Ice",
+        "baseTribeRuntimeId": 87,
+        "bossTribeRuntimeId": 87,
+        "valid": true
+      },
+      {
+        "palId": "negativekoala",
+        "sourceId": "NegativeKoala",
+        "bossSourceId": "BOSS_NegativeKoala",
+        "baseTribeRuntimeId": 120,
+        "bossTribeRuntimeId": 120,
+        "valid": true
+      },
+      {
+        "palId": "penguin",
+        "sourceId": "Penguin",
+        "bossSourceId": "BOSS_Penguin",
+        "baseTribeRuntimeId": 123,
+        "bossTribeRuntimeId": 123,
+        "valid": true
+      },
+      {
+        "palId": "penguin_electric",
+        "sourceId": "Penguin_Electric",
+        "bossSourceId": "BOSS_Penguin_Electric",
+        "baseTribeRuntimeId": 262,
+        "bossTribeRuntimeId": 262,
+        "valid": true
+      },
+      {
+        "palId": "captainpenguin",
+        "sourceId": "CaptainPenguin",
+        "bossSourceId": "BOSS_CaptainPenguin",
+        "baseTribeRuntimeId": 33,
+        "bossTribeRuntimeId": 33,
+        "valid": true
+      },
+      {
+        "palId": "captainpenguin_black",
+        "sourceId": "CaptainPenguin_Black",
+        "bossSourceId": "BOSS_CaptainPenguin_Black",
+        "baseTribeRuntimeId": 263,
+        "bossTribeRuntimeId": 263,
+        "valid": true
+      },
+      {
+        "palId": "wizardowl",
+        "sourceId": "WizardOwl",
+        "bossSourceId": "BOSS_WizardOwl",
+        "baseTribeRuntimeId": 170,
+        "bossTribeRuntimeId": 170,
+        "valid": true
+      },
+      {
+        "palId": "alpaca",
+        "sourceId": "Alpaca",
+        "bossSourceId": "BOSS_Alpaca",
+        "baseTribeRuntimeId": 15,
+        "bossTribeRuntimeId": 15,
+        "valid": true
+      },
+      {
+        "palId": "kingalpaca",
+        "sourceId": "KingAlpaca",
+        "bossSourceId": "BOSS_KingAlpaca",
+        "baseTribeRuntimeId": 97,
+        "bossTribeRuntimeId": 97,
+        "valid": true
+      },
+      {
+        "palId": "kingalpaca_ice",
+        "sourceId": "KingAlpaca_Ice",
+        "bossSourceId": "BOSS_KingAlpaca_Ice",
+        "baseTribeRuntimeId": 98,
+        "bossTribeRuntimeId": 98,
+        "valid": true
+      },
+      {
+        "palId": "dreamdemon",
+        "sourceId": "DreamDemon",
+        "bossSourceId": "BOSS_DreamDemon",
+        "baseTribeRuntimeId": 51,
+        "bossTribeRuntimeId": 51,
+        "valid": true
+      },
+      {
+        "palId": "monkey",
+        "sourceId": "Monkey",
+        "bossSourceId": "BOSS_Monkey",
+        "baseTribeRuntimeId": 113,
+        "bossTribeRuntimeId": 113,
+        "valid": true
+      },
+      {
+        "palId": "monkey_fire",
+        "sourceId": "Monkey_Fire",
+        "bossSourceId": "BOSS_Monkey_Fire",
+        "baseTribeRuntimeId": 115,
+        "bossTribeRuntimeId": 115,
+        "valid": true
+      },
+      {
+        "palId": "nightfox",
+        "sourceId": "NightFox",
+        "bossSourceId": "BOSS_NightFox",
+        "baseTribeRuntimeId": 122,
+        "bossTribeRuntimeId": 122,
+        "valid": true
+      },
+      {
+        "palId": "lavagirl",
+        "sourceId": "LavaGirl",
+        "bossSourceId": "BOSS_LavaGirl",
+        "baseTribeRuntimeId": 103,
+        "bossTribeRuntimeId": 103,
+        "valid": true
+      },
+      {
+        "palId": "flamebambi",
+        "sourceId": "FlameBambi",
+        "bossSourceId": "BOSS_FlameBambi",
+        "baseTribeRuntimeId": 61,
+        "bossTribeRuntimeId": 61,
+        "valid": true
+      },
+      {
+        "palId": "bastet",
+        "sourceId": "Bastet",
+        "bossSourceId": "BOSS_Bastet",
+        "baseTribeRuntimeId": 20,
+        "bossTribeRuntimeId": 20,
+        "valid": true
+      },
+      {
+        "palId": "bastet_ice",
+        "sourceId": "Bastet_Ice",
+        "bossSourceId": "BOSS_Bastet_Ice",
+        "baseTribeRuntimeId": 21,
+        "bossTribeRuntimeId": 21,
+        "valid": true
+      },
+      {
+        "palId": "boar",
+        "sourceId": "Boar",
+        "bossSourceId": "BOSS_Boar",
+        "baseTribeRuntimeId": 31,
+        "bossTribeRuntimeId": 31,
+        "valid": true
+      },
+      {
+        "palId": "kitsunebi",
+        "sourceId": "Kitsunebi",
+        "bossSourceId": "BOSS_Kitsunebi",
+        "baseTribeRuntimeId": 102,
+        "bossTribeRuntimeId": 102,
+        "valid": true
+      },
+      {
+        "palId": "kitsunebi_ice",
+        "sourceId": "Kitsunebi_Ice",
+        "bossSourceId": "BOSS_Kitsunebi_Ice",
+        "baseTribeRuntimeId": 217,
+        "bossTribeRuntimeId": 217,
+        "valid": true
+      },
+      {
+        "palId": "negativeoctopus",
+        "sourceId": "NegativeOctopus",
+        "bossSourceId": "BOSS_NegativeOctopus",
+        "baseTribeRuntimeId": 121,
+        "bossTribeRuntimeId": 121,
+        "valid": true
+      },
+      {
+        "palId": "negativeoctopus_neutral",
+        "sourceId": "NegativeOctopus_Neutral",
+        "bossSourceId": "BOSS_NegativeOctopus_Neutral",
+        "baseTribeRuntimeId": 261,
+        "bossTribeRuntimeId": 261,
+        "valid": true
+      },
+      {
+        "palId": "cutemole",
+        "sourceId": "CuteMole",
+        "bossSourceId": "BOSS_CuteMole",
+        "baseTribeRuntimeId": 44,
+        "bossTribeRuntimeId": 44,
+        "valid": true
+      },
+      {
+        "palId": "deer",
+        "sourceId": "Deer",
+        "bossSourceId": "BOSS_Deer",
+        "baseTribeRuntimeId": 49,
+        "bossTribeRuntimeId": 49,
+        "valid": true
+      },
+      {
+        "palId": "deer_ground",
+        "sourceId": "Deer_Ground",
+        "bossSourceId": "BOSS_Deer_Ground",
+        "baseTribeRuntimeId": 50,
+        "bossTribeRuntimeId": 50,
+        "valid": true
+      },
+      {
+        "palId": "garm",
+        "sourceId": "Garm",
+        "bossSourceId": "BOSS_Garm",
+        "baseTribeRuntimeId": 72,
+        "bossTribeRuntimeId": 72,
+        "valid": true
+      },
+      {
+        "palId": "berrygoat",
+        "sourceId": "BerryGoat",
+        "bossSourceId": "BOSS_BerryGoat",
+        "baseTribeRuntimeId": 23,
+        "bossTribeRuntimeId": 23,
+        "valid": true
+      },
+      {
+        "palId": "berrygoat_dark",
+        "sourceId": "BerryGoat_Dark",
+        "bossSourceId": "BOSS_BerryGoat_Dark",
+        "baseTribeRuntimeId": 216,
+        "bossTribeRuntimeId": 216,
+        "valid": true
+      },
+      {
+        "palId": "mopbaby",
+        "sourceId": "MopBaby",
+        "bossSourceId": "BOSS_MopBaby",
+        "baseTribeRuntimeId": 116,
+        "bossTribeRuntimeId": 116,
+        "valid": true
+      },
+      {
+        "palId": "mopking",
+        "sourceId": "MopKing",
+        "bossSourceId": "BOSS_MopKing",
+        "baseTribeRuntimeId": 117,
+        "bossTribeRuntimeId": 117,
+        "valid": true
+      },
+      {
+        "palId": "tentacleturtle",
+        "sourceId": "TentacleTurtle",
+        "bossSourceId": "BOSS_TentacleTurtle",
+        "baseTribeRuntimeId": 151,
+        "bossTribeRuntimeId": 151,
+        "valid": true
+      },
+      {
+        "palId": "tentacleturtle_ground",
+        "sourceId": "TentacleTurtle_Ground",
+        "bossSourceId": "BOSS_TentacleTurtle_Ground",
+        "baseTribeRuntimeId": 267,
+        "bossTribeRuntimeId": 267,
+        "valid": true
+      },
+      {
+        "palId": "windchimes",
+        "sourceId": "WindChimes",
+        "bossSourceId": "BOSS_WindChimes",
+        "baseTribeRuntimeId": 168,
+        "bossTribeRuntimeId": 168,
+        "valid": true
+      },
+      {
+        "palId": "windchimes_ice",
+        "sourceId": "WindChimes_Ice",
+        "bossSourceId": "BOSS_WindChimes_Ice",
+        "baseTribeRuntimeId": 169,
+        "bossTribeRuntimeId": 169,
+        "valid": true
+      },
+      {
+        "palId": "sweetssheep",
+        "sourceId": "SweetsSheep",
+        "bossSourceId": "BOSS_SweetsSheep",
+        "baseTribeRuntimeId": 149,
+        "bossTribeRuntimeId": 149,
+        "valid": true
+      },
+      {
+        "palId": "sweetssheep_ground",
+        "sourceId": "SweetsSheep_Ground",
+        "bossSourceId": "BOSS_SweetsSheep_Ground",
+        "baseTribeRuntimeId": 150,
+        "bossTribeRuntimeId": 150,
+        "valid": true
+      },
+      {
+        "palId": "cowpal",
+        "sourceId": "CowPal",
+        "bossSourceId": "BOSS_CowPal",
+        "baseTribeRuntimeId": 41,
+        "bossTribeRuntimeId": 41,
+        "valid": true
+      },
+      {
+        "palId": "bluedragon",
+        "sourceId": "BlueDragon",
+        "bossSourceId": "BOSS_BlueDragon",
+        "baseTribeRuntimeId": 29,
+        "bossTribeRuntimeId": 29,
+        "valid": true
+      },
+      {
+        "palId": "bluedragon_ice",
+        "sourceId": "BlueDragon_Ice",
+        "bossSourceId": "BOSS_BlueDragon_Ice",
+        "baseTribeRuntimeId": 269,
+        "bossTribeRuntimeId": 269,
+        "valid": true
+      },
+      {
+        "palId": "eleccat",
+        "sourceId": "ElecCat",
+        "bossSourceId": "BOSS_ElecCat",
+        "baseTribeRuntimeId": 54,
+        "bossTribeRuntimeId": 54,
+        "valid": true
+      },
+      {
+        "palId": "kelpie",
+        "sourceId": "Kelpie",
+        "bossSourceId": "BOSS_Kelpie",
+        "baseTribeRuntimeId": 95,
+        "bossTribeRuntimeId": 95,
+        "valid": true
+      },
+      {
+        "palId": "kelpie_fire",
+        "sourceId": "Kelpie_Fire",
+        "bossSourceId": "BOSS_Kelpie_Fire",
+        "baseTribeRuntimeId": 96,
+        "bossTribeRuntimeId": 96,
+        "valid": true
+      },
+      {
+        "palId": "pinkrabbit",
+        "sourceId": "PinkRabbit",
+        "bossSourceId": "BOSS_PinkRabbit",
+        "baseTribeRuntimeId": 127,
+        "bossTribeRuntimeId": 127,
+        "valid": true
+      },
+      {
+        "palId": "pinkrabbit_grass",
+        "sourceId": "PinkRabbit_Grass",
+        "bossSourceId": "BOSS_PinkRabbit_Grass",
+        "baseTribeRuntimeId": 224,
+        "bossTribeRuntimeId": 224,
+        "valid": true
+      },
+      {
+        "palId": "jellyfishfairy",
+        "sourceId": "JellyfishFairy",
+        "bossSourceId": "BOSS_JellyfishFairy",
+        "baseTribeRuntimeId": 215,
+        "bossTribeRuntimeId": 215,
+        "valid": true
+      },
+      {
+        "palId": "jellyfishghost",
+        "sourceId": "JellyfishGhost",
+        "bossSourceId": "BOSS_JellyfishGhost",
+        "baseTribeRuntimeId": 254,
+        "bossTribeRuntimeId": 254,
+        "valid": true
+      },
+      {
+        "palId": "clionetwins",
+        "sourceId": "ClioneTwins",
+        "bossSourceId": "BOSS_ClioneTwins",
+        "baseTribeRuntimeId": 289,
+        "bossTribeRuntimeId": 289,
+        "valid": true
+      },
+      {
+        "palId": "octopusgirl",
+        "sourceId": "OctopusGirl",
+        "bossSourceId": "BOSS_OctopusGirl",
+        "baseTribeRuntimeId": 212,
+        "bossTribeRuntimeId": 212,
+        "valid": true
+      },
+      {
+        "palId": "octopusgirl_neutral",
+        "sourceId": "OctopusGirl_Neutral",
+        "bossSourceId": "BOSS_OctopusGirl_Neutral",
+        "baseTribeRuntimeId": 213,
+        "bossTribeRuntimeId": 213,
+        "valid": true
+      },
+      {
+        "palId": "eagle",
+        "sourceId": "Eagle",
+        "bossSourceId": "BOSS_Eagle",
+        "baseTribeRuntimeId": 53,
+        "bossTribeRuntimeId": 53,
+        "valid": true
+      },
+      {
+        "palId": "ghostblackcat",
+        "sourceId": "GhostBlackCat",
+        "bossSourceId": "BOSS_GhostBlackCat",
+        "baseTribeRuntimeId": 242,
+        "bossTribeRuntimeId": 242,
+        "valid": true
+      },
+      {
+        "palId": "hawkbird",
+        "sourceId": "HawkBird",
+        "bossSourceId": "BOSS_HawkBird",
+        "baseTribeRuntimeId": 85,
+        "bossTribeRuntimeId": 85,
+        "valid": true
+      },
+      {
+        "palId": "catbat",
+        "sourceId": "CatBat",
+        "bossSourceId": "BOSS_CatBat",
+        "baseTribeRuntimeId": 35,
+        "bossTribeRuntimeId": 35,
+        "valid": true
+      },
+      {
+        "palId": "colorfulbird",
+        "sourceId": "ColorfulBird",
+        "bossSourceId": "BOSS_ColorfulBird",
+        "baseTribeRuntimeId": 40,
+        "bossTribeRuntimeId": 40,
+        "valid": true
+      },
+      {
+        "palId": "kirin",
+        "sourceId": "Kirin",
+        "bossSourceId": "BOSS_Kirin",
+        "baseTribeRuntimeId": 100,
+        "bossTribeRuntimeId": 100,
+        "valid": true
+      },
+      {
+        "palId": "kirin_ice",
+        "sourceId": "Kirin_Ice",
+        "bossSourceId": "BOSS_Kirin_Ice",
+        "baseTribeRuntimeId": 101,
+        "bossTribeRuntimeId": 101,
+        "valid": true
+      },
+      {
+        "palId": "sharkkid",
+        "sourceId": "SharkKid",
+        "bossSourceId": "BOSS_SharkKid",
+        "baseTribeRuntimeId": 141,
+        "bossTribeRuntimeId": 141,
+        "valid": true
+      },
+      {
+        "palId": "sharkkid_fire",
+        "sourceId": "SharkKid_Fire",
+        "bossSourceId": "BOSS_SharkKid_Fire",
+        "baseTribeRuntimeId": 142,
+        "bossTribeRuntimeId": 142,
+        "valid": true
+      },
+      {
+        "palId": "werewolf",
+        "sourceId": "Werewolf",
+        "bossSourceId": "BOSS_Werewolf",
+        "baseTribeRuntimeId": 164,
+        "bossTribeRuntimeId": 164,
+        "valid": true
+      },
+      {
+        "palId": "werewolf_ice",
+        "sourceId": "Werewolf_Ice",
+        "bossSourceId": "BOSS_Werewolf_Ice",
+        "baseTribeRuntimeId": 219,
+        "bossTribeRuntimeId": 219,
+        "valid": true
+      },
+      {
+        "palId": "darkcrow",
+        "sourceId": "DarkCrow",
+        "bossSourceId": "BOSS_DarkCrow",
+        "baseTribeRuntimeId": 45,
+        "bossTribeRuntimeId": 45,
+        "valid": true
+      },
+      {
+        "palId": "flamebuffalo",
+        "sourceId": "FlameBuffalo",
+        "bossSourceId": "BOSS_FlameBuffalo",
+        "baseTribeRuntimeId": 62,
+        "bossTribeRuntimeId": 62,
+        "valid": true
+      },
+      {
+        "palId": "fluffybird",
+        "sourceId": "FluffyBird",
+        "bossSourceId": "BOSS_FluffyBird",
+        "baseTribeRuntimeId": 285,
+        "bossTribeRuntimeId": 285,
+        "valid": true
+      },
+      {
+        "palId": "littlebriarrose",
+        "sourceId": "LittleBriarRose",
+        "bossSourceId": "BOSS_LittleBriarRose",
+        "baseTribeRuntimeId": 108,
+        "bossTribeRuntimeId": 108,
+        "valid": true
+      },
+      {
+        "palId": "cutebutterfly",
+        "sourceId": "CuteButterfly",
+        "bossSourceId": "BOSS_CuteButterfly",
+        "baseTribeRuntimeId": 42,
+        "bossTribeRuntimeId": 42,
+        "valid": true
+      },
+      {
+        "palId": "elecpomeranian",
+        "sourceId": "ElecPomeranian",
+        "bossSourceId": "BOSS_ElecPomeranian",
+        "baseTribeRuntimeId": 241,
+        "bossTribeRuntimeId": 241,
+        "valid": true
+      },
+      {
+        "palId": "fairydragon",
+        "sourceId": "FairyDragon",
+        "bossSourceId": "BOSS_FairyDragon",
+        "baseTribeRuntimeId": 56,
+        "bossTribeRuntimeId": 56,
+        "valid": true
+      },
+      {
+        "palId": "fairydragon_water",
+        "sourceId": "FairyDragon_Water",
+        "bossSourceId": "BOSS_FairyDragon_Water",
+        "baseTribeRuntimeId": 57,
+        "bossTribeRuntimeId": 57,
+        "valid": true
+      },
+      {
+        "palId": "birddragon",
+        "sourceId": "BirdDragon",
+        "bossSourceId": "BOSS_BirdDragon",
+        "baseTribeRuntimeId": 24,
+        "bossTribeRuntimeId": 24,
+        "valid": true
+      },
+      {
+        "palId": "birddragon_ice",
+        "sourceId": "BirdDragon_Ice",
+        "bossSourceId": "BOSS_BirdDragon_Ice",
+        "baseTribeRuntimeId": 25,
+        "bossTribeRuntimeId": 25,
+        "valid": true
+      },
+      {
+        "palId": "catvampire",
+        "sourceId": "CatVampire",
+        "bossSourceId": "BOSS_CatVampire",
+        "baseTribeRuntimeId": 38,
+        "bossTribeRuntimeId": 38,
+        "valid": true
+      },
+      {
+        "palId": "violetfairy",
+        "sourceId": "VioletFairy",
+        "bossSourceId": "BOSS_VioletFairy",
+        "baseTribeRuntimeId": 158,
+        "bossTribeRuntimeId": 158,
+        "valid": true
+      },
+      {
+        "palId": "soldierbee",
+        "sourceId": "SoldierBee",
+        "bossSourceId": "BOSS_SoldierBee",
+        "baseTribeRuntimeId": 146,
+        "bossTribeRuntimeId": 146,
+        "valid": true
+      },
+      {
+        "palId": "queenbee",
+        "sourceId": "QueenBee",
+        "bossSourceId": "BOSS_QueenBee",
+        "baseTribeRuntimeId": 129,
+        "bossTribeRuntimeId": 129,
+        "valid": true
+      },
+      {
+        "palId": "pinklizard",
+        "sourceId": "PinkLizard",
+        "bossSourceId": "BOSS_PinkLizard",
+        "baseTribeRuntimeId": 126,
+        "bossTribeRuntimeId": 126,
+        "valid": true
+      },
+      {
+        "palId": "naughtycat",
+        "sourceId": "NaughtyCat",
+        "bossSourceId": "BOSS_NaughtyCat",
+        "baseTribeRuntimeId": 119,
+        "bossTribeRuntimeId": 119,
+        "valid": true
+      },
+      {
+        "palId": "purplespider",
+        "sourceId": "PurpleSpider",
+        "bossSourceId": "BOSS_PurpleSpider",
+        "baseTribeRuntimeId": 208,
+        "bossTribeRuntimeId": 208,
+        "valid": true
+      },
+      {
+        "palId": "iceseal",
+        "sourceId": "IceSeal",
+        "bossSourceId": "BOSS_IceSeal",
+        "baseTribeRuntimeId": 238,
+        "bossTribeRuntimeId": 238,
+        "valid": true
+      },
+      {
+        "palId": "iceseal_ground",
+        "sourceId": "IceSeal_Ground",
+        "bossSourceId": "BOSS_IceSeal_Ground",
+        "baseTribeRuntimeId": 239,
+        "bossTribeRuntimeId": 239,
+        "valid": true
+      },
+      {
+        "palId": "lizardman",
+        "sourceId": "LizardMan",
+        "bossSourceId": "BOSS_LizardMan",
+        "baseTribeRuntimeId": 109,
+        "bossTribeRuntimeId": 109,
+        "valid": true
+      },
+      {
+        "palId": "lizardman_fire",
+        "sourceId": "LizardMan_Fire",
+        "bossSourceId": "BOSS_LizardMan_Fire",
+        "baseTribeRuntimeId": 110,
+        "bossTribeRuntimeId": 110,
+        "valid": true
+      },
+      {
+        "palId": "gorilla",
+        "sourceId": "Gorilla",
+        "bossSourceId": "BOSS_Gorilla",
+        "baseTribeRuntimeId": 75,
+        "bossTribeRuntimeId": 75,
+        "valid": true
+      },
+      {
+        "palId": "gorilla_ground",
+        "sourceId": "Gorilla_Ground",
+        "bossSourceId": "BOSS_Gorilla_Ground",
+        "baseTribeRuntimeId": 76,
+        "bossTribeRuntimeId": 76,
+        "valid": true
+      },
+      {
+        "palId": "serpent",
+        "sourceId": "Serpent",
+        "bossSourceId": "BOSS_Serpent",
+        "baseTribeRuntimeId": 139,
+        "bossTribeRuntimeId": 139,
+        "valid": true
+      },
+      {
+        "palId": "serpent_ground",
+        "sourceId": "Serpent_Ground",
+        "bossSourceId": "BOSS_Serpent_Ground",
+        "baseTribeRuntimeId": 140,
+        "bossTribeRuntimeId": 140,
+        "valid": true
+      },
+      {
+        "palId": "robinhood",
+        "sourceId": "RobinHood",
+        "bossSourceId": "BOSS_RobinHood",
+        "baseTribeRuntimeId": 132,
+        "bossTribeRuntimeId": 132,
+        "valid": true
+      },
+      {
+        "palId": "robinhood_ground",
+        "sourceId": "RobinHood_Ground",
+        "bossSourceId": "BOSS_RobinHood_Ground",
+        "baseTribeRuntimeId": 133,
+        "bossTribeRuntimeId": 133,
+        "valid": true
+      },
+      {
+        "palId": "flowerrabbit",
+        "sourceId": "FlowerRabbit",
+        "bossSourceId": "BOSS_FlowerRabbit",
+        "baseTribeRuntimeId": 67,
+        "bossTribeRuntimeId": 67,
+        "valid": true
+      },
+      {
+        "palId": "foxmage",
+        "sourceId": "FoxMage",
+        "bossSourceId": "BOSS_FoxMage",
+        "baseTribeRuntimeId": 69,
+        "bossTribeRuntimeId": 69,
+        "valid": true
+      },
+      {
+        "palId": "foxmage_dark",
+        "sourceId": "FoxMage_Dark",
+        "bossSourceId": "BOSS_FoxMage_Dark",
+        "baseTribeRuntimeId": 70,
+        "bossTribeRuntimeId": 70,
+        "valid": true
+      },
+      {
+        "palId": "catmage",
+        "sourceId": "CatMage",
+        "bossSourceId": "BOSS_CatMage",
+        "baseTribeRuntimeId": 36,
+        "bossTribeRuntimeId": 36,
+        "valid": true
+      },
+      {
+        "palId": "catmage_fire",
+        "sourceId": "CatMage_Fire",
+        "bossSourceId": "BOSS_CatMage_Fire",
+        "baseTribeRuntimeId": 37,
+        "bossTribeRuntimeId": 37,
+        "valid": true
+      },
+      {
+        "palId": "hadesbird",
+        "sourceId": "HadesBird",
+        "bossSourceId": "BOSS_HadesBird",
+        "baseTribeRuntimeId": 83,
+        "bossTribeRuntimeId": 83,
+        "valid": true
+      },
+      {
+        "palId": "hadesbird_electric",
+        "sourceId": "HadesBird_Electric",
+        "bossSourceId": "BOSS_HadesBird_Electric",
+        "baseTribeRuntimeId": 84,
+        "bossTribeRuntimeId": 84,
+        "valid": true
+      },
+      {
+        "palId": "grassminotaur",
+        "sourceId": "GrassMinotaur",
+        "bossSourceId": "BOSS_GrassMinotaur",
+        "baseTribeRuntimeId": 296,
+        "bossTribeRuntimeId": 296,
+        "valid": true
+      },
+      {
+        "palId": "grassminotaur_ice",
+        "sourceId": "GrassMinotaur_Ice",
+        "bossSourceId": "BOSS_GrassMinotaur_Ice",
+        "baseTribeRuntimeId": 297,
+        "bossTribeRuntimeId": 297,
+        "valid": true
+      },
+      {
+        "palId": "mutant",
+        "sourceId": "Mutant",
+        "bossSourceId": "BOSS_Mutant",
+        "baseTribeRuntimeId": 118,
+        "bossTribeRuntimeId": 118,
+        "valid": true
+      },
+      {
+        "palId": "fengyundeeper",
+        "sourceId": "FengyunDeeper",
+        "bossSourceId": "BOSS_FengyunDeeper",
+        "baseTribeRuntimeId": 58,
+        "bossTribeRuntimeId": 58,
+        "valid": true
+      },
+      {
+        "palId": "fengyundeeper_electric",
+        "sourceId": "FengyunDeeper_Electric",
+        "bossSourceId": "BOSS_FengyunDeeper_Electric",
+        "baseTribeRuntimeId": 222,
+        "bossTribeRuntimeId": 222,
+        "valid": true
+      },
+      {
+        "palId": "flowerdinosaur",
+        "sourceId": "FlowerDinosaur",
+        "bossSourceId": "BOSS_FlowerDinosaur",
+        "baseTribeRuntimeId": 63,
+        "bossTribeRuntimeId": 63,
+        "valid": true
+      },
+      {
+        "palId": "flowerdinosaur_electric",
+        "sourceId": "FlowerDinosaur_Electric",
+        "bossSourceId": "BOSS_FlowerDinosaur_Electric",
+        "baseTribeRuntimeId": 64,
+        "bossTribeRuntimeId": 64,
+        "valid": true
+      },
+      {
+        "palId": "ronin",
+        "sourceId": "Ronin",
+        "bossSourceId": "BOSS_Ronin",
+        "baseTribeRuntimeId": 134,
+        "bossTribeRuntimeId": 134,
+        "valid": true
+      },
+      {
+        "palId": "ronin_dark",
+        "sourceId": "Ronin_Dark",
+        "bossSourceId": "BOSS_Ronin_Dark",
+        "baseTribeRuntimeId": 135,
+        "bossTribeRuntimeId": 135,
+        "valid": true
+      },
+      {
+        "palId": "icecrocodile",
+        "sourceId": "IceCrocodile",
+        "bossSourceId": "BOSS_IceCrocodile",
+        "baseTribeRuntimeId": 232,
+        "bossTribeRuntimeId": 232,
+        "valid": true
+      },
+      {
+        "palId": "grassmammoth",
+        "sourceId": "GrassMammoth",
+        "bossSourceId": "BOSS_GrassMammoth",
+        "baseTribeRuntimeId": 78,
+        "bossTribeRuntimeId": 78,
+        "valid": true
+      },
+      {
+        "palId": "grassmammoth_ice",
+        "sourceId": "GrassMammoth_Ice",
+        "bossSourceId": "BOSS_GrassMammoth_Ice",
+        "baseTribeRuntimeId": 79,
+        "bossTribeRuntimeId": 79,
+        "valid": true
+      },
+      {
+        "palId": "stuffedshark",
+        "sourceId": "StuffedShark",
+        "bossSourceId": "BOSS_StuffedShark",
+        "baseTribeRuntimeId": 236,
+        "bossTribeRuntimeId": 236,
+        "valid": true
+      },
+      {
+        "palId": "stuffedshark_fire",
+        "sourceId": "StuffedShark_Fire",
+        "bossSourceId": "BOSS_StuffedShark_Fire",
+        "baseTribeRuntimeId": 272,
+        "bossTribeRuntimeId": 272,
+        "valid": true
+      },
+      {
+        "palId": "flowerdoll",
+        "sourceId": "FlowerDoll",
+        "bossSourceId": "BOSS_FlowerDoll",
+        "baseTribeRuntimeId": 65,
+        "bossTribeRuntimeId": 65,
+        "valid": true
+      },
+      {
+        "palId": "flowerdoll_fire",
+        "sourceId": "FlowerDoll_Fire",
+        "bossSourceId": "BOSS_FlowerDoll_Fire",
+        "baseTribeRuntimeId": 66,
+        "bossTribeRuntimeId": 66,
+        "valid": true
+      },
+      {
+        "palId": "pandagirl",
+        "sourceId": "PandaGirl",
+        "bossSourceId": "BOSS_PandaGirl",
+        "baseTribeRuntimeId": 295,
+        "bossTribeRuntimeId": 295,
+        "valid": true
+      },
+      {
+        "palId": "baphomet",
+        "sourceId": "Baphomet",
+        "bossSourceId": "BOSS_Baphomet",
+        "baseTribeRuntimeId": 18,
+        "bossTribeRuntimeId": 18,
+        "valid": true
+      },
+      {
+        "palId": "baphomet_dark",
+        "sourceId": "Baphomet_Dark",
+        "bossSourceId": "BOSS_Baphomet_Dark",
+        "baseTribeRuntimeId": 19,
+        "bossTribeRuntimeId": 19,
+        "valid": true
+      },
+      {
+        "palId": "raijindaughter",
+        "sourceId": "RaijinDaughter",
+        "bossSourceId": "BOSS_RaijinDaughter",
+        "baseTribeRuntimeId": 130,
+        "bossTribeRuntimeId": 130,
+        "valid": true
+      },
+      {
+        "palId": "raijindaughter_water",
+        "sourceId": "RaijinDaughter_Water",
+        "bossSourceId": "BOSS_RaijinDaughter_Water",
+        "baseTribeRuntimeId": 218,
+        "bossTribeRuntimeId": 218,
+        "valid": true
+      },
+      {
+        "palId": "firekirin",
+        "sourceId": "FireKirin",
+        "bossSourceId": "BOSS_FireKirin",
+        "baseTribeRuntimeId": 59,
+        "bossTribeRuntimeId": 59,
+        "valid": true
+      },
+      {
+        "palId": "firekirin_dark",
+        "sourceId": "FireKirin_Dark",
+        "bossSourceId": "BOSS_FireKirin_Dark",
+        "baseTribeRuntimeId": 60,
+        "bossTribeRuntimeId": 60,
+        "valid": true
+      },
+      {
+        "palId": "lazydragon",
+        "sourceId": "LazyDragon",
+        "bossSourceId": "BOSS_LazyDragon",
+        "baseTribeRuntimeId": 105,
+        "bossTribeRuntimeId": 105,
+        "valid": true
+      },
+      {
+        "palId": "lazydragon_electric",
+        "sourceId": "LazyDragon_Electric",
+        "bossSourceId": "BOSS_LazyDragon_Electric",
+        "baseTribeRuntimeId": 106,
+        "bossTribeRuntimeId": 106,
+        "valid": true
+      },
+      {
+        "palId": "icefox",
+        "sourceId": "IceFox",
+        "bossSourceId": "BOSS_IceFox",
+        "baseTribeRuntimeId": 91,
+        "bossTribeRuntimeId": 91,
+        "valid": true
+      },
+      {
+        "palId": "thunderbird",
+        "sourceId": "ThunderBird",
+        "bossSourceId": "BOSS_ThunderBird",
+        "baseTribeRuntimeId": 152,
+        "bossTribeRuntimeId": 152,
+        "valid": true
+      },
+      {
+        "palId": "thunderbird_ice",
+        "sourceId": "ThunderBird_Ice",
+        "bossSourceId": "BOSS_ThunderBird_Ice",
+        "baseTribeRuntimeId": 153,
+        "bossTribeRuntimeId": 153,
+        "valid": true
+      },
+      {
+        "palId": "ghostanglerfish",
+        "sourceId": "GhostAnglerfish",
+        "bossSourceId": "BOSS_GhostAnglerfish",
+        "baseTribeRuntimeId": 226,
+        "bossTribeRuntimeId": 226,
+        "valid": true
+      },
+      {
+        "palId": "ghostanglerfish_fire",
+        "sourceId": "GhostAnglerfish_Fire",
+        "bossSourceId": "BOSS_GhostAnglerfish_Fire",
+        "baseTribeRuntimeId": 271,
+        "bossTribeRuntimeId": 271,
+        "valid": true
+      },
+      {
+        "palId": "thunderdog",
+        "sourceId": "ThunderDog",
+        "bossSourceId": "BOSS_ThunderDog",
+        "baseTribeRuntimeId": 154,
+        "bossTribeRuntimeId": 154,
+        "valid": true
+      },
+      {
+        "palId": "thunderdog_ice",
+        "sourceId": "ThunderDog_Ice",
+        "bossSourceId": "BOSS_ThunderDog_Ice",
+        "baseTribeRuntimeId": 155,
+        "bossTribeRuntimeId": 155,
+        "valid": true
+      },
+      {
+        "palId": "darkscorpion",
+        "sourceId": "DarkScorpion",
+        "bossSourceId": "BOSS_DarkScorpion",
+        "baseTribeRuntimeId": 47,
+        "bossTribeRuntimeId": 47,
+        "valid": true
+      },
+      {
+        "palId": "darkscorpion_ground",
+        "sourceId": "DarkScorpion_Ground",
+        "bossSourceId": "BOSS_DarkScorpion_Ground",
+        "baseTribeRuntimeId": 48,
+        "bossTribeRuntimeId": 48,
+        "valid": true
+      },
+      {
+        "palId": "cactusdoll",
+        "sourceId": "CactusDoll",
+        "bossSourceId": "BOSS_CactusDoll",
+        "baseTribeRuntimeId": 233,
+        "bossTribeRuntimeId": 233,
+        "valid": true
+      },
+      {
+        "palId": "cactusdoll_dark",
+        "sourceId": "CactusDoll_Dark",
+        "bossSourceId": "BOSS_CactusDoll_Dark",
+        "baseTribeRuntimeId": 234,
+        "bossTribeRuntimeId": 234,
+        "valid": true
+      },
+      {
+        "palId": "icedeer",
+        "sourceId": "IceDeer",
+        "bossSourceId": "BOSS_IceDeer",
+        "baseTribeRuntimeId": 90,
+        "bossTribeRuntimeId": 90,
+        "valid": true
+      },
+      {
+        "palId": "grasspanda",
+        "sourceId": "GrassPanda",
+        "bossSourceId": "BOSS_GrassPanda",
+        "baseTribeRuntimeId": 80,
+        "bossTribeRuntimeId": 80,
+        "valid": true
+      },
+      {
+        "palId": "grasspanda_electric",
+        "sourceId": "GrassPanda_Electric",
+        "bossSourceId": "BOSS_GrassPanda_Electric",
+        "baseTribeRuntimeId": 81,
+        "bossTribeRuntimeId": 81,
+        "valid": true
+      },
+      {
+        "palId": "weaseldragon",
+        "sourceId": "WeaselDragon",
+        "bossSourceId": "BOSS_WeaselDragon",
+        "baseTribeRuntimeId": 162,
+        "bossTribeRuntimeId": 162,
+        "valid": true
+      },
+      {
+        "palId": "weaseldragon_fire",
+        "sourceId": "WeaselDragon_Fire",
+        "bossSourceId": "BOSS_WeaselDragon_Fire",
+        "baseTribeRuntimeId": 163,
+        "bossTribeRuntimeId": 163,
+        "valid": true
+      },
+      {
+        "palId": "redarmorbird",
+        "sourceId": "RedArmorBird",
+        "bossSourceId": "BOSS_RedArmorBird",
+        "baseTribeRuntimeId": 131,
+        "bossTribeRuntimeId": 131,
+        "valid": true
+      },
+      {
+        "palId": "volcanodragon",
+        "sourceId": "VolcanoDragon",
+        "bossSourceId": "BOSS_VolcanoDragon",
+        "baseTribeRuntimeId": 190,
+        "bossTribeRuntimeId": 190,
+        "valid": true
+      },
+      {
+        "palId": "volcanodragon_ice",
+        "sourceId": "VolcanoDragon_Ice",
+        "bossSourceId": "BOSS_VolcanoDragon_Ice",
+        "baseTribeRuntimeId": 191,
+        "bossTribeRuntimeId": 191,
+        "valid": true
+      },
+      {
+        "palId": "tropicalostrich",
+        "sourceId": "TropicalOstrich",
+        "bossSourceId": "BOSS_TropicalOstrich",
+        "baseTribeRuntimeId": 247,
+        "bossTribeRuntimeId": 247,
+        "valid": true
+      },
+      {
+        "palId": "drillgame",
+        "sourceId": "DrillGame",
+        "bossSourceId": "BOSS_DrillGame",
+        "baseTribeRuntimeId": 52,
+        "bossTribeRuntimeId": 52,
+        "valid": true
+      },
+      {
+        "palId": "sakurasaurus",
+        "sourceId": "SakuraSaurus",
+        "bossSourceId": "BOSS_SakuraSaurus",
+        "baseTribeRuntimeId": 137,
+        "bossTribeRuntimeId": 137,
+        "valid": true
+      },
+      {
+        "palId": "sakurasaurus_water",
+        "sourceId": "SakuraSaurus_Water",
+        "bossSourceId": "BOSS_SakuraSaurus_Water",
+        "baseTribeRuntimeId": 138,
+        "bossTribeRuntimeId": 138,
+        "valid": true
+      },
+      {
+        "palId": "lazycatfish",
+        "sourceId": "LazyCatfish",
+        "bossSourceId": "BOSS_LazyCatfish",
+        "baseTribeRuntimeId": 104,
+        "bossTribeRuntimeId": 104,
+        "valid": true
+      },
+      {
+        "palId": "lazycatfish_gold",
+        "sourceId": "LazyCatfish_Gold",
+        "bossSourceId": "BOSS_LazyCatfish_Gold",
+        "baseTribeRuntimeId": 266,
+        "bossTribeRuntimeId": 266,
+        "valid": true
+      },
+      {
+        "palId": "plesiosaur",
+        "sourceId": "Plesiosaur",
+        "bossSourceId": "BOSS_Plesiosaur",
+        "baseTribeRuntimeId": 246,
+        "bossTribeRuntimeId": 246,
+        "valid": true
+      },
+      {
+        "palId": "amaterasuwolf",
+        "sourceId": "AmaterasuWolf",
+        "bossSourceId": "BOSS_AmaterasuWolf",
+        "baseTribeRuntimeId": 16,
+        "bossTribeRuntimeId": 16,
+        "valid": true
+      },
+      {
+        "palId": "amaterasuwolf_dark",
+        "sourceId": "AmaterasuWolf_Dark",
+        "bossSourceId": "BOSS_AmaterasuWolf_Dark",
+        "baseTribeRuntimeId": 223,
+        "bossTribeRuntimeId": 223,
+        "valid": true
+      },
+      {
+        "palId": "manticore",
+        "sourceId": "Manticore",
+        "bossSourceId": "BOSS_Manticore",
+        "baseTribeRuntimeId": 111,
+        "bossTribeRuntimeId": 111,
+        "valid": true
+      },
+      {
+        "palId": "manticore_dark",
+        "sourceId": "Manticore_Dark",
+        "bossSourceId": "BOSS_Manticore_Dark",
+        "baseTribeRuntimeId": 112,
+        "bossTribeRuntimeId": 112,
+        "valid": true
+      },
+      {
+        "palId": "herculesbeetle",
+        "sourceId": "HerculesBeetle",
+        "bossSourceId": "BOSS_HerculesBeetle",
+        "baseTribeRuntimeId": 88,
+        "bossTribeRuntimeId": 88,
+        "valid": true
+      },
+      {
+        "palId": "herculesbeetle_ground",
+        "sourceId": "HerculesBeetle_Ground",
+        "bossSourceId": "BOSS_HerculesBeetle_Ground",
+        "baseTribeRuntimeId": 89,
+        "bossTribeRuntimeId": 89,
+        "valid": true
+      },
+      {
+        "palId": "snowpeafowl",
+        "sourceId": "SnowPeafowl",
+        "bossSourceId": "BOSS_SnowPeafowl",
+        "baseTribeRuntimeId": 250,
+        "bossTribeRuntimeId": 250,
+        "valid": true
+      },
+      {
+        "palId": "darkflamefox",
+        "sourceId": "DarkFlameFox",
+        "bossSourceId": "BOSS_DarkFlameFox",
+        "baseTribeRuntimeId": 290,
+        "bossTribeRuntimeId": 290,
+        "valid": true
+      },
+      {
+        "palId": "whitemoth",
+        "sourceId": "WhiteMoth",
+        "bossSourceId": "BOSS_WhiteMoth",
+        "baseTribeRuntimeId": 165,
+        "bossTribeRuntimeId": 165,
+        "valid": true
+      },
+      {
+        "palId": "whitemoth_neutral",
+        "sourceId": "WhiteMoth_Neutral",
+        "bossSourceId": "BOSS_WhiteMoth_Neutral",
+        "baseTribeRuntimeId": 166,
+        "bossTribeRuntimeId": 166,
+        "valid": true
+      },
+      {
+        "palId": "ghostbeast",
+        "sourceId": "GhostBeast",
+        "bossSourceId": "BOSS_GhostBeast",
+        "baseTribeRuntimeId": 73,
+        "bossTribeRuntimeId": 73,
+        "valid": true
+      },
+      {
+        "palId": "mushroomdragon",
+        "sourceId": "MushroomDragon",
+        "bossSourceId": "BOSS_MushroomDragon",
+        "baseTribeRuntimeId": 176,
+        "bossTribeRuntimeId": 176,
+        "valid": true
+      },
+      {
+        "palId": "mushroomdragon_dark",
+        "sourceId": "MushroomDragon_Dark",
+        "bossSourceId": "BOSS_MushroomDragon_Dark",
+        "baseTribeRuntimeId": 177,
+        "bossTribeRuntimeId": 177,
+        "valid": true
+      },
+      {
+        "palId": "icewitch",
+        "sourceId": "IceWitch",
+        "bossSourceId": "BOSS_IceWitch",
+        "baseTribeRuntimeId": 227,
+        "bossTribeRuntimeId": 227,
+        "valid": true
+      },
+      {
+        "palId": "mummypal",
+        "sourceId": "MummyPal",
+        "bossSourceId": "BOSS_MummyPal",
+        "baseTribeRuntimeId": 273,
+        "bossTribeRuntimeId": 273,
+        "valid": true
+      },
+      {
+        "palId": "umihebi",
+        "sourceId": "Umihebi",
+        "bossSourceId": "BOSS_Umihebi",
+        "baseTribeRuntimeId": 156,
+        "bossTribeRuntimeId": 156,
+        "valid": true
+      },
+      {
+        "palId": "umihebi_fire",
+        "sourceId": "Umihebi_Fire",
+        "bossSourceId": "BOSS_Umihebi_Fire",
+        "baseTribeRuntimeId": 157,
+        "bossTribeRuntimeId": 157,
+        "valid": true
+      },
+      {
+        "palId": "suzaku",
+        "sourceId": "Suzaku",
+        "bossSourceId": "BOSS_Suzaku",
+        "baseTribeRuntimeId": 147,
+        "bossTribeRuntimeId": 147,
+        "valid": true
+      },
+      {
+        "palId": "suzaku_water",
+        "sourceId": "Suzaku_Water",
+        "bossSourceId": "BOSS_Suzaku_Water",
+        "baseTribeRuntimeId": 148,
+        "bossTribeRuntimeId": 148,
+        "valid": true
+      },
+      {
+        "palId": "featherostrich",
+        "sourceId": "FeatherOstrich",
+        "bossSourceId": "BOSS_FeatherOstrich",
+        "baseTribeRuntimeId": 179,
+        "bossTribeRuntimeId": 179,
+        "valid": true
+      },
+      {
+        "palId": "skydragon",
+        "sourceId": "SkyDragon",
+        "bossSourceId": "BOSS_SkyDragon",
+        "baseTribeRuntimeId": 144,
+        "bossTribeRuntimeId": 144,
+        "valid": true
+      },
+      {
+        "palId": "skydragon_grass",
+        "sourceId": "SkyDragon_Grass",
+        "bossSourceId": "BOSS_SkyDragon_Grass",
+        "baseTribeRuntimeId": 145,
+        "bossTribeRuntimeId": 145,
+        "valid": true
+      },
+      {
+        "palId": "leafprincess",
+        "sourceId": "LeafPrincess",
+        "bossSourceId": "BOSS_LeafPrincess",
+        "baseTribeRuntimeId": 175,
+        "bossTribeRuntimeId": 175,
+        "valid": true
+      },
+      {
+        "palId": "smallarmadillo",
+        "sourceId": "SmallArmadillo",
+        "bossSourceId": "BOSS_SmallArmadillo",
+        "baseTribeRuntimeId": 178,
+        "bossTribeRuntimeId": 178,
+        "valid": true
+      },
+      {
+        "palId": "guardiandog",
+        "sourceId": "GuardianDog",
+        "bossSourceId": "BOSS_GuardianDog",
+        "baseTribeRuntimeId": 185,
+        "bossTribeRuntimeId": 185,
+        "valid": true
+      },
+      {
+        "palId": "swordcutlassfish",
+        "sourceId": "SwordCutlassfish",
+        "bossSourceId": "BOSS_SwordCutlassfish",
+        "baseTribeRuntimeId": 259,
+        "bossTribeRuntimeId": 259,
+        "valid": true
+      },
+      {
+        "palId": "swordcutlassfish_fire",
+        "sourceId": "SwordCutlassfish_Fire",
+        "bossSourceId": "BOSS_SwordCutlassfish_Fire",
+        "baseTribeRuntimeId": 260,
+        "bossTribeRuntimeId": 260,
+        "valid": true
+      },
+      {
+        "palId": "volcanicmonster",
+        "sourceId": "VolcanicMonster",
+        "bossSourceId": "BOSS_VolcanicMonster",
+        "baseTribeRuntimeId": 159,
+        "bossTribeRuntimeId": 159,
+        "valid": true
+      },
+      {
+        "palId": "volcanicmonster_ice",
+        "sourceId": "VolcanicMonster_Ice",
+        "bossSourceId": "BOSS_VolcanicMonster_Ice",
+        "baseTribeRuntimeId": 160,
+        "bossTribeRuntimeId": 160,
+        "valid": true
+      },
+      {
+        "palId": "nightbluehorse",
+        "sourceId": "NightBlueHorse",
+        "bossSourceId": "BOSS_NightBlueHorse",
+        "baseTribeRuntimeId": 195,
+        "bossTribeRuntimeId": 195,
+        "valid": true
+      },
+      {
+        "palId": "nightbluehorse_neutral",
+        "sourceId": "NightBlueHorse_Neutral",
+        "bossSourceId": "BOSS_NightBlueHorse_Neutral",
+        "baseTribeRuntimeId": 196,
+        "bossTribeRuntimeId": 196,
+        "valid": true
+      },
+      {
+        "palId": "rockbeast",
+        "sourceId": "RockBeast",
+        "bossSourceId": "BOSS_RockBeast",
+        "baseTribeRuntimeId": 210,
+        "bossTribeRuntimeId": 210,
+        "valid": true
+      },
+      {
+        "palId": "rockbeast_ice",
+        "sourceId": "RockBeast_Ice",
+        "bossSourceId": "BOSS_RockBeast_Ice",
+        "baseTribeRuntimeId": 211,
+        "bossTribeRuntimeId": 211,
+        "valid": true
+      },
+      {
+        "palId": "whitetiger",
+        "sourceId": "WhiteTiger",
+        "bossSourceId": "BOSS_WhiteTiger",
+        "baseTribeRuntimeId": 167,
+        "bossTribeRuntimeId": 167,
+        "valid": true
+      },
+      {
+        "palId": "whitetiger_ground",
+        "sourceId": "WhiteTiger_Ground",
+        "bossSourceId": "BOSS_WhiteTiger_Ground",
+        "baseTribeRuntimeId": 220,
+        "bossTribeRuntimeId": 220,
+        "valid": true
+      },
+      {
+        "palId": "smallyeti",
+        "sourceId": "SmallYeti",
+        "bossSourceId": "BOSS_SmallYeti",
+        "baseTribeRuntimeId": 231,
+        "bossTribeRuntimeId": 231,
+        "valid": true
+      },
+      {
+        "palId": "yeti",
+        "sourceId": "Yeti",
+        "bossSourceId": "BOSS_Yeti",
+        "baseTribeRuntimeId": 172,
+        "bossTribeRuntimeId": 172,
+        "valid": true
+      },
+      {
+        "palId": "yeti_grass",
+        "sourceId": "Yeti_Grass",
+        "bossSourceId": "BOSS_Yeti_Grass",
+        "baseTribeRuntimeId": 173,
+        "bossTribeRuntimeId": 173,
+        "valid": true
+      },
+      {
+        "palId": "candleghost",
+        "sourceId": "CandleGhost",
+        "bossSourceId": "BOSS_CandleGhost",
+        "baseTribeRuntimeId": 184,
+        "bossTribeRuntimeId": 184,
+        "valid": true
+      },
+      {
+        "palId": "venusflytrap",
+        "sourceId": "VenusFlytrap",
+        "bossSourceId": "BOSS_VenusFlytrap",
+        "baseTribeRuntimeId": 282,
+        "bossTribeRuntimeId": 282,
+        "valid": true
+      },
+      {
+        "palId": "kingbahamut",
+        "sourceId": "KingBahamut",
+        "bossSourceId": "BOSS_KingBahamut",
+        "baseTribeRuntimeId": 99,
+        "bossTribeRuntimeId": 99,
+        "valid": true
+      },
+      {
+        "palId": "kingbahamut_dragon",
+        "sourceId": "KingBahamut_Dragon",
+        "bossSourceId": "RAID_KingBahamut_Dragon",
+        "baseTribeRuntimeId": 3,
+        "bossTribeRuntimeId": 3,
+        "valid": true
+      },
+      {
+        "palId": "grassgolem",
+        "sourceId": "GrassGolem",
+        "bossSourceId": "BOSS_GrassGolem",
+        "baseTribeRuntimeId": 248,
+        "bossTribeRuntimeId": 248,
+        "valid": true
+      },
+      {
+        "palId": "grassgolem_dark",
+        "sourceId": "GrassGolem_Dark",
+        "bossSourceId": "BOSS_GrassGolem_Dark",
+        "baseTribeRuntimeId": 249,
+        "bossTribeRuntimeId": 249,
+        "valid": true
+      },
+      {
+        "palId": "anubis",
+        "sourceId": "Anubis",
+        "bossSourceId": "Boss_Anubis",
+        "baseTribeRuntimeId": 17,
+        "bossTribeRuntimeId": 17,
+        "valid": true
+      },
+      {
+        "palId": "sekhmet",
+        "sourceId": "Sekhmet",
+        "bossSourceId": "BOSS_Sekhmet",
+        "baseTribeRuntimeId": 205,
+        "bossTribeRuntimeId": 205,
+        "valid": true
+      },
+      {
+        "palId": "scorpionman",
+        "sourceId": "ScorpionMan",
+        "bossSourceId": "BOSS_ScorpionMan",
+        "baseTribeRuntimeId": 180,
+        "bossTribeRuntimeId": 180,
+        "valid": true
+      },
+      {
+        "palId": "scorpionman_electric",
+        "sourceId": "ScorpionMan_Electric",
+        "bossSourceId": "BOSS_ScorpionMan_Electric",
+        "baseTribeRuntimeId": 181,
+        "bossTribeRuntimeId": 181,
+        "valid": true
+      },
+      {
+        "palId": "cubeturtle",
+        "sourceId": "CubeTurtle",
+        "bossSourceId": "BOSS_CubeTurtle",
+        "baseTribeRuntimeId": 251,
+        "bossTribeRuntimeId": 251,
+        "valid": true
+      },
+      {
+        "palId": "cubeturtle_neutral",
+        "sourceId": "CubeTurtle_Neutral",
+        "bossSourceId": "BOSS_CubeTurtle_Neutral",
+        "baseTribeRuntimeId": 252,
+        "bossTribeRuntimeId": 252,
+        "valid": true
+      },
+      {
+        "palId": "badcatgirl",
+        "sourceId": "BadCatgirl",
+        "bossSourceId": "BOSS_BadCatgirl",
+        "baseTribeRuntimeId": 13,
+        "bossTribeRuntimeId": 13,
+        "valid": true
+      },
+      {
+        "palId": "mimicdog",
+        "sourceId": "MimicDog",
+        "bossSourceId": "BOSS_MimicDog",
+        "baseTribeRuntimeId": 187,
+        "bossTribeRuntimeId": 187,
+        "valid": true
+      },
+      {
+        "palId": "darkalien",
+        "sourceId": "DarkAlien",
+        "bossSourceId": "BOSS_DarkAlien",
+        "baseTribeRuntimeId": 188,
+        "bossTribeRuntimeId": 188,
+        "valid": true
+      },
+      {
+        "palId": "whitealiendragon",
+        "sourceId": "WhiteAlienDragon",
+        "bossSourceId": "BOSS_WhiteAlienDragon",
+        "baseTribeRuntimeId": 189,
+        "bossTribeRuntimeId": 189,
+        "valid": true
+      },
+      {
+        "palId": "blueberryfairy",
+        "sourceId": "BlueberryFairy",
+        "bossSourceId": "BOSS_BlueberryFairy",
+        "baseTribeRuntimeId": 14,
+        "bossTribeRuntimeId": 14,
+        "valid": true
+      },
+      {
+        "palId": "ghostrabbit",
+        "sourceId": "GhostRabbit",
+        "bossSourceId": "BOSS_GhostRabbit",
+        "baseTribeRuntimeId": 193,
+        "bossTribeRuntimeId": 193,
+        "valid": true
+      },
+      {
+        "palId": "ghostrabbit_grass",
+        "sourceId": "GhostRabbit_Grass",
+        "bossSourceId": "BOSS_GhostRabbit_Grass",
+        "baseTribeRuntimeId": 194,
+        "bossTribeRuntimeId": 194,
+        "valid": true
+      },
+      {
+        "palId": "blackpuppy",
+        "sourceId": "BlackPuppy",
+        "bossSourceId": "BOSS_BlackPuppy",
+        "baseTribeRuntimeId": 198,
+        "bossTribeRuntimeId": 198,
+        "valid": true
+      },
+      {
+        "palId": "blackpuppy_ice",
+        "sourceId": "BlackPuppy_Ice",
+        "bossSourceId": "BOSS_BlackPuppy_Ice",
+        "baseTribeRuntimeId": 199,
+        "bossTribeRuntimeId": 199,
+        "valid": true
+      },
+      {
+        "palId": "mysterymask",
+        "sourceId": "MysteryMask",
+        "bossSourceId": "BOSS_MysteryMask",
+        "baseTribeRuntimeId": 203,
+        "bossTribeRuntimeId": 203,
+        "valid": true
+      },
+      {
+        "palId": "icenarwhal",
+        "sourceId": "IceNarwhal",
+        "bossSourceId": "BOSS_IceNarwhal",
+        "baseTribeRuntimeId": 214,
+        "bossTribeRuntimeId": 214,
+        "valid": true
+      },
+      {
+        "palId": "icenarwhal_fire",
+        "sourceId": "IceNarwhal_Fire",
+        "bossSourceId": "BOSS_IceNarwhal_Fire",
+        "baseTribeRuntimeId": 270,
+        "bossTribeRuntimeId": 270,
+        "valid": true
+      },
+      {
+        "palId": "grassrabbitman",
+        "sourceId": "GrassRabbitMan",
+        "bossSourceId": "BOSS_GrassRabbitMan",
+        "baseTribeRuntimeId": 82,
+        "bossTribeRuntimeId": 82,
+        "valid": true
+      },
+      {
+        "palId": "grimgirl",
+        "sourceId": "GrimGirl",
+        "bossSourceId": "BOSS_GrimGirl",
+        "baseTribeRuntimeId": 207,
+        "bossTribeRuntimeId": 207,
+        "valid": true
+      },
+      {
+        "palId": "goldenhorse",
+        "sourceId": "GoldenHorse",
+        "bossSourceId": "BOSS_GoldenHorse",
+        "baseTribeRuntimeId": 74,
+        "bossTribeRuntimeId": 74,
+        "valid": true
+      },
+      {
+        "palId": "sifudog",
+        "sourceId": "SifuDog",
+        "bossSourceId": "BOSS_SifuDog",
+        "baseTribeRuntimeId": 186,
+        "bossTribeRuntimeId": 186,
+        "valid": true
+      },
+      {
+        "palId": "sumodog",
+        "sourceId": "SumoDog",
+        "bossSourceId": "BOSS_SumoDog",
+        "baseTribeRuntimeId": 281,
+        "bossTribeRuntimeId": 281,
+        "valid": true
+      },
+      {
+        "palId": "whitedeer",
+        "sourceId": "WhiteDeer",
+        "bossSourceId": "BOSS_WhiteDeer",
+        "baseTribeRuntimeId": 200,
+        "bossTribeRuntimeId": 200,
+        "valid": true
+      },
+      {
+        "palId": "whitedeer_dark",
+        "sourceId": "WhiteDeer_Dark",
+        "bossSourceId": "BOSS_WhiteDeer_Dark",
+        "baseTribeRuntimeId": 201,
+        "bossTribeRuntimeId": 201,
+        "valid": true
+      },
+      {
+        "palId": "blackmetaldragon",
+        "sourceId": "BlackMetalDragon",
+        "bossSourceId": "BOSS_BlackMetalDragon",
+        "baseTribeRuntimeId": 28,
+        "bossTribeRuntimeId": 28,
+        "valid": true
+      },
+      {
+        "palId": "winggolem",
+        "sourceId": "WingGolem",
+        "bossSourceId": "BOSS_WingGolem",
+        "baseTribeRuntimeId": 182,
+        "bossTribeRuntimeId": 182,
+        "valid": true
+      },
+      {
+        "palId": "winggolem_fire",
+        "sourceId": "WingGolem_Fire",
+        "bossSourceId": "BOSS_WingGolem_Fire",
+        "baseTribeRuntimeId": 183,
+        "bossTribeRuntimeId": 183,
+        "valid": true
+      },
+      {
+        "palId": "whiteshielddragon",
+        "sourceId": "WhiteShieldDragon",
+        "bossSourceId": "BOSS_WhiteShieldDragon",
+        "baseTribeRuntimeId": 197,
+        "bossTribeRuntimeId": 197,
+        "valid": true
+      },
+      {
+        "palId": "bluethunderhorse",
+        "sourceId": "BlueThunderHorse",
+        "bossSourceId": "BOSS_BlueThunderHorse",
+        "baseTribeRuntimeId": 209,
+        "bossTribeRuntimeId": 209,
+        "valid": true
+      },
+      {
+        "palId": "longcat",
+        "sourceId": "LongCat",
+        "bossSourceId": "BOSS_LongCat",
+        "baseTribeRuntimeId": 253,
+        "bossTribeRuntimeId": 253,
+        "valid": true
+      },
+      {
+        "palId": "elecsnail",
+        "sourceId": "ElecSnail",
+        "bossSourceId": "BOSS_ElecSnail",
+        "baseTribeRuntimeId": 277,
+        "bossTribeRuntimeId": 277,
+        "valid": true
+      },
+      {
+        "palId": "elecsnail_ground",
+        "sourceId": "ElecSnail_Ground",
+        "bossSourceId": "BOSS_ElecSnail_Ground",
+        "baseTribeRuntimeId": 279,
+        "bossTribeRuntimeId": 279,
+        "valid": true
+      },
+      {
+        "palId": "dandeliongirl",
+        "sourceId": "DandelionGirl",
+        "bossSourceId": "BOSS_DandelionGirl",
+        "baseTribeRuntimeId": 287,
+        "bossTribeRuntimeId": 287,
+        "valid": true
+      },
+      {
+        "palId": "brownrabbit",
+        "sourceId": "BrownRabbit",
+        "bossSourceId": "BOSS_BrownRabbit",
+        "baseTribeRuntimeId": 32,
+        "bossTribeRuntimeId": 32,
+        "valid": true
+      },
+      {
+        "palId": "hoodghost",
+        "sourceId": "HoodGhost",
+        "bossSourceId": "BOSS_HoodGhost",
+        "baseTribeRuntimeId": 204,
+        "bossTribeRuntimeId": 204,
+        "valid": true
+      },
+      {
+        "palId": "eleclizard",
+        "sourceId": "ElecLizard",
+        "bossSourceId": "BOSS_ElecLizard",
+        "baseTribeRuntimeId": 206,
+        "bossTribeRuntimeId": 206,
+        "valid": true
+      },
+      {
+        "palId": "onighostgirl",
+        "sourceId": "OniGhostGirl",
+        "bossSourceId": "BOSS_OniGhostGirl",
+        "baseTribeRuntimeId": 244,
+        "bossTribeRuntimeId": 244,
+        "valid": true
+      },
+      {
+        "palId": "kingsunfish",
+        "sourceId": "KingSunfish",
+        "bossSourceId": "BOSS_KingSunfish",
+        "baseTribeRuntimeId": 274,
+        "bossTribeRuntimeId": 274,
+        "valid": true
+      },
+      {
+        "palId": "kingsunfish_thunder",
+        "sourceId": "KingSunfish_Thunder",
+        "bossSourceId": "BOSS_KingSunfish_Thunder",
+        "baseTribeRuntimeId": 275,
+        "bossTribeRuntimeId": 275,
+        "valid": true
+      },
+      {
+        "palId": "sleeverabbit",
+        "sourceId": "SleeveRabbit",
+        "bossSourceId": "BOSS_SleeveRabbit",
+        "baseTribeRuntimeId": 299,
+        "bossTribeRuntimeId": 299,
+        "valid": true
+      },
+      {
+        "palId": "ghostdragon",
+        "sourceId": "GhostDragon",
+        "bossSourceId": "BOSS_GhostDragon",
+        "baseTribeRuntimeId": 302,
+        "bossTribeRuntimeId": 302,
+        "valid": true
+      },
+      {
+        "palId": "ghostdragon_fire",
+        "sourceId": "GhostDragon_Fire",
+        "bossSourceId": "BOSS_GhostDragon_Fire",
+        "baseTribeRuntimeId": 303,
+        "bossTribeRuntimeId": 303,
+        "valid": true
+      },
+      {
+        "palId": "thunderfluffybird",
+        "sourceId": "ThunderFluffyBird",
+        "bossSourceId": "BOSS_ThunderFluffyBird",
+        "baseTribeRuntimeId": 255,
+        "bossTribeRuntimeId": 255,
+        "valid": true
+      },
+      {
+        "palId": "redflowerbird",
+        "sourceId": "RedFlowerBird",
+        "bossSourceId": "BOSS_RedFlowerBird",
+        "baseTribeRuntimeId": 292,
+        "bossTribeRuntimeId": 292,
+        "valid": true
+      },
+      {
+        "palId": "foxexorcist",
+        "sourceId": "FoxExorcist",
+        "bossSourceId": "BOSS_FoxExorcist",
+        "baseTribeRuntimeId": 237,
+        "bossTribeRuntimeId": 237,
+        "valid": true
+      },
+      {
+        "palId": "lotusdragon",
+        "sourceId": "LotusDragon",
+        "bossSourceId": "BOSS_LotusDragon",
+        "baseTribeRuntimeId": 293,
+        "bossTribeRuntimeId": 293,
+        "valid": true
+      },
+      {
+        "palId": "clownrabbit",
+        "sourceId": "ClownRabbit",
+        "bossSourceId": "BOSS_ClownRabbit",
+        "baseTribeRuntimeId": 228,
+        "bossTribeRuntimeId": 228,
+        "valid": true
+      },
+      {
+        "palId": "thiefbird",
+        "sourceId": "ThiefBird",
+        "bossSourceId": "BOSS_ThiefBird",
+        "baseTribeRuntimeId": 243,
+        "bossTribeRuntimeId": 243,
+        "valid": true
+      },
+      {
+        "palId": "snakegirl",
+        "sourceId": "SnakeGirl",
+        "bossSourceId": "BOSS_SnakeGirl",
+        "baseTribeRuntimeId": 225,
+        "bossTribeRuntimeId": 225,
+        "valid": true
+      },
+      {
+        "palId": "mushroomlady",
+        "sourceId": "MushroomLady",
+        "bossSourceId": "BOSS_MushroomLady",
+        "baseTribeRuntimeId": 235,
+        "bossTribeRuntimeId": 235,
+        "valid": true
+      },
+      {
+        "palId": "lanternbutler",
+        "sourceId": "LanternButler",
+        "bossSourceId": "BOSS_LanternButler",
+        "baseTribeRuntimeId": 280,
+        "bossTribeRuntimeId": 280,
+        "valid": true
+      },
+      {
+        "palId": "moonchild",
+        "sourceId": "MoonChild",
+        "bossSourceId": "BOSS_MoonChild",
+        "baseTribeRuntimeId": 256,
+        "bossTribeRuntimeId": 256,
+        "valid": true
+      },
+      {
+        "palId": "monochromequeen",
+        "sourceId": "MonochromeQueen",
+        "bossSourceId": "BOSS_MonochromeQueen",
+        "baseTribeRuntimeId": 276,
+        "bossTribeRuntimeId": 276,
+        "valid": true
+      },
+      {
+        "palId": "kabukiman",
+        "sourceId": "KabukiMan",
+        "bossSourceId": "BOSS_KabukiMan",
+        "baseTribeRuntimeId": 305,
+        "bossTribeRuntimeId": 305,
+        "valid": true
+      },
+      {
+        "palId": "domearmordragon",
+        "sourceId": "DomeArmorDragon",
+        "bossSourceId": "BOSS_DomeArmorDragon",
+        "baseTribeRuntimeId": 306,
+        "bossTribeRuntimeId": 306,
+        "valid": true
+      },
+      {
+        "palId": "elecpanda",
+        "sourceId": "ElecPanda",
+        "bossSourceId": "GYM_ElecPanda",
+        "baseTribeRuntimeId": 6,
+        "bossTribeRuntimeId": 6,
+        "valid": true
+      },
+      {
+        "palId": "lilyqueen",
+        "sourceId": "LilyQueen",
+        "bossSourceId": "GYM_LilyQueen",
+        "baseTribeRuntimeId": 8,
+        "bossTribeRuntimeId": 8,
+        "valid": true
+      },
+      {
+        "palId": "lilyqueen_dark",
+        "sourceId": "LilyQueen_Dark",
+        "bossSourceId": "BOSS_LilyQueen_Dark",
+        "baseTribeRuntimeId": 107,
+        "bossTribeRuntimeId": 107,
+        "valid": true
+      },
+      {
+        "palId": "thunderdragonman",
+        "sourceId": "ThunderDragonMan",
+        "bossSourceId": "GYM_ThunderDragonMan",
+        "baseTribeRuntimeId": 9,
+        "bossTribeRuntimeId": 9,
+        "valid": true
+      },
+      {
+        "palId": "horus",
+        "sourceId": "Horus",
+        "bossSourceId": "GYM_Horus",
+        "baseTribeRuntimeId": 7,
+        "bossTribeRuntimeId": 7,
+        "valid": true
+      },
+      {
+        "palId": "horus_water",
+        "sourceId": "Horus_Water",
+        "bossSourceId": "BOSS_Horus_Water",
+        "baseTribeRuntimeId": 221,
+        "bossTribeRuntimeId": 221,
+        "valid": true
+      },
+      {
+        "palId": "blackgriffon",
+        "sourceId": "BlackGriffon",
+        "bossSourceId": "GYM_BlackGriffon",
+        "baseTribeRuntimeId": 5,
+        "bossTribeRuntimeId": 5,
+        "valid": true
+      },
+      {
+        "palId": "moonqueen",
+        "sourceId": "MoonQueen",
+        "bossSourceId": "GYM_MoonQueen",
+        "baseTribeRuntimeId": 10,
+        "bossTribeRuntimeId": 10,
+        "valid": true
+      },
+      {
+        "palId": "snowtigerbeastman",
+        "sourceId": "SnowTigerBeastman",
+        "bossSourceId": "GYM_SnowTigerBeastman",
+        "baseTribeRuntimeId": 11,
+        "bossTribeRuntimeId": 11,
+        "valid": true
+      },
+      {
+        "palId": "blueskydragon",
+        "sourceId": "BlueSkyDragon",
+        "bossSourceId": "GYM_BlueSkyDragon",
+        "baseTribeRuntimeId": 12,
+        "bossTribeRuntimeId": 12,
+        "valid": true
+      },
+      {
+        "palId": "mothman",
+        "sourceId": "Mothman",
+        "bossSourceId": "BOSS_Mothman",
+        "baseTribeRuntimeId": 301,
+        "bossTribeRuntimeId": 301,
+        "valid": true
+      },
+      {
+        "palId": "flowerprince",
+        "sourceId": "FlowerPrince",
+        "bossSourceId": "BOSS_FlowerPrince",
+        "baseTribeRuntimeId": 304,
+        "bossTribeRuntimeId": 304,
+        "valid": true
+      },
+      {
+        "palId": "nightlady",
+        "sourceId": "NightLady",
+        "bossSourceId": "RAID_NightLady",
+        "baseTribeRuntimeId": 1,
+        "bossTribeRuntimeId": 1,
+        "valid": true
+      },
+      {
+        "palId": "nightlady_dark",
+        "sourceId": "NightLady_Dark",
+        "bossSourceId": "RAID_NightLady_Dark",
+        "baseTribeRuntimeId": 2,
+        "bossTribeRuntimeId": 2,
+        "valid": true
+      },
+      {
+        "palId": "darkmechadragon",
+        "sourceId": "DarkMechaDragon",
+        "bossSourceId": "BOSS_DarkMechaDragon",
+        "baseTribeRuntimeId": 192,
+        "bossTribeRuntimeId": 192,
+        "valid": true
+      },
+      {
+        "palId": "legenddeer",
+        "sourceId": "LegendDeer",
+        "bossSourceId": "BOSS_LegendDeer",
+        "baseTribeRuntimeId": 229,
+        "bossTribeRuntimeId": 229,
+        "valid": true
+      },
+      {
+        "palId": "saintcentaur",
+        "sourceId": "SaintCentaur",
+        "bossSourceId": "BOSS_SaintCentaur",
+        "baseTribeRuntimeId": 136,
+        "bossTribeRuntimeId": 136,
+        "valid": true
+      },
+      {
+        "palId": "blackcentaur",
+        "sourceId": "BlackCentaur",
+        "bossSourceId": "BOSS_BlackCentaur",
+        "baseTribeRuntimeId": 26,
+        "bossTribeRuntimeId": 26,
+        "valid": true
+      },
+      {
+        "palId": "icehorse",
+        "sourceId": "IceHorse",
+        "bossSourceId": "BOSS_IceHorse",
+        "baseTribeRuntimeId": 92,
+        "bossTribeRuntimeId": 92,
+        "valid": true
+      },
+      {
+        "palId": "icehorse_dark",
+        "sourceId": "IceHorse_Dark",
+        "bossSourceId": "BOSS_IceHorse_Dark",
+        "baseTribeRuntimeId": 93,
+        "bossTribeRuntimeId": 93,
+        "valid": true
+      },
+      {
+        "palId": "poseidonorca",
+        "sourceId": "PoseidonOrca",
+        "bossSourceId": "BOSS_PoseidonOrca",
+        "baseTribeRuntimeId": 258,
+        "bossTribeRuntimeId": 258,
+        "valid": true
+      },
+      {
+        "palId": "jetdragon",
+        "sourceId": "JetDragon",
+        "bossSourceId": "BOSS_JetDragon",
+        "baseTribeRuntimeId": 94,
+        "bossTribeRuntimeId": 94,
+        "valid": true
+      },
+      {
+        "palId": "kingwhale",
+        "sourceId": "KingWhale",
+        "bossSourceId": "BOSS_KingWhale",
+        "baseTribeRuntimeId": 202,
+        "bossTribeRuntimeId": 202,
+        "valid": true
+      }
+    ]
+  },
+  "allDifferences": {
+    "rowMetadata": [],
+    "uniqueRows": [],
+    "logicalResults": []
+  },
+  "inputs": {
+    "runtimeInput": {
+      "bytes": 518868,
+      "sha256": "e25e5bdd4ef66431263338e8509db8ccc4f969a13e7954185ea001921fccd57b",
+      "rawPalRows": 753,
+      "releasedPals": 288,
+      "uniqueRows": 258,
+      "pairs": 41616,
+      "logicalRows": 41617,
+      "specialPairs": 183,
+      "tribes": 333
+    },
+    "rawAssetsSha256": "e23a12ceffae5792b69c8faebe8ee3fbacbc09f0bd88572410d2b3b59aca1fe0",
+    "palsSha256": "77b300c10a1225f51e1c218ada7d03d236cc9fcb8b950ab79fa25a5b0e67fdf0",
+    "breedingSha256": "74f2ac2b7825ff9e4f0cea7426c0d22e701d53eb250ad78d2b2b28979dadc52c",
+    "staticNativeEvidenceSha256": "ac079224cbadb33886092145de2d4f5e2d6da6ccc5ba4cb0374f1e2f552e2651",
+    "runtimeProbeSourceSha256": "75eebadde38b79e1afb506c343f6c957ba74dfa70724e13b041fc215ac24aeb5",
+    "offlineShimSourceSha256": "39dbb0143a20966eed6e932795aaca0f5949340ec905c4b3192d7f8f7a3c1697"
+  },
+  "serverInitialization": {
+    "reportedGameVersion": "v1.0.1.100619",
+    "reachedRunningState": true,
+    "processExitCode": 143
+  },
+  "evidenceSha256": "08d7850d2bb566a77cd8734c93b7ed8f31563c287850e41450de2328c89a36a6"
+}

@@ -3,8 +3,10 @@
 `build-24181105.assets.json` is a derived, read-only extraction.
 `build-24181105.native-breeding.json` records reproducible byte offsets,
 instruction excerpts, and hashes from the exact dedicated-server executable.
-Neither file contains a PAK/IoStore payload, mappings file, executable, Steam
-credential, or account data.
+`../audit/native-runtime-comparison.json` records the exhaustive direct-call
+result produced from that executable. None of these files contains a
+PAK/IoStore payload, mappings file, executable, Steam credential, compiled
+probe, or account data.
 
 - Game: `v1.0.1.100619`
 - Dedicated server app/build: `2394010` / `24181105`
@@ -28,11 +30,22 @@ It also reads `DA_BreedingItemEffectData`; all four fixed-build entries have
 `CombiRankBonus = 0`, so the native optional rank adjustment leaves the base
 ceiling-average formula unchanged for every available breeding item.
 `build_verified_dataset.py` independently validates the exact input hashes,
-applies the pinned release-selection rules, calculates every unordered parent
+applies release selection from Paldex fields, rarity, boss flags, and exact icon
+identity without classifying RowName text, calculates every unordered parent
 pair, and compares every logical result row with pinned auxiliary outputs.
 The byte-verified top-level control flow checks special combinations before
 normal selection and has no equal-parent shortcut; this is why two self-pair
 results intentionally differ from auxiliary calculators that add such a rule.
+
+The native runtime audit injects byte-layout rows built from the fixed extracted
+tables into the hash-verified server process and calls the real top-level
+breeding function for all 41,616 pairs, both parent orders, and both meaningful
+gender orientations. Its 166,464 calls and all 41,617 logical results have zero
+differences. This proves the fixed executable's selection against the exact
+extracted tables. The probe instruments five lookup/helper points (raw and
+unique `FindRow`, row-key generation, manager `FindRow`, and the manager
+helper); it does not claim an unmodified live-PAK DataTable read or 41,616
+observed in-game hatches.
 
 To reproduce the native byte checks without committing the executable:
 
@@ -40,3 +53,18 @@ To reproduce the native byte checks without committing the executable:
 python3 tools/verify_native_breeding_binary.py \
   /path/to/PalServer-Linux-Shipping
 ```
+
+To reproduce the exhaustive direct-call audit from the exact server root:
+
+```sh
+sudo unshare --net -- bash -lc '
+  ulimit -c 0
+  ip link set lo up
+  python3 tools/verify_native_breeding_runtime.py /path/to/palserver-root \
+    --output audit/native-runtime-comparison.json
+'
+```
+
+The workflow uploads only the derived JSON. The downloaded server files and
+temporary compiled shared objects remain runner-local and are deleted with the
+runner.
