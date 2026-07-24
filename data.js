@@ -193,22 +193,26 @@ function setDataStatus(text,state="warn"){
 }
 async function checkCurrentBuild(check){
  const freshness=$("#buildFreshness");
+ const versionStatus=$("#versionStatus");
  try{
   const {value}=await fetchDocument(check.currentBuildEndpoint,10000);
   const current=String(value?.data?.[check.targetServerAppId]?.depots?.branches?.public?.buildid||"");
   if(!current)throw new Error("現行Build IDを取得できません");
   if(current!==check.targetServerBuildId){
    document.body.dataset.buildState="outdated";
+   versionStatus.textContent="現在の対応バージョン";
    setDataStatus("新ビルド検出・旧固定ビルド（未検証）","warn");
    freshness.textContent=`現行サーバーBuild ${current}を検出しました。この表はBuild ${check.targetServerBuildId}用のため、現行版としては未検証です。`;
    freshness.hidden=false;
    return;
   }
   document.body.dataset.buildState="current";
+  versionStatus.textContent="最新バージョンに対応しています";
    setDataStatus("対象サーバーBuild一致・資産表照合済み","ok");
   freshness.hidden=true;
  }catch{
   document.body.dataset.buildState="unknown";
+  versionStatus.textContent="現在の対応バージョン";
   setDataStatus("固定ビルド資産表・現行ビルド確認不能","warn");
   freshness.textContent=`Build ${check.targetServerBuildId}の固定データは利用できますが、現行Build IDを確認できませんでした。`;
   freshness.hidden=false;

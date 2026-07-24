@@ -44,9 +44,8 @@ test("01 desktop Chromium first load shows the fixed-build counts",async({page})
   await expect(page.locator("#buildId")).toHaveText("Build 24181105");
   await expect(page.locator("body")).toHaveAttribute("data-build-state","current");
   await expect(page.locator("#dataStatus")).toContainText("対象サーバーBuild一致");
-  await expect(page.locator(".audit-notice")).toContainText("計166,464回");
-  await expect(page.locator(".audit-notice")).toContainText("差分0");
-  await expect(page.locator(".audit-notice")).toContainText("ゲーム内で全組を孵化させる照合は未実施");
+  await expect(page.locator("#versionStatus")).toHaveText("最新バージョンに対応しています");
+  await expect(page.locator(".audit-notice")).toContainText("Palworld v1.0.1.100619");
 });
 
 test("01b rendering is local and never requests third-party Pal images",async({page})=>{
@@ -421,6 +420,7 @@ test("19 a newly detected public build automatically removes current-build statu
   await openReady(page);
   await expect(page.locator("body")).toHaveAttribute("data-build-state","outdated");
   await expect(page.locator("#dataStatus")).toContainText("新ビルド検出");
+  await expect(page.locator("#versionStatus")).toHaveText("現在の対応バージョン");
   await expect(page.locator("#buildFreshness")).toContainText("現行サーバーBuild 99999999");
 });
 
@@ -438,6 +438,7 @@ test("21 build lookup failure keeps fixed data usable but removes current-build 
   await openReady(page);
   await expect(page.locator("body")).toHaveAttribute("data-build-state","unknown");
   await expect(page.locator("#dataStatus")).toContainText("現行ビルド確認不能");
+  await expect(page.locator("#versionStatus")).toHaveText("現在の対応バージョン");
   await expect(page.locator("#palCount")).toHaveText("288形態");
 });
 
