@@ -16,9 +16,9 @@ const EXPECTED_NATIVE_EVIDENCE_SHA256="ac079224cbadb33886092145de2d4f5e2d6da6ccc
 const EXPECTED_NATIVE_RUNTIME_EVIDENCE_SHA256="265bf315873f9d4f1e58ac8fec9544b912e7e6cea304cdc3b34cb1437be63bb1";
 const EXPECTED_NATIVE_RUNTIME_EVIDENCE_DIGEST="08d7850d2bb566a77cd8734c93b7ed8f31563c287850e41450de2328c89a36a6";
 const EXPECTED_SERVER_EXECUTABLE_SHA256="788649fa1592160faa7bcf07ccd16d474ebeaae954717bc32284b5a43028d8e7";
-const EXPECTED_PAL_DATA_SHA256="77b300c10a1225f51e1c218ada7d03d236cc9fcb8b950ab79fa25a5b0e67fdf0";
+const EXPECTED_PAL_DATA_SHA256="584c969e0d9d4e9d0b64154b862baa5314914ff3cbe706d15aada035d464984c";
 const EXPECTED_BREEDING_DATA_SHA256="74f2ac2b7825ff9e4f0cea7426c0d22e701d53eb250ad78d2b2b28979dadc52c";
-const EXPECTED_GENERATED_DATA_SHA256="d00bdc6286be2e0a53227fb7ceb677d79a13717ca2ae5bb4930cfcec3b275cb7";
+const EXPECTED_GENERATED_DATA_SHA256="04365dba99db2c7201b867fd3f85953d3751ddad13d6af2838a9c715e87f2478";
 const DATA_VERSION=encodeURIComponent(APP_DATASET_ID);
 const DATA_URLS={
  pals:`data/pals.verified.json?dataset=${DATA_VERSION}`,
@@ -39,6 +39,14 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const pairKey=(a,b)=>[a,b].sort().join("|");
 const palSort=(a,b)=>a.no-b.no||String(a.suffix||"").localeCompare(String(b.suffix||""))||a.sourceOrder-b.sourceOrder||a.index-b.index;
+const LOCAL_PAL_ICON_PATTERN=/^assets\/pal-icons\/[a-z0-9_]+\.png$/;
+
+function validatedPalIcon(value,palId=""){
+ if(typeof value!=="string"||!LOCAL_PAL_ICON_PATTERN.test(value))throw new Error(`パルのアイコンパスが不正です: ${palId||"(unknown)"}`);
+ const resolved=new URL(value,document.baseURI);
+ if(resolved.origin!==location.origin)throw new Error(`パルのアイコンは同一オリジンである必要があります: ${palId||"(unknown)"}`);
+ return value;
+}
 
 async function fetchDocument(url,timeout=30000){
  const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),timeout);
@@ -91,7 +99,8 @@ function preparePals(payload,compact){
   variant:Boolean(raw.variant),
   power:Number(raw.power),
   elements:Array.isArray(raw.elements)?raw.elements:[],
-  work:raw.work&&typeof raw.work==="object"?raw.work:{}
+  work:raw.work&&typeof raw.work==="object"?raw.work:{},
+  icon:validatedPalIcon(raw.icon,raw.id)
  }));
  if(pals.some(p=>!p.id||!p.en||!p.jp||!Number.isInteger(p.no)||p.no<=0||!Number.isInteger(p.power)||p.power<=0||!Number.isInteger(p.sourceOrder)||!p.elements.length||p.variant!==Boolean(p.suffix)||!p.isPal||p.isBoss||p.isRaidBoss||p.isTowerBoss))throw new Error("パル情報に欠落または未公開データがあります");
  const order=pals.map(p=>p.id);

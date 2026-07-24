@@ -23,6 +23,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Reject private game inputs and compiled artifacts
+        run: python tools/check_repository_hygiene.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

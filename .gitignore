@@ -4,3 +4,19 @@ test-results/
 playwright-report/
 __pycache__/
 *.py[cod]
+tools/pal-icon-extractor/bin/
+tools/pal-icon-extractor/obj/
+
+# Fixed-game inputs and compiled probes must never enter the repository.
+*.pak
+*.utoc
+*.ucas
+*.usmap
+appmanifest_*.acf
+*.exe
+*.dll
+*.pdb
+*.so
+*.dylib
+steamapps/
+depotcache/

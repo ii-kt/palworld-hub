@@ -50,7 +50,7 @@
   "bossAlphaSpeciesMappingVerified": true,
   "bossAlphaAndIndividualStatePostProcessingModeled": false,
   "currentBuildEndpoint": "https://api.steamcmd.net/v1/info/2394010",
-  "palDataSha256": "77b300c10a1225f51e1c218ada7d03d236cc9fcb8b950ab79fa25a5b0e67fdf0",
+  "palDataSha256": "584c969e0d9d4e9d0b64154b862baa5314914ff3cbe706d15aada035d464984c",
   "breedingDataSha256": "74f2ac2b7825ff9e4f0cea7426c0d22e701d53eb250ad78d2b2b28979dadc52c",
-  "generatedDataSha256": "d00bdc6286be2e0a53227fb7ceb677d79a13717ca2ae5bb4930cfcec3b275cb7"
+  "generatedDataSha256": "04365dba99db2c7201b867fd3f85953d3751ddad13d6af2838a9c715e87f2478"
 }

@@ -1,0 +1,5202 @@
+{
+  "schemaVersion": 1,
+  "gameVersion": "v1.0.1.100619",
+  "sourceClient": {
+    "appId": "1623730",
+    "buildId": "24181527",
+    "depotId": "1623731",
+    "depotManifestId": "2714631871676494093",
+    "pakFile": "Pal-Windows.pak",
+    "pakBytes": 40526106335,
+    "pakSha256": "fe2d7b8548d5be0649b6bb3e49aadc79529c2e7d138baaacece3a3563a864227"
+  },
+  "sourceMapping": {
+    "iconTable": "Pal/Content/Pal/DataTable/Character/DT_PalCharacterIconDataTable",
+    "evidencePath": "evidence/build-24181105.assets.json",
+    "evidenceSha256": "e23a12ceffae5792b69c8faebe8ee3fbacbc09f0bd88572410d2b3b59aca1fe0",
+    "catalogMappingsSha256": "561ef13c8ee3cf785e4de8aa5bc9b3ad1646e416d895f1d1166fa27ebdfd26b0",
+    "parserMappings": "PalworldModding/UsefulFiles@42cf396e714c166f17950a9c964583e0cadf2a15",
+    "parserMappingsSha256": "241c45de9d5b55b246cd4b39d62b9209faf7758ce0637e1f7a545aa0f75f71f0"
+  },
+  "extractor": {
+    "tableExtractor": "Awy64/palworld-atlas-data@0385b3fd8bd757240d4a2c79615145122669abd5",
+    "textureDecoder": "FabianFG/CUE4Parse@ecad882a3049df6f27e0c5c3a3531346305c010b",
+    "cue4ParseVersion": "1.2.2.202607"
+  },
+  "counts": {
+    "palForms": 288,
+    "uniqueIcons": 287,
+    "sharedIcons": 1
+  },
+  "icons": [
+    {
+      "iconId": "alpaca",
+      "sourceTableId": "Alpaca",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Alpaca_icon_normal.T_Alpaca_icon_normal",
+      "outputPath": "assets/pal-icons/alpaca.png",
+      "palIds": [
+        "alpaca"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "42ab46ef844452e0fe68d108fbfc9e0647804d634e7ccd68872afaf4fd1b1b32",
+      "pngBytes": 9891,
+      "pngSha256": "a948a426079f0755e7418ac42c2428b36273612914a5033a7703ea8aaac39f30"
+    },
+    {
+      "iconId": "amaterasuwolf",
+      "sourceTableId": "AmaterasuWolf",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_AmaterasuWolf_icon_normal.T_AmaterasuWolf_icon_normal",
+      "outputPath": "assets/pal-icons/amaterasuwolf.png",
+      "palIds": [
+        "amaterasuwolf"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3e1fd3e0efa434d0d867e84199a8c6d8592aa6ae52e090f1b4dda83f01844dd5",
+      "pngBytes": 17697,
+      "pngSha256": "4a204dbac47d085130d23fda166e47d023e59257780e980257fb670adb26a6c7"
+    },
+    {
+      "iconId": "amaterasuwolf_dark",
+      "sourceTableId": "AmaterasuWolf_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_AmaterasuWolf_Dark_icon_normal.T_AmaterasuWolf_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/amaterasuwolf_dark.png",
+      "palIds": [
+        "amaterasuwolf_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "423d4523577217442a7bb5485e2a8355ce7885124cd8fcdd96fb381133472662",
+      "pngBytes": 18719,
+      "pngSha256": "e3a5d016ad4164973fd713043d8cc87367141e45262974e05cc62301e6abd36b"
+    },
+    {
+      "iconId": "anubis",
+      "sourceTableId": "Anubis",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Anubis_icon_normal.T_Anubis_icon_normal",
+      "outputPath": "assets/pal-icons/anubis.png",
+      "palIds": [
+        "anubis"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "9b7023fe11720ef7983af9fb106bb5b4a19ed81ce922b69e612fb1471a82eba7",
+      "pngBytes": 9826,
+      "pngSha256": "0d52d49a3e64517b83827c7c5b8dfc11238b7030e1a511a931e3aa9ac61fb548"
+    },
+    {
+      "iconId": "badcatgirl",
+      "sourceTableId": "BadCatGirl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BadCatgirl_icon_normal.T_BadCatgirl_icon_normal",
+      "outputPath": "assets/pal-icons/badcatgirl.png",
+      "palIds": [
+        "badcatgirl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "29d0dbcdf330dc08379bb219e0a21677e5c599a9e9324ca23cea78b739ec9ceb",
+      "pngBytes": 16878,
+      "pngSha256": "21bdc7b1001d91b8af30c321b3ee548085116c284f5b6650e3982ca5b8c29273"
+    },
+    {
+      "iconId": "baphomet",
+      "sourceTableId": "Baphomet",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Baphomet_icon_normal.T_Baphomet_icon_normal",
+      "outputPath": "assets/pal-icons/baphomet.png",
+      "palIds": [
+        "baphomet"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "60c5dc754c2e8a8525fa386d99c0e80e907d290e3d8456a07d8699ad772f30db",
+      "pngBytes": 15998,
+      "pngSha256": "5e086198f5e6d2b6bac0340bfc7ce9c7f8b4ac2660f44e93a808ef5442369242"
+    },
+    {
+      "iconId": "baphomet_dark",
+      "sourceTableId": "Baphomet_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Baphomet_Dark_icon_normal.T_Baphomet_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/baphomet_dark.png",
+      "palIds": [
+        "baphomet_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "35c6e5e0b21c6e0b0bf9fe1627665edc4d2e7b4b72f2f16b3d1e90b4051ca64e",
+      "pngBytes": 18447,
+      "pngSha256": "be392cc889926676228b08ef8569e7e9274993312a7fcfe07e1b10522a0252cd"
+    },
+    {
+      "iconId": "bastet",
+      "sourceTableId": "Bastet",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Bastet_icon_normal.T_Bastet_icon_normal",
+      "outputPath": "assets/pal-icons/bastet.png",
+      "palIds": [
+        "bastet"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "df648320bd46f757ee9f0dc631ccb5ef965e34fd1209daf1c4f3558ccd17456f",
+      "pngBytes": 11849,
+      "pngSha256": "8bfb2efe6d9cf7be99cf3bb0a2c4868b49881b7b05501cdbf0ae9257a8be71d7"
+    },
+    {
+      "iconId": "bastet_ice",
+      "sourceTableId": "Bastet_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Bastet_Ice_icon_normal.T_Bastet_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/bastet_ice.png",
+      "palIds": [
+        "bastet_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "8ef8d18a66f2c877c49daedbfc0138ed5d9c09225f884a575161bd869071eecc",
+      "pngBytes": 13204,
+      "pngSha256": "473db852dfebf57173d22f3ff90f506a817afd3349e6420667f5fc6c821d67b1"
+    },
+    {
+      "iconId": "berrygoat",
+      "sourceTableId": "BerryGoat",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BerryGoat_icon_normal.T_BerryGoat_icon_normal",
+      "outputPath": "assets/pal-icons/berrygoat.png",
+      "palIds": [
+        "berrygoat"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "15411cb1f1a4ce65983e0151444db64c2d0c915f8795f76ba005bd6ce645e394",
+      "pngBytes": 17620,
+      "pngSha256": "b401e8c1a50eb462b29872cc4e8791f2d16f894ef4630b9333752a2413cc5d88"
+    },
+    {
+      "iconId": "berrygoat_dark",
+      "sourceTableId": "BerryGoat_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BerryGoat_Dark_icon_normal.T_BerryGoat_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/berrygoat_dark.png",
+      "palIds": [
+        "berrygoat_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c342b2683e9698336525dfcde354754955e0320e6edd986a89e5b89edf27108c",
+      "pngBytes": 17849,
+      "pngSha256": "0ff0c23617087259e6491398e4e7ce02f85722fd12c9686f18c4734019a5500f"
+    },
+    {
+      "iconId": "birddragon",
+      "sourceTableId": "BirdDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BirdDragon_icon_normal.T_BirdDragon_icon_normal",
+      "outputPath": "assets/pal-icons/birddragon.png",
+      "palIds": [
+        "birddragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "5700f619d4eda8fc1c41f40afc5ed0be4db56140fb84c017b4889b08937f0cb3",
+      "pngBytes": 14210,
+      "pngSha256": "01d067c3adf9f875f6fb5c5cc98b2f17e96c036e345d217d0bcca403b81a34fd"
+    },
+    {
+      "iconId": "birddragon_ice",
+      "sourceTableId": "BirdDragon_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BirdDragon_Ice_icon_normal.T_BirdDragon_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/birddragon_ice.png",
+      "palIds": [
+        "birddragon_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ec7a1b49ed0c077af8b088dce289136d8e157f46265df7ba538efc027dcf357f",
+      "pngBytes": 16655,
+      "pngSha256": "50f405d15dd73e26ca0c0cf5658deba7f213ce5f28a2709709b3c2bb3e821414"
+    },
+    {
+      "iconId": "blackcentaur",
+      "sourceTableId": "BlackCentaur",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlackCentaur_icon_normal.T_BlackCentaur_icon_normal",
+      "outputPath": "assets/pal-icons/blackcentaur.png",
+      "palIds": [
+        "blackcentaur"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "1804a73720a00ed77e9103a9be422049ecde97ef79e2f7922331b67efeed6c32",
+      "pngBytes": 16568,
+      "pngSha256": "5af2be19385052fe031f523badc204cd8d4445f5de33d612bd086692e6162e3f"
+    },
+    {
+      "iconId": "blackgriffon",
+      "sourceTableId": "BlackGriffon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlackGriffon_icon_normal.T_BlackGriffon_icon_normal",
+      "outputPath": "assets/pal-icons/blackgriffon.png",
+      "palIds": [
+        "blackgriffon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "f1a621a11cdf40f9a54ed7eb296bc12b0223adf9c118a1459a7e36ccd231273c",
+      "pngBytes": 14679,
+      "pngSha256": "cd184d90177bbb7b80a3cbbf09f40b80bb3af1b3553cdee7471f86923f53719c"
+    },
+    {
+      "iconId": "blackmetaldragon",
+      "sourceTableId": "BlackMetalDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlackMetalDragon_icon_normal.T_BlackMetalDragon_icon_normal",
+      "outputPath": "assets/pal-icons/blackmetaldragon.png",
+      "palIds": [
+        "blackmetaldragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b86044dba28502471a4c70586a2f47e3492c9e1af27c16464519fe3d93e6d1fc",
+      "pngBytes": 15386,
+      "pngSha256": "1c155cb7c6e695b34efc8fa3c92fb946b0120de305b75ec4790a0171288b330a"
+    },
+    {
+      "iconId": "blackpuppy",
+      "sourceTableId": "BlackPuppy",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlackPuppy_icon_normal.T_BlackPuppy_icon_normal",
+      "outputPath": "assets/pal-icons/blackpuppy.png",
+      "palIds": [
+        "blackpuppy"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "a04f7c8bf5b8bf3f853f70e3c234241dd1d9fa69b083f9a752d84783aa1a8f1d",
+      "pngBytes": 12939,
+      "pngSha256": "275218a3fdb3ba8cdb99af000f68511a50ee78d31ab10b5f681f01c327fb3b35"
+    },
+    {
+      "iconId": "blackpuppy_ice",
+      "sourceTableId": "BlackPuppy_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlackPuppy_Ice_icon_normal.T_BlackPuppy_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/blackpuppy_ice.png",
+      "palIds": [
+        "blackpuppy_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "952bcf3a23f005a1a690693762da552bd8e1935b2f0f30eb7f04442c7bce996f",
+      "pngBytes": 12977,
+      "pngSha256": "396155beb25ed7fbb6c1121904501b92dc7852375e311a07bcdb9b36911003e0"
+    },
+    {
+      "iconId": "blueberryfairy",
+      "sourceTableId": "BlueberryFairy",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlueberryFairy_icon_normal.T_BlueberryFairy_icon_normal",
+      "outputPath": "assets/pal-icons/blueberryfairy.png",
+      "palIds": [
+        "blueberryfairy"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "0a396aaae02baab12785932b9c14f01cb9d16409d19f1939a4b3c7e6ec1ec166",
+      "pngBytes": 22146,
+      "pngSha256": "99ca3d039ba8426a1eca4e0dda79fe1c17ad5f3217a4bf1547bbce9672b2d0cd"
+    },
+    {
+      "iconId": "bluedragon",
+      "sourceTableId": "BlueDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlueDragon_icon_normal.T_BlueDragon_icon_normal",
+      "outputPath": "assets/pal-icons/bluedragon.png",
+      "palIds": [
+        "bluedragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "1223e4834ba6adabb40034a265467e19bfb908d5ecbd0870f30bff15ec9d5dd0",
+      "pngBytes": 13652,
+      "pngSha256": "bee52962931cae15b063dbd740f96ffef3ad4308107e5fda694eff6b8ca8c0d1"
+    },
+    {
+      "iconId": "bluedragon_ice",
+      "sourceTableId": "BlueDragon_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlueDragon_Ice_icon_normal.T_BlueDragon_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/bluedragon_ice.png",
+      "palIds": [
+        "bluedragon_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "48178bb8b5b197ae2f18d8c45a327609e23aaa0e5a4c77dcc15c1bf768cab0c3",
+      "pngBytes": 14411,
+      "pngSha256": "fb432c618fad64c9abdf83fca7e69a75e03ce3c68ba2e4dc8682444d82a6c93c"
+    },
+    {
+      "iconId": "blueplatypus",
+      "sourceTableId": "Blueplatypus",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BluePlatypus_icon_normal.T_BluePlatypus_icon_normal",
+      "outputPath": "assets/pal-icons/blueplatypus.png",
+      "palIds": [
+        "blueplatypus"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "8aff6f4b424277f49b38f60a017cc2e7d55d844c2bc98fe5a22d663a71dc53d1",
+      "pngBytes": 13473,
+      "pngSha256": "e541e67525ec3e76941b7d1033e8bef3063ee4f767872ad37682b75a105075e9"
+    },
+    {
+      "iconId": "blueplatypus_fire",
+      "sourceTableId": "BluePlatypus_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BluePlatypus_Fire_icon_normal.T_BluePlatypus_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/blueplatypus_fire.png",
+      "palIds": [
+        "blueplatypus_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "add58a488c6b5b5daae83c944705227b8b3d2b1dffe0de7fd356a905d361a1c3",
+      "pngBytes": 13764,
+      "pngSha256": "411a66adfed2655726edf051f2069301225f83981655585b8b68de871bb33058"
+    },
+    {
+      "iconId": "blueskydragon",
+      "sourceTableId": "BlueSkyDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlueSkyDragon_icon_normal.T_BlueSkyDragon_icon_normal",
+      "outputPath": "assets/pal-icons/blueskydragon.png",
+      "palIds": [
+        "blueskydragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c0489e29cef5752f350852526850fb92a1f80312f8cd765408357d481dece51b",
+      "pngBytes": 18288,
+      "pngSha256": "d802eddb12bc254f6dbe0f1b9b305d74915432a4df7f51e9bb3175b18028f061"
+    },
+    {
+      "iconId": "bluethunderhorse",
+      "sourceTableId": "BlueThunderHorse",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BlueThunderHorse_icon_normal.T_BlueThunderHorse_icon_normal",
+      "outputPath": "assets/pal-icons/bluethunderhorse.png",
+      "palIds": [
+        "bluethunderhorse"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6348daaf581c640f6a0ce49644aba54174807beb8529a14ce5b4691d4258e436",
+      "pngBytes": 15628,
+      "pngSha256": "adcfb51b7b42fb5695890f6c705bf0dfa2ff29f5a4932dbd799f2a149f8402d3"
+    },
+    {
+      "iconId": "boar",
+      "sourceTableId": "Boar",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Boar_icon_normal.T_Boar_icon_normal",
+      "outputPath": "assets/pal-icons/boar.png",
+      "palIds": [
+        "boar"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "7b1aa42e0fba9a637a6c973f461003ba4d7ac918c2e188a64b87b90858c54fe1",
+      "pngBytes": 14494,
+      "pngSha256": "bf189fa336909def3d2754133e1329f5141e80fd60a75de2d9c7b7438298cfc3"
+    },
+    {
+      "iconId": "brownrabbit",
+      "sourceTableId": "BrownRabbit",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_BrownRabbit_icon_normal.T_BrownRabbit_icon_normal",
+      "outputPath": "assets/pal-icons/brownrabbit.png",
+      "palIds": [
+        "brownrabbit"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3d9f311ddd70b9e34d99650aa2c64b0d9a9b56b72499ffa47418913effbb8898",
+      "pngBytes": 19885,
+      "pngSha256": "d8978aa48e1a99874945571a07b13ea391ed477178d83dd729b339a81b154705"
+    },
+    {
+      "iconId": "cactusdoll",
+      "sourceTableId": "CactusDoll",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CactusDoll_icon_normal.T_CactusDoll_icon_normal",
+      "outputPath": "assets/pal-icons/cactusdoll.png",
+      "palIds": [
+        "cactusdoll"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6a668596a23b2af43d1685f24d182dd1442eeddb111f7c2c077a4529b102e5c0",
+      "pngBytes": 14723,
+      "pngSha256": "65b88ccdd1b3691d7c8078fc08aa0f9e290b58cfd02fe14da1fd6d121968f8a1"
+    },
+    {
+      "iconId": "cactusdoll_dark",
+      "sourceTableId": "CactusDoll_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CactusDoll_Dark_icon_normal.T_CactusDoll_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/cactusdoll_dark.png",
+      "palIds": [
+        "cactusdoll_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "2dff085a62c63297c5f402b5c6ad002f83e57cd57d9637bffda633334127701c",
+      "pngBytes": 15011,
+      "pngSha256": "11ad5a589cd36619e9bfde1a8843a8bb2df6e7c9bc9abbec940a1a148590146e"
+    },
+    {
+      "iconId": "candleghost",
+      "sourceTableId": "CandleGhost",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CandleGhost_icon_normal.T_CandleGhost_icon_normal",
+      "outputPath": "assets/pal-icons/candleghost.png",
+      "palIds": [
+        "candleghost"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "1fd62bf30de4be5858604456acbd030955daddf9585d8ca26008ce74e6833da4",
+      "pngBytes": 16760,
+      "pngSha256": "545064630c429f23dc2a8a2a3cead9a9a532535b89c26ae48fae116c424ece33"
+    },
+    {
+      "iconId": "captainpenguin",
+      "sourceTableId": "CaptainPenguin",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CaptainPenguin_icon_normal.T_CaptainPenguin_icon_normal",
+      "outputPath": "assets/pal-icons/captainpenguin.png",
+      "palIds": [
+        "captainpenguin"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3d4ccf1aaba2fd7ae9007f40947876a1f7f9f6f1d1168dd7439fcbdcee799151",
+      "pngBytes": 17489,
+      "pngSha256": "975afcde4837f948fc7c636f6c705f1461eb3917fe37c34965270ae7bc6c694a"
+    },
+    {
+      "iconId": "captainpenguin_black",
+      "sourceTableId": "CaptainPenguin_Black",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CaptainPenguin_Black_icon_normal.T_CaptainPenguin_Black_icon_normal",
+      "outputPath": "assets/pal-icons/captainpenguin_black.png",
+      "palIds": [
+        "captainpenguin_black"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "bb9d30bfbe8788004233264a3d88efd7ea77ac3f250290e52464870d0ad178f4",
+      "pngBytes": 19228,
+      "pngSha256": "b1fb05ba6c1a684de73d073c6efcb8af38695ec4bbd3214314fa38a3363df84d"
+    },
+    {
+      "iconId": "carbunclo",
+      "sourceTableId": "Carbunclo",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Carbunclo_icon_normal.T_Carbunclo_icon_normal",
+      "outputPath": "assets/pal-icons/carbunclo.png",
+      "palIds": [
+        "carbunclo"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "43710a11d24cbcd4763e889c3945abe2daa9a8ac4f213987379ca359da5be09f",
+      "pngBytes": 17008,
+      "pngSha256": "d42220de92cbf5b9b6d8443ad2163bb420f207416f52018f630b52cac151193b"
+    },
+    {
+      "iconId": "catbat",
+      "sourceTableId": "CatBat",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CatBat_icon_normal.T_CatBat_icon_normal",
+      "outputPath": "assets/pal-icons/catbat.png",
+      "palIds": [
+        "catbat"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "43d3efadcad2f36599e10fe30ad3a778a4ae3223a9b67b6866971380428a1578",
+      "pngBytes": 17417,
+      "pngSha256": "5d08c508687ccf416c2a223aba7a4af1bf67bb8bf04c60f8f8d126e0e8ecd618"
+    },
+    {
+      "iconId": "catmage",
+      "sourceTableId": "CatMage",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CatMage_icon_normal.T_CatMage_icon_normal",
+      "outputPath": "assets/pal-icons/catmage.png",
+      "palIds": [
+        "catmage"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "1032298b66ff2549b1d3a0297bc818f029d15065210253b59c0b951403bfb560",
+      "pngBytes": 17809,
+      "pngSha256": "04ceb922344a71eaf53acf583b7afdccab09d0b95f9ccdfeb9dc74c79ba39b81"
+    },
+    {
+      "iconId": "catmage_fire",
+      "sourceTableId": "CatMage_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CatMage_Fire_icon_normal.T_CatMage_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/catmage_fire.png",
+      "palIds": [
+        "catmage_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "9f9c6dfc661f0ca34da40ed364bf175843da432c9abef67557bd73d3caf2b1c1",
+      "pngBytes": 17705,
+      "pngSha256": "eaf832530fc866c21c0b88c9dc17e3dbe211868f3754dae7dbc8e9c9789c0cba"
+    },
+    {
+      "iconId": "catvampire",
+      "sourceTableId": "CatVampire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CatVampire_icon_normal.T_CatVampire_icon_normal",
+      "outputPath": "assets/pal-icons/catvampire.png",
+      "palIds": [
+        "catvampire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6093a2b80b0f2339e3fc806aed2826bdb5d5ead2b7be3e2017bbd652f35c7486",
+      "pngBytes": 12360,
+      "pngSha256": "edfcbd176495ff62e333c9108583162da53d552802d4d978754978c69904d7e9"
+    },
+    {
+      "iconId": "chickenpal",
+      "sourceTableId": "ChickenPal",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ChickenPal_icon_normal.T_ChickenPal_icon_normal",
+      "outputPath": "assets/pal-icons/chickenpal.png",
+      "palIds": [
+        "chickenpal"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6e60b0654f984f876fb216ec1d4105533a887181c64df3e6793ae0acafee7cfb",
+      "pngBytes": 11391,
+      "pngSha256": "e40c2bdf3074ebec76bd3150629a83f409cc8b2eac1b25b198a7bddb4e0df3fd"
+    },
+    {
+      "iconId": "clionetwins",
+      "sourceTableId": "ClioneTwins",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ClioneTwins_icon_normal.T_ClioneTwins_icon_normal",
+      "outputPath": "assets/pal-icons/clionetwins.png",
+      "palIds": [
+        "clionetwins"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "601f59af28cf8a11537bccd159669d84ffd2f545348e048ddbbb5c16ab56cb85",
+      "pngBytes": 19540,
+      "pngSha256": "d007dd3d739f8b90205dcd7f69fadc33cc0c411ad93d91d53ef1d52c4e98759b"
+    },
+    {
+      "iconId": "cloverfairy",
+      "sourceTableId": "CloverFairy",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CloverFairy_icon_normal.T_CloverFairy_icon_normal",
+      "outputPath": "assets/pal-icons/cloverfairy.png",
+      "palIds": [
+        "cloverfairy"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "5f3b6f46a22fd6e3871fa421d39037c5c1ff444295402a766c2cc65d3c04f3ed",
+      "pngBytes": 18320,
+      "pngSha256": "061cb02b7f88ac53d21bfe8a1b198691c7d09ba9ef1e2cd8df10e9299bd8d62b"
+    },
+    {
+      "iconId": "clownrabbit",
+      "sourceTableId": "ClownRabbit",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ClownRabbit_icon_normal.T_ClownRabbit_icon_normal",
+      "outputPath": "assets/pal-icons/clownrabbit.png",
+      "palIds": [
+        "clownrabbit"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e275bc7ce3ad87502aec1c17409d1d2ba492d1531ae6b68fac27ce07f9a40f31",
+      "pngBytes": 16763,
+      "pngSha256": "c49c558943417e53f25ef89abc20d4253170626398592b92f60c5466fab15206"
+    },
+    {
+      "iconId": "colorfulbird",
+      "sourceTableId": "ColorfulBird",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ColorfulBird_icon_normal.T_ColorfulBird_icon_normal",
+      "outputPath": "assets/pal-icons/colorfulbird.png",
+      "palIds": [
+        "colorfulbird"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e66db5e953926a47536a9dc4233260a9e00b5ce3cad3dddbb961a55b37fe2634",
+      "pngBytes": 9192,
+      "pngSha256": "adab9e0a576a976bfa88552a30856b2b6ce92e986b973f78b51fef8dd2ce7197"
+    },
+    {
+      "iconId": "cowpal",
+      "sourceTableId": "Cowpal",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CowPal_icon_normal.T_CowPal_icon_normal",
+      "outputPath": "assets/pal-icons/cowpal.png",
+      "palIds": [
+        "cowpal"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d9f82d19cef2c9faf1f537b1bfbe8affc9071d55bf62fe53e066462c891f0a5a",
+      "pngBytes": 14365,
+      "pngSha256": "dbd6472af78accac7e865d9ffb0939d8eb6b8266336dcc53366ee1ef30a49875"
+    },
+    {
+      "iconId": "cubeturtle",
+      "sourceTableId": "CubeTurtle",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CubeTurtle_icon_normal.T_CubeTurtle_icon_normal",
+      "outputPath": "assets/pal-icons/cubeturtle.png",
+      "palIds": [
+        "cubeturtle"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "734b7f81e64b36654ee9c344c6555ce070cf1b3e107c200d7912a29e9549aff0",
+      "pngBytes": 22674,
+      "pngSha256": "0dc334abc1b6ad34e4739972233bc523c4cee233113fc8b8b911360abd9f942d"
+    },
+    {
+      "iconId": "cubeturtle_neutral",
+      "sourceTableId": "CubeTurtle_Neutral",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CubeTurtle_Neutral_icon_normal.T_CubeTurtle_Neutral_icon_normal",
+      "outputPath": "assets/pal-icons/cubeturtle_neutral.png",
+      "palIds": [
+        "cubeturtle_neutral"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "7fa3d554621701f375bf47db1d3bc4c1af785dd747e0ac889aa9eaf14be12f45",
+      "pngBytes": 22833,
+      "pngSha256": "28223b9ee2e18db29252ef43358f8712e9afe0e1154634ef4f86be413ecb6bcd"
+    },
+    {
+      "iconId": "cutebutterfly",
+      "sourceTableId": "CuteButterfly",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CuteButterfly_icon_normal.T_CuteButterfly_icon_normal",
+      "outputPath": "assets/pal-icons/cutebutterfly.png",
+      "palIds": [
+        "cutebutterfly"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "f23cafe78250c36178c5e71e40f95d3bce1ef0c5f0ef72c0c3ebb5c418ec5809",
+      "pngBytes": 17494,
+      "pngSha256": "4b78c40d0ed6d8925823ecb2073c5ced1f5f89481e8d73f1d9fb314fcdc04e9f"
+    },
+    {
+      "iconId": "cutefox",
+      "sourceTableId": "CuteFox",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CuteFox_icon_normal.T_CuteFox_icon_normal",
+      "outputPath": "assets/pal-icons/cutefox.png",
+      "palIds": [
+        "cutefox"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "8f59d82caa79379204060285263ac3721c872361ba5c76c792d16ae92a7923e3",
+      "pngBytes": 15379,
+      "pngSha256": "35f33fb9a9477580c9263bd5aef302dd450035dc35e80909a62c67972d553831"
+    },
+    {
+      "iconId": "cutemole",
+      "sourceTableId": "CuteMole",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_CuteMole_icon_normal.T_CuteMole_icon_normal",
+      "outputPath": "assets/pal-icons/cutemole.png",
+      "palIds": [
+        "cutemole"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "316ec05465c94bbe1560980427019920478130459720b04c951c459f53bc480d",
+      "pngBytes": 13439,
+      "pngSha256": "876c71dd36e64c77eae8dfb3aa5a27a34bd84bf373df2227fa5646abd5eca02c"
+    },
+    {
+      "iconId": "dandeliongirl",
+      "sourceTableId": "DandelionGirl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DandelionGirl_icon_normal.T_DandelionGirl_icon_normal",
+      "outputPath": "assets/pal-icons/dandeliongirl.png",
+      "palIds": [
+        "dandeliongirl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "641b5b9511fc16b9a0c4e36be64279441cf71843cae95ac2b8f2f7dac5ba8e49",
+      "pngBytes": 11131,
+      "pngSha256": "ed106cfe00fd5279f1653bd26ba9c88e9b96624ef1cf1c876d3e75a1b06869c3"
+    },
+    {
+      "iconId": "darkalien",
+      "sourceTableId": "DarkAlien",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DarkAlien_icon_normal.T_DarkAlien_icon_normal",
+      "outputPath": "assets/pal-icons/darkalien.png",
+      "palIds": [
+        "darkalien"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3c424c720d3c6b96082f1b4843b40a474fd79a2e02b3c27e7df6dbc3a3c8d5c6",
+      "pngBytes": 17038,
+      "pngSha256": "435c59dd43a491c3ac0d91f0668db5efb262a5e31d3933d8db773cd57bafbef9"
+    },
+    {
+      "iconId": "darkcrow",
+      "sourceTableId": "DarkCrow",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DarkCrow_icon_normal.T_DarkCrow_icon_normal",
+      "outputPath": "assets/pal-icons/darkcrow.png",
+      "palIds": [
+        "darkcrow"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "bf5c1223900efb39ac39538e249d1ce55b2262173def64756ce1f2e9cb9d37d9",
+      "pngBytes": 10125,
+      "pngSha256": "d76b0adff66ab79e76225c49edbcea297411e57cda421820802bb8a7d36129fb"
+    },
+    {
+      "iconId": "darkflamefox",
+      "sourceTableId": "DarkFlameFox",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DarkFlameFox_icon_normal.T_DarkFlameFox_icon_normal",
+      "outputPath": "assets/pal-icons/darkflamefox.png",
+      "palIds": [
+        "darkflamefox"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e9433edc2b9072f0b0fa1e2d019e0800bef41c5cd1186ea08fecb565045819e4",
+      "pngBytes": 16319,
+      "pngSha256": "2555315d1736a946185a6f517e4a98dcc98aa915bc72b72272a4faf43a886949"
+    },
+    {
+      "iconId": "darkmechadragon",
+      "sourceTableId": "DarkMechaDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DarkMechaDragon_icon_normal.T_DarkMechaDragon_icon_normal",
+      "outputPath": "assets/pal-icons/darkmechadragon.png",
+      "palIds": [
+        "darkmechadragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "16ac0df80b1c40e4d68cf54a7911508690a74425f96db48ba65d5d9538b5c19a",
+      "pngBytes": 11248,
+      "pngSha256": "d649e7ab78c7060e4380279142715c2c28a94054ea88159a219278793a717013"
+    },
+    {
+      "iconId": "darkscorpion",
+      "sourceTableId": "DarkScorpion",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DarkScorpion_icon_normal.T_DarkScorpion_icon_normal",
+      "outputPath": "assets/pal-icons/darkscorpion.png",
+      "palIds": [
+        "darkscorpion"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "1f9ddb859bb6587d89904a1bd5b58911bdbc952120b2d183b7958525952acc58",
+      "pngBytes": 17694,
+      "pngSha256": "f992dbe6922bdd639e044c80878616a477a0b5970e0dc096d98db7dcc743dba5"
+    },
+    {
+      "iconId": "darkscorpion_ground",
+      "sourceTableId": "DarkScorpion_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DarkScorpion_Ground_icon_normal.T_DarkScorpion_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/darkscorpion_ground.png",
+      "palIds": [
+        "darkscorpion_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "7470f825081584e24355dadf20599cb1401f055058b3f7ea5ff5e39b6ad95f43",
+      "pngBytes": 18362,
+      "pngSha256": "2bbd01b7a4accd5f5e09954ca1ff60c60d91172ec751cd6f212cb685dff895a0"
+    },
+    {
+      "iconId": "deer",
+      "sourceTableId": "Deer",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Deer_icon_normal.T_Deer_icon_normal",
+      "outputPath": "assets/pal-icons/deer.png",
+      "palIds": [
+        "deer"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "4d68959ddc7e4e67b64c0b72c48c6e4e51c14164d1011ac056f51b0f5689f721",
+      "pngBytes": 15468,
+      "pngSha256": "141155ccfffa2627767c21ad2ab9b93f4a6466eb3124c404cb304110db60abb7"
+    },
+    {
+      "iconId": "deer_ground",
+      "sourceTableId": "Deer_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Deer_Ground_icon_normal.T_Deer_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/deer_ground.png",
+      "palIds": [
+        "deer_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "41ae9c27f7f4bd7622c705fb95c630c4ecdd500e50a616ec52f7ffd5f302de54",
+      "pngBytes": 15517,
+      "pngSha256": "b8556592f672b8193b5c8156d2f2095bcac5741bcf028eba2687b38fadcb3fb5"
+    },
+    {
+      "iconId": "domearmordragon",
+      "sourceTableId": "DomeArmorDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DomeArmorDragon_icon_normal.T_DomeArmorDragon_icon_normal",
+      "outputPath": "assets/pal-icons/domearmordragon.png",
+      "palIds": [
+        "domearmordragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e7701265f10f77aa58bf33f45c0734a219def9f0144fa2cb448db4656f2b4f97",
+      "pngBytes": 19294,
+      "pngSha256": "6ae83942cd26d88afdc75d96e6e93c1bbc8f3e5928b9636f38797bdcfb7adaa6"
+    },
+    {
+      "iconId": "dreamdemon",
+      "sourceTableId": "DreamDemon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DreamDemon_icon_normal.T_DreamDemon_icon_normal",
+      "outputPath": "assets/pal-icons/dreamdemon.png",
+      "palIds": [
+        "dreamdemon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d036c10ac6c517d2023bcd4f7798cb1106a94ec02f5e260593eb4e7ef68e73e8",
+      "pngBytes": 16111,
+      "pngSha256": "22f2cb9ea26271af231329ff6ce53c91aa1c9f10a4b0040b7b6c1389f22ac6a7"
+    },
+    {
+      "iconId": "drillgame",
+      "sourceTableId": "DrillGame",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_DrillGame_icon_normal.T_DrillGame_icon_normal",
+      "outputPath": "assets/pal-icons/drillgame.png",
+      "palIds": [
+        "drillgame"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b927ea0a40279eecdbcb7e8ad4caa11436bf77ec904570ec30c8fb7586d3d06a",
+      "pngBytes": 17312,
+      "pngSha256": "214b3bb5038515d63aa27f872c85e10fa49f6e6112206c76f7620ab30a705932"
+    },
+    {
+      "iconId": "eagle",
+      "sourceTableId": "Eagle",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Eagle_icon_normal.T_Eagle_icon_normal",
+      "outputPath": "assets/pal-icons/eagle.png",
+      "palIds": [
+        "eagle"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "5e5089280ca6a4951d8dfee496f9c9f849641eb81e82f705d4c40c5d80bc3c0e",
+      "pngBytes": 11110,
+      "pngSha256": "d9ee4bce04c1f6dd4c7ac5709e29f1a16221dfb840eabcd10ab3ad1bb59c21d0"
+    },
+    {
+      "iconId": "eleccat",
+      "sourceTableId": "ElecCat",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ElecCat_icon_normal.T_ElecCat_icon_normal",
+      "outputPath": "assets/pal-icons/eleccat.png",
+      "palIds": [
+        "eleccat"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "673a98c0f99df2d0193a76d16b6a14a50b005dd99be0df57d40b461aea05a497",
+      "pngBytes": 16618,
+      "pngSha256": "9ba1223076a3837b6faef3b1d9695093b2ce217f016929511f766c0720c37f69"
+    },
+    {
+      "iconId": "eleclizard",
+      "sourceTableId": "ElecLizard",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ElecLizard_icon_normal.T_ElecLizard_icon_normal",
+      "outputPath": "assets/pal-icons/eleclizard.png",
+      "palIds": [
+        "eleclizard"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3318a45eb84fc2c2c71f9b59f70a4a214f7f04fc6579f4bdaeba4504efd47a41",
+      "pngBytes": 12932,
+      "pngSha256": "5eb77bebff06bf7ff55e7d793c2d3a5e74f52123df6083db428ab7d511792748"
+    },
+    {
+      "iconId": "elecpanda",
+      "sourceTableId": "ElecPanda",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ElecPanda_icon_normal.T_ElecPanda_icon_normal",
+      "outputPath": "assets/pal-icons/elecpanda.png",
+      "palIds": [
+        "elecpanda"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "0b2ba234ed4aedb365fdfa982d08ffb0e96b60c1f03498e08df1660a4dc2cccf",
+      "pngBytes": 15088,
+      "pngSha256": "a87bd78ea97145bcc089d6421994457d700f89b930b979d28beb32a496c4133a"
+    },
+    {
+      "iconId": "elecpomeranian",
+      "sourceTableId": "ElecPomeranian",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ElecPomeranian_icon_normal.T_ElecPomeranian_icon_normal",
+      "outputPath": "assets/pal-icons/elecpomeranian.png",
+      "palIds": [
+        "elecpomeranian"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e496ba76362a7a067e5c3342ee33749449fcc3addefd9ca24ba8096b2c4c12a0",
+      "pngBytes": 14948,
+      "pngSha256": "d9b6e39ba3c6783d625cc06627ccf7039cfbd42ff7c66d3dfcd196df4abebdaf"
+    },
+    {
+      "iconId": "elecsnail",
+      "sourceTableId": "ElecSnail",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ElecSnail_icon_normal.T_ElecSnail_icon_normal",
+      "outputPath": "assets/pal-icons/elecsnail.png",
+      "palIds": [
+        "elecsnail"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "5eea65d4b694ad2924db43f27d55d8e2ec4ea9196cfce4a9c3c258f725a7616b",
+      "pngBytes": 15043,
+      "pngSha256": "5a6a1193f158da37e832bdba07e2663d5161a9453da2ecf3f2bc1411bcbf3d3f"
+    },
+    {
+      "iconId": "elecsnail_ground",
+      "sourceTableId": "ElecSnail_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ElecSnail_Ground_icon_normal.T_ElecSnail_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/elecsnail_ground.png",
+      "palIds": [
+        "elecsnail_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "937279047ef7151e87066696ffaebbc39faf5abfcd8a47eea8416584b38c438a",
+      "pngBytes": 15144,
+      "pngSha256": "8d89e98090cb8eaf72d3b1bf0006f7d05ac81e0b272fc95f4537b0dfb1487f68"
+    },
+    {
+      "iconId": "fairydragon",
+      "sourceTableId": "FairyDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FairyDragon_icon_normal.T_FairyDragon_icon_normal",
+      "outputPath": "assets/pal-icons/fairydragon.png",
+      "palIds": [
+        "fairydragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "010bbbacd7d81dc4c47a1fea8c640613d8bcc154f650f189074e884e73108efe",
+      "pngBytes": 9906,
+      "pngSha256": "098e77e5c55cec1993f0117a95a607a4436861f6d055e465f111f82a50791137"
+    },
+    {
+      "iconId": "fairydragon_water",
+      "sourceTableId": "FairyDragon_Water",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FairyDragon_Water_icon_normal.T_FairyDragon_Water_icon_normal",
+      "outputPath": "assets/pal-icons/fairydragon_water.png",
+      "palIds": [
+        "fairydragon_water"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "055a4cbaf4e9d931bc730ead0aaba0da32d77ec83bfd4264e15e5b6875b199b2",
+      "pngBytes": 8505,
+      "pngSha256": "26f90399707c2323ec790cbd51ee6d6438522a252482274b5c3fb225e5262d74"
+    },
+    {
+      "iconId": "featherostrich",
+      "sourceTableId": "FeatherOstrich",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FeatherOstrich_icon_normal.T_FeatherOstrich_icon_normal",
+      "outputPath": "assets/pal-icons/featherostrich.png",
+      "palIds": [
+        "featherostrich"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "bd8c07587a7fd0ff97e5a84f476f73f87630dc8d73d537be25681e5141ed4842",
+      "pngBytes": 14280,
+      "pngSha256": "a94440d43f3d3b286631d2bc5f5d40a45760ad9eb4b0cbf2c621d24d10dd2df6"
+    },
+    {
+      "iconId": "fengyundeeper",
+      "sourceTableId": "FengyunDeeper",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FengyunDeeper_icon_normal.T_FengyunDeeper_icon_normal",
+      "outputPath": "assets/pal-icons/fengyundeeper.png",
+      "palIds": [
+        "fengyundeeper"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c312daee828012be7e6b574cc9d76d2ff2fd8a5bb62291af424ccd2bf8e274af",
+      "pngBytes": 13011,
+      "pngSha256": "ceed4b93273c4cb889455c25d20ec2dbc2ef9cd729e470aa3d172bd6594527f8"
+    },
+    {
+      "iconId": "fengyundeeper_electric",
+      "sourceTableId": "FengyunDeeper_Electric",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FengyunDeeper_Electric_icon_normal.T_FengyunDeeper_Electric_icon_normal",
+      "outputPath": "assets/pal-icons/fengyundeeper_electric.png",
+      "palIds": [
+        "fengyundeeper_electric"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b6dee857915ea4c9310ce43df02e78f9fc2e733f05eaf39ffd1d4488d599ea35",
+      "pngBytes": 12110,
+      "pngSha256": "7202711cda69ccb68fff390c4afb678bd2e2301084120d55a8d791abd9abd9a9"
+    },
+    {
+      "iconId": "firekirin",
+      "sourceTableId": "FireKirin",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FireKirin_icon_normal.T_FireKirin_icon_normal",
+      "outputPath": "assets/pal-icons/firekirin.png",
+      "palIds": [
+        "firekirin"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "bea862ebe4db01689d45bf7f8f8ea3bad933ef6386ef432c8b6ba001763399b1",
+      "pngBytes": 16592,
+      "pngSha256": "6c9045fb86a07ccafcf19483a4f5ecdfd270583e6b3eca8344bf2ba8d0719a69"
+    },
+    {
+      "iconId": "firekirin_dark",
+      "sourceTableId": "FireKirin_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FireKirin_Dark_icon_normal.T_FireKirin_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/firekirin_dark.png",
+      "palIds": [
+        "firekirin_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "0cec77a9765b8bb305c2fcba291bd06d6b4cf7b3eedc5cb80425ff05a77917be",
+      "pngBytes": 17954,
+      "pngSha256": "794869e45cd808e1fe9f7517453f7825fc4722ecf164e47e8dda21f85c3eb66c"
+    },
+    {
+      "iconId": "flamebambi",
+      "sourceTableId": "FlameBambi",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlameBambi_icon_normal.T_FlameBambi_icon_normal",
+      "outputPath": "assets/pal-icons/flamebambi.png",
+      "palIds": [
+        "flamebambi"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b9caffb38eb2e3e293b5273bd101b3a053ec87a7a80381bb00e0704e46e334ef",
+      "pngBytes": 14341,
+      "pngSha256": "a775343c0c5423c345e7c871edf866018dfd0117830d615209c5338ecb5f7603"
+    },
+    {
+      "iconId": "flamebuffalo",
+      "sourceTableId": "FlameBuffalo",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlameBuffalo_icon_normal.T_FlameBuffalo_icon_normal",
+      "outputPath": "assets/pal-icons/flamebuffalo.png",
+      "palIds": [
+        "flamebuffalo"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c16673d0bdd20def8727cf5d4fb1b7990e423c00921d3b755c739f239aac9507",
+      "pngBytes": 19634,
+      "pngSha256": "3be2fe25b47bbeb1e4eb8d08a5bb414dfd427ecde7cd82dcbe46b6a99846174e"
+    },
+    {
+      "iconId": "flowerdinosaur",
+      "sourceTableId": "FlowerDinosaur",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlowerDinosaur_icon_normal.T_FlowerDinosaur_icon_normal",
+      "outputPath": "assets/pal-icons/flowerdinosaur.png",
+      "palIds": [
+        "flowerdinosaur"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "04460ff2ed3e023a0ad1f323926ba917bace295188d598634c5dc7760a3d65db",
+      "pngBytes": 16431,
+      "pngSha256": "c821d73ff85fde5c022ba048e3c7cd6f1b4f77259b3521cc884f9b8bbacb1350"
+    },
+    {
+      "iconId": "flowerdinosaur_electric",
+      "sourceTableId": "FlowerDinosaur_Electric",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlowerDinosaur_Electric_icon_normal.T_FlowerDinosaur_Electric_icon_normal",
+      "outputPath": "assets/pal-icons/flowerdinosaur_electric.png",
+      "palIds": [
+        "flowerdinosaur_electric"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "69435cf28ce3990d7d805917da38818ea62c3fbf6ce65da2382530d9639e2236",
+      "pngBytes": 16205,
+      "pngSha256": "7024f8bf5b7c61f792e4706ebac86e2fba94caa0a672d5e443444fa18cb9a1b5"
+    },
+    {
+      "iconId": "flowerdoll",
+      "sourceTableId": "FlowerDoll",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlowerDoll_icon_normal.T_FlowerDoll_icon_normal",
+      "outputPath": "assets/pal-icons/flowerdoll.png",
+      "palIds": [
+        "flowerdoll"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "619ea995dbe14a6ef81eef21e8b08fd45a92385e95d2b7fdae5e80e170cd0466",
+      "pngBytes": 18212,
+      "pngSha256": "d496a481079c3a7f28468208b1c51194fc048f211271825e092d2ebd5fb2aceb"
+    },
+    {
+      "iconId": "flowerdoll_fire",
+      "sourceTableId": "FlowerDoll_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlowerDoll_Fire_icon_normal.T_FlowerDoll_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/flowerdoll_fire.png",
+      "palIds": [
+        "flowerdoll_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "9982d61418ab919f6e0f165c0496aa491b3a8507d7dbe8a34bf6794b1d14e0b9",
+      "pngBytes": 19090,
+      "pngSha256": "74d004c0afbd558ab06508f07337f3a58ebfa5b0316f9b4932825e18830586d6"
+    },
+    {
+      "iconId": "flowerprince",
+      "sourceTableId": "FlowerPrince",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlowerPrince_icon_normal.T_FlowerPrince_icon_normal",
+      "outputPath": "assets/pal-icons/flowerprince.png",
+      "palIds": [
+        "flowerprince"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6bfa0c6b6f019cf604d661fca70625fbfeb14e347a83ee21f113e6fed51fdc47",
+      "pngBytes": 19788,
+      "pngSha256": "ecd359e6af1a34a8732f5db0e3f53ca3a2cd27bf2e4b5808e842dbf95f58d685"
+    },
+    {
+      "iconId": "flowerrabbit",
+      "sourceTableId": "FlowerRabbit",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlowerRabbit_icon_normal.T_FlowerRabbit_icon_normal",
+      "outputPath": "assets/pal-icons/flowerrabbit.png",
+      "palIds": [
+        "flowerrabbit"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "29ec0727f1db4cf48786ff175291d12a156edc36e5cdb3d4ddb8146c6100817c",
+      "pngBytes": 17617,
+      "pngSha256": "b2964034acb8239f0b4a44ce8149b956b606bbee7d88433f4a1607170ded7401"
+    },
+    {
+      "iconId": "fluffybird",
+      "sourceTableId": "FluffyBird",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FluffyBird_icon_normal.T_FluffyBird_icon_normal",
+      "outputPath": "assets/pal-icons/fluffybird.png",
+      "palIds": [
+        "fluffybird"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3cf16ae215eb2556b8adf61cc9905085112e0e480a20b05d05d0e907d6ef1323",
+      "pngBytes": 17628,
+      "pngSha256": "2a10c08da9866ffadcb67a03052e46ba8b494bf3750340e0a8d12d3b4d4e0595"
+    },
+    {
+      "iconId": "flyingmanta",
+      "sourceTableId": "FlyingManta",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlyingManta_icon_normal.T_FlyingManta_icon_normal",
+      "outputPath": "assets/pal-icons/flyingmanta.png",
+      "palIds": [
+        "flyingmanta"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "03c232123006171ccdf49707621f3516034e58c03b2bce70004360c71fb92ecf",
+      "pngBytes": 11942,
+      "pngSha256": "a7a9cbc4f608ac8ff89cb37d8b8a099615ee332efccc63a824af9ab70431ad08"
+    },
+    {
+      "iconId": "flyingmanta_thunder",
+      "sourceTableId": "FlyingManta_Thunder",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FlyingManta_Thunder_icon_normal.T_FlyingManta_Thunder_icon_normal",
+      "outputPath": "assets/pal-icons/flyingmanta_thunder.png",
+      "palIds": [
+        "flyingmanta_thunder"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "efffd8ad47a7641b3cef7cb86235a10ff055c278164f77d57f86ca6ad846c630",
+      "pngBytes": 12254,
+      "pngSha256": "c87be30bce2892cf36e69ccb46b5bc811ee91cad4e81055a0d316faa1999573c"
+    },
+    {
+      "iconId": "foxexorcist",
+      "sourceTableId": "FoxExorcist",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FoxExorcist_icon_normal.T_FoxExorcist_icon_normal",
+      "outputPath": "assets/pal-icons/foxexorcist.png",
+      "palIds": [
+        "foxexorcist"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "785e242f5b6a5846da795946855f5db7f0482640c26b2e179b584eb5b9b0fb21",
+      "pngBytes": 15043,
+      "pngSha256": "87c0a2cb3060961623554ee3151021749684081c78ec20416ae04d791cb97b5f"
+    },
+    {
+      "iconId": "foxmage",
+      "sourceTableId": "FoxMage",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FoxMage_icon_normal.T_FoxMage_icon_normal",
+      "outputPath": "assets/pal-icons/foxmage.png",
+      "palIds": [
+        "foxmage"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "af77abf3b4d1421895b34f9900383a4294b52f3be4b2629ad9c72a081fa4b29f",
+      "pngBytes": 16836,
+      "pngSha256": "3e4a8602940cf61d3e90e9eb7e91d443b31828a2df32c0057c03e53e277f764b"
+    },
+    {
+      "iconId": "foxmage_dark",
+      "sourceTableId": "FoxMage_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_FoxMage_Dark_icon_normal.T_FoxMage_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/foxmage_dark.png",
+      "palIds": [
+        "foxmage_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "18eb8aa484b5ca4a803710cfba4d350ff4a608f3485034faa72f4d82e022a386",
+      "pngBytes": 17061,
+      "pngSha256": "50f9a4a4064969db41aa809727e884ff1fe622908aa6df6db000771872437dea"
+    },
+    {
+      "iconId": "ganesha",
+      "sourceTableId": "Ganesha",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Ganesha_icon_normal.T_Ganesha_icon_normal",
+      "outputPath": "assets/pal-icons/ganesha.png",
+      "palIds": [
+        "ganesha"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "f423f12229c4074b0d21fc9f67386d41cd30078afe116d1285d241f009c03e4b",
+      "pngBytes": 13772,
+      "pngSha256": "b452e6e2a6fac516168d395c2129d7b6c0ee273c33517215778a59536d91800c"
+    },
+    {
+      "iconId": "garm",
+      "sourceTableId": "Garm",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Garm_icon_normal.T_Garm_icon_normal",
+      "outputPath": "assets/pal-icons/garm.png",
+      "palIds": [
+        "garm"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "9832141d1d94343300c98198c758675f4f3f4f3bdf3a76927f3ef90d4c264438",
+      "pngBytes": 14700,
+      "pngSha256": "5df0ea434fbacda972979e77fbd61779a4fa00be0baabcf67545f2e54bd57659"
+    },
+    {
+      "iconId": "ghostanglerfish",
+      "sourceTableId": "GhostAnglerfish",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GhostAnglerfish_icon_normal.T_GhostAnglerfish_icon_normal",
+      "outputPath": "assets/pal-icons/ghostanglerfish.png",
+      "palIds": [
+        "ghostanglerfish"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c2aeb6af336ef853d5ed161f52233ba1ead6355a4944101e3f8718cc4a0a07c1",
+      "pngBytes": 15675,
+      "pngSha256": "5bc239b4cf6dbfec7fc63eb52d3f071a1ce12ba7541b424f3caa4dec8c12836d"
+    },
+    {
+      "iconId": "ghostanglerfish_fire",
+      "sourceTableId": "GhostAnglerfish_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GhostAnglerfish_Fire_icon_normal.T_GhostAnglerfish_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/ghostanglerfish_fire.png",
+      "palIds": [
+        "ghostanglerfish_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ddb903bf75f3f42fd32f63fc02e9a8e5955e27dcad58517f84e6523a74090ac4",
+      "pngBytes": 16129,
+      "pngSha256": "0a6cecf94dec4a852c6475bf9bdf6275aac23618fbe0ef72618a20299622d90f"
+    },
+    {
+      "iconId": "ghostbeast",
+      "sourceTableId": "GhostBeast",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GhostBeast_icon_normal.T_GhostBeast_icon_normal",
+      "outputPath": "assets/pal-icons/ghostbeast.png",
+      "palIds": [
+        "ghostbeast"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "86963d1d81edf7302ac9357783c234b9f3d5812f448e2c41440260c0c83a647d",
+      "pngBytes": 16032,
+      "pngSha256": "180b92696006102ab0a193ac4fac4a4dccae01f03a7874d4b8fded976db54553"
+    },
+    {
+      "iconId": "ghostblackcat",
+      "sourceTableId": "GhostBlackCat",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GhostBlackCat_icon_normal.T_GhostBlackCat_icon_normal",
+      "outputPath": "assets/pal-icons/ghostblackcat.png",
+      "palIds": [
+        "ghostblackcat"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "357e7a6c4e0d1af770d75749e416903ae111d7f3a636d3150a8d021a98f0853d",
+      "pngBytes": 19216,
+      "pngSha256": "263ff06c7488d06c7bdd0d12ad3e3b20f3f22569aff86644534ceb7904d74634"
+    },
+    {
+      "iconId": "ghostdragon",
+      "sourceTableId": "GhostDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GhostDragon_icon_normal.T_GhostDragon_icon_normal",
+      "outputPath": "assets/pal-icons/ghostdragon.png",
+      "palIds": [
+        "ghostdragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "1dab437117793f3ffc5057030b8a7fb05fc497fb83a8c7f9717d52d90718c227",
+      "pngBytes": 14271,
+      "pngSha256": "50c331299cec8bd2dd33280d4541ad9e78dd940848153e150089887062c472f6"
+    },
+    {
+      "iconId": "ghostdragon_fire",
+      "sourceTableId": "GhostDragon_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GhostDragon_Fire_icon_normal.T_GhostDragon_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/ghostdragon_fire.png",
+      "palIds": [
+        "ghostdragon_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "127e51a2dc718d99560fab0ed19a7696ac8b918c69d5ce515b2ad635ec01dc71",
+      "pngBytes": 13332,
+      "pngSha256": "01d63edb459876c58ab2819f32f1384de4d355734642520468e52a7bf2dd2f6f"
+    },
+    {
+      "iconId": "ghostrabbit",
+      "sourceTableId": "GhostRabbit",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GhostRabbit_icon_normal.T_GhostRabbit_icon_normal",
+      "outputPath": "assets/pal-icons/ghostrabbit.png",
+      "palIds": [
+        "ghostrabbit"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "029ccda6f52d0c50df892366fc499dfd15e1a58166e4ad5c77f1a8470c6f13e7",
+      "pngBytes": 16793,
+      "pngSha256": "e63b9f3389cfbdc6a87ebae99027037d9974f0457da78db94bc613f350a8b4c9"
+    },
+    {
+      "iconId": "ghostrabbit_grass",
+      "sourceTableId": "GhostRabbit_Grass",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GhostRabbit_Grass_icon_normal.T_GhostRabbit_Grass_icon_normal",
+      "outputPath": "assets/pal-icons/ghostrabbit_grass.png",
+      "palIds": [
+        "ghostrabbit_grass"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ba867a5ee5e038edf0bd8e362eac5f4cdf49933be1931a52aa82c13f7ab5ddca",
+      "pngBytes": 16436,
+      "pngSha256": "68a5f959dfba884e2f8716c3384f09942d6199acc963d883348a3dc1c044f173"
+    },
+    {
+      "iconId": "goldenhorse",
+      "sourceTableId": "GoldenHorse",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GoldenHorse_icon_normal.T_GoldenHorse_icon_normal",
+      "outputPath": "assets/pal-icons/goldenhorse.png",
+      "palIds": [
+        "goldenhorse"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "7aeddbd1054c24766cad9df15479a07a276b5a38a26e6e198cc404add9a6e04c",
+      "pngBytes": 14970,
+      "pngSha256": "dd6566a7f724339f7333874aaca22cf03220bda57b6c112faaa536846099f7a9"
+    },
+    {
+      "iconId": "gorilla",
+      "sourceTableId": "Gorilla",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Gorilla_icon_normal.T_Gorilla_icon_normal",
+      "outputPath": "assets/pal-icons/gorilla.png",
+      "palIds": [
+        "gorilla"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "23552fb61a89e9355515d2ec34ff7fe33de451e4a72994d6d1b81a13bf324c02",
+      "pngBytes": 16415,
+      "pngSha256": "bff2247a904d4355338a13e92d1093f66525d690fce3caa6d590eb5f01e8cb99"
+    },
+    {
+      "iconId": "gorilla_ground",
+      "sourceTableId": "Gorilla_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Gorilla_Ground_icon_normal.T_Gorilla_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/gorilla_ground.png",
+      "palIds": [
+        "gorilla_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d65b73a60728f3f87309610a0015563a3b2fd165ff134e1fe06c7e98fc8b5ffd",
+      "pngBytes": 15404,
+      "pngSha256": "528d433afc476bb78eb6e420a4c97b35fdec268e49bb71a617d06ec9d3a71b36"
+    },
+    {
+      "iconId": "grassgolem",
+      "sourceTableId": "GrassGolem",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrassGolem_icon_normal.T_GrassGolem_icon_normal",
+      "outputPath": "assets/pal-icons/grassgolem.png",
+      "palIds": [
+        "grassgolem"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c61b289146e42899cf041b2234254ff1ebcb52e62207f7bf81d0e741740e7a94",
+      "pngBytes": 22139,
+      "pngSha256": "24f9cd8226eb6fa5727c1f43e5ed126edb372557d5a9eddef1609afc34366bd3"
+    },
+    {
+      "iconId": "grassgolem_dark",
+      "sourceTableId": "GrassGolem_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrassGolem_Dark_icon_normal.T_GrassGolem_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/grassgolem_dark.png",
+      "palIds": [
+        "grassgolem_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "4677c63e369498e2e1bd563542441e942655cc4233d716b246ee6dce2f95babf",
+      "pngBytes": 15896,
+      "pngSha256": "f6c3a4f11e68e6d5d922a310d541c7d2059f2939e92a40cbd786ea0b65b2c025"
+    },
+    {
+      "iconId": "grassmammoth",
+      "sourceTableId": "GrassMammoth",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrassMammoth_icon_normal.T_GrassMammoth_icon_normal",
+      "outputPath": "assets/pal-icons/grassmammoth.png",
+      "palIds": [
+        "grassmammoth"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "028c8cf55a7e5619c623fc8bf920613a6f001dea866005cf656f9b92b540dce4",
+      "pngBytes": 17616,
+      "pngSha256": "a2d39387bcee08fbba4a17d341dd77c27c3db224a0bdfc34b581a6718a58d16b"
+    },
+    {
+      "iconId": "grassmammoth_ice",
+      "sourceTableId": "GrassMammoth_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrassMammoth_Ice_icon_normal.T_GrassMammoth_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/grassmammoth_ice.png",
+      "palIds": [
+        "grassmammoth_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "34661fc972f31c89703703272c99490c4b9b206ddd65b00645360603fbba4fa5",
+      "pngBytes": 18560,
+      "pngSha256": "0e1993a20bc4c408343fd219fb7b1f4aa828f4a259f66fc0d368c646ebf29272"
+    },
+    {
+      "iconId": "grassminotaur",
+      "sourceTableId": "GrassMinotaur",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrassMinotaur_icon_normal.T_GrassMinotaur_icon_normal",
+      "outputPath": "assets/pal-icons/grassminotaur.png",
+      "palIds": [
+        "grassminotaur"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "8e93e46c10681b41e8889e0505b50e63cb361df734a3717d5edd749d3c3688e5",
+      "pngBytes": 20736,
+      "pngSha256": "1ca725368b12002a5170640c7ca7ebf1a3557857140d21feb83d17e1a33b4798"
+    },
+    {
+      "iconId": "grassminotaur_ice",
+      "sourceTableId": "GrassMinotaur_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrassMinotaur_Ice_icon_normal.T_GrassMinotaur_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/grassminotaur_ice.png",
+      "palIds": [
+        "grassminotaur_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "aabb7395dd46c292ac7575d3272330813e154dc1bd47ac1a517dd704a54420ce",
+      "pngBytes": 20463,
+      "pngSha256": "832030385d157504857f145cdb51c198827ce9be53525299a7ee6e91e37bcae2"
+    },
+    {
+      "iconId": "grasspanda",
+      "sourceTableId": "GrassPanda",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrassPanda_icon_normal.T_GrassPanda_icon_normal",
+      "outputPath": "assets/pal-icons/grasspanda.png",
+      "palIds": [
+        "grasspanda"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "5a797d36a3f3f2bbde92982ce9ea6938d901e45888a540a655703ebd7c750b93",
+      "pngBytes": 17075,
+      "pngSha256": "a9f17e9031dbe504cb7e7cef675177e79806d0fc2667c311e26f47af117d63e6"
+    },
+    {
+      "iconId": "grasspanda_electric",
+      "sourceTableId": "GrassPanda_Electric",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrassPanda_Electric_icon_normal.T_GrassPanda_Electric_icon_normal",
+      "outputPath": "assets/pal-icons/grasspanda_electric.png",
+      "palIds": [
+        "grasspanda_electric"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "33b64924a2b4a3b2073690aab9915c942b2e88a4dac3becef465422b05ee0910",
+      "pngBytes": 17268,
+      "pngSha256": "e1cb98f2413cf3f891bd962c3eb99f024a95da85f11e41ab15ba77176be38aa5"
+    },
+    {
+      "iconId": "grassrabbitman",
+      "sourceTableId": "GrassRabbitMan",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrassRabbitMan_icon_normal.T_GrassRabbitMan_icon_normal",
+      "outputPath": "assets/pal-icons/grassrabbitman.png",
+      "palIds": [
+        "grassrabbitman"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b2b3ad874415ae720770c70465f08b7d278cc5d5123621ee7cdf95546580dbcf",
+      "pngBytes": 16083,
+      "pngSha256": "05732611bf98cc15b0da764794431e438303505e0cb884e23a66ce3a90c7c45e"
+    },
+    {
+      "iconId": "grimgirl",
+      "sourceTableId": "GrimGirl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GrimGirl_icon_normal.T_GrimGirl_icon_normal",
+      "outputPath": "assets/pal-icons/grimgirl.png",
+      "palIds": [
+        "grimgirl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6b79861e0dd2077d7e31fe0252e9b07d78a3dd6f2d5bdbb4277c18f14c230400",
+      "pngBytes": 11848,
+      "pngSha256": "542f2588eb6b56984702309d659cb068ee40132d4bb31634a01d0bbbe99c51bc"
+    },
+    {
+      "iconId": "guardiandog",
+      "sourceTableId": "GuardianDog",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_GuardianDog_icon_normal.T_GuardianDog_icon_normal",
+      "outputPath": "assets/pal-icons/guardiandog.png",
+      "palIds": [
+        "guardiandog"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "72cedb88dd8e7ead22fda206430a4d31ad0fdc43927cd47e8d8309dbb5502817",
+      "pngBytes": 14366,
+      "pngSha256": "d57e1094550f89a8f8436e2e13b834dc6c8724d2fca5dfd5fcae908a18431d65"
+    },
+    {
+      "iconId": "hadesbird",
+      "sourceTableId": "HadesBird",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_HadesBird_icon_normal.T_HadesBird_icon_normal",
+      "outputPath": "assets/pal-icons/hadesbird.png",
+      "palIds": [
+        "hadesbird"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "be786147780e47475716e1af07dcb26e33e98611282fa054df0982352b09538c",
+      "pngBytes": 15498,
+      "pngSha256": "0d983ce71398129820ceb028a274450293b5bf5d0a4cbdeafaff7a03a0663c1a"
+    },
+    {
+      "iconId": "hadesbird_electric",
+      "sourceTableId": "HadesBird_Electric",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_HadesBird_Electric_icon_normal.T_HadesBird_Electric_icon_normal",
+      "outputPath": "assets/pal-icons/hadesbird_electric.png",
+      "palIds": [
+        "hadesbird_electric"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "8b499226fa4b83f8ea997650ed6f18460bed1fbf43633d2330d8c4edc784885d",
+      "pngBytes": 15996,
+      "pngSha256": "418f1b52932ac74f5e63dfd02d77436ceabd62fa4fddfd4afeb3221d87636b18"
+    },
+    {
+      "iconId": "hawkbird",
+      "sourceTableId": "HawkBird",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_HawkBird_icon_normal.T_HawkBird_icon_normal",
+      "outputPath": "assets/pal-icons/hawkbird.png",
+      "palIds": [
+        "hawkbird"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "72b8ee8de4b4c274d313ce05e9bdc3105a768b23c1e48f1057e71bcddbc1626d",
+      "pngBytes": 15510,
+      "pngSha256": "872dd75d7f58f2c08825c858cfc48e2bfca560c052c34470c8b483c36c4044a6"
+    },
+    {
+      "iconId": "hedgehog",
+      "sourceTableId": "Hedgehog",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Hedgehog_icon_normal.T_Hedgehog_icon_normal",
+      "outputPath": "assets/pal-icons/hedgehog.png",
+      "palIds": [
+        "hedgehog"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "01b0b85f0f11966caf71ba5e12ffb14871d8d06004a76db57e0b0ca20c0f2419",
+      "pngBytes": 14485,
+      "pngSha256": "9ad6a3ffc6549942ead052361b1dea76a3758c330fb6b2bab43fd19b7975ca8c"
+    },
+    {
+      "iconId": "hedgehog_ice",
+      "sourceTableId": "Hedgehog_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Hedgehog_Ice_icon_normal.T_Hedgehog_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/hedgehog_ice.png",
+      "palIds": [
+        "hedgehog_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b7ec5bfdf4266f427ebd897039f7b480e73788fdf52c00956904a0655f6232e1",
+      "pngBytes": 15898,
+      "pngSha256": "147af8ea0fd8ec7a7d1e2f1f7ef1a0f227af1cd4b6fb7846b50a09fc06875885"
+    },
+    {
+      "iconId": "herculesbeetle",
+      "sourceTableId": "HerculesBeetle",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_HerculesBeetle_icon_normal.T_HerculesBeetle_icon_normal",
+      "outputPath": "assets/pal-icons/herculesbeetle.png",
+      "palIds": [
+        "herculesbeetle"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "4975a3331e836a1384cd0b17f008197d17c58af6c7634054ab24a684a146e9d0",
+      "pngBytes": 17381,
+      "pngSha256": "57e512958a932099037c626cd886aa804063b38c4c6b65b719ff73ac57efba01"
+    },
+    {
+      "iconId": "herculesbeetle_ground",
+      "sourceTableId": "HerculesBeetle_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_HerculesBeetle_Ground_icon_normal.T_HerculesBeetle_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/herculesbeetle_ground.png",
+      "palIds": [
+        "herculesbeetle_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "cff239569e1c856c6ae5c1dfaec577c7b21961c21b433cbf5a679c5b50617847",
+      "pngBytes": 20460,
+      "pngSha256": "0a43a148e24c39e9915631c954649ca548ead81512ca95a3a9dc3b3ff67f120e"
+    },
+    {
+      "iconId": "hoodghost",
+      "sourceTableId": "HoodGhost",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_HoodGhost_icon_normal.T_HoodGhost_icon_normal",
+      "outputPath": "assets/pal-icons/hoodghost.png",
+      "palIds": [
+        "hoodghost"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "4090dc5da2b8ab29e732be49b8739a1538875331344eb5dc3a2fe84e3f50746e",
+      "pngBytes": 13236,
+      "pngSha256": "900ea3e66bc07d50a4c7c18743048b6472fe1f9e20095ab036e057226c8a1f92"
+    },
+    {
+      "iconId": "horus",
+      "sourceTableId": "Horus",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Horus_icon_normal.T_Horus_icon_normal",
+      "outputPath": "assets/pal-icons/horus.png",
+      "palIds": [
+        "horus"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c8766c6300cf6cb37ee45909d8c80e6f16dea1ae42646ce7aeb224ddb0a3423d",
+      "pngBytes": 14013,
+      "pngSha256": "f53cb9a853e692c9f55aebb65a5d5a031b38daa1c32b29c056846fa6bc37a4b3"
+    },
+    {
+      "iconId": "horus_water",
+      "sourceTableId": "Horus_Water",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Horus_Water_icon_normal.T_Horus_Water_icon_normal",
+      "outputPath": "assets/pal-icons/horus_water.png",
+      "palIds": [
+        "horus_water"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "8269e50926a8c5b42185e4c4f91c50be183e7722c5324f3520de9e41ccff579d",
+      "pngBytes": 14371,
+      "pngSha256": "e785a7374be53119d36946713e3a8fe7025cf56a3236e66cf4a0daf6f6e6c436"
+    },
+    {
+      "iconId": "icecrocodile",
+      "sourceTableId": "IceCrocodile",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceCrocodile_icon_normal.T_IceCrocodile_icon_normal",
+      "outputPath": "assets/pal-icons/icecrocodile.png",
+      "palIds": [
+        "icecrocodile"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "7e55523d049a78bdca62aa3fd8b89167d698883cb3dc60a59dbdd7f6e319a70f",
+      "pngBytes": 12918,
+      "pngSha256": "132067b7efad33bbce4bc257b6c689d2a1c4027788f36d6df1af5e63c912fecc"
+    },
+    {
+      "iconId": "icedeer",
+      "sourceTableId": "IceDeer",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceDeer_icon_normal.T_IceDeer_icon_normal",
+      "outputPath": "assets/pal-icons/icedeer.png",
+      "palIds": [
+        "icedeer"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e95da054fa9d080bffccbd31421ed06ca026241488eeef05b804ad7f569472af",
+      "pngBytes": 18448,
+      "pngSha256": "0dafdc92fe2be21a17ac50b8223c9eaa75ee23ecabfbad31b4ece0bc7c4d1c29"
+    },
+    {
+      "iconId": "icefox",
+      "sourceTableId": "IceFox",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceFox_icon_normal.T_IceFox_icon_normal",
+      "outputPath": "assets/pal-icons/icefox.png",
+      "palIds": [
+        "icefox"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "00e5b254742669e65f4188b1a34614eeb20e5767a37c668847d3162dbc780517",
+      "pngBytes": 14462,
+      "pngSha256": "6f27c1f23bdde3d1f1dac2445ca688fedd7bca6b41d47677b1b971f829847072"
+    },
+    {
+      "iconId": "icehorse",
+      "sourceTableId": "IceHorse",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceHorse_icon_normal.T_IceHorse_icon_normal",
+      "outputPath": "assets/pal-icons/icehorse.png",
+      "palIds": [
+        "icehorse"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6e98243a85c9ee2aa15a667a9822557fd62644a9b2b5b310f80f25d518b2142e",
+      "pngBytes": 16139,
+      "pngSha256": "db4d150ee55adfcc3207b3036883f27b9a8a52239da23249f92609ff099f310b"
+    },
+    {
+      "iconId": "icehorse_dark",
+      "sourceTableId": "IceHorse_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceHorse_Dark_icon_normal.T_IceHorse_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/icehorse_dark.png",
+      "palIds": [
+        "icehorse_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c443b9962728e102119a62c420b76b70b8fc51e0b95b74101269725625085e21",
+      "pngBytes": 17039,
+      "pngSha256": "a9de9c4fd249b9cea590a5ebd4668f3e3610554c584ed64b83bf84a050f0eb7e"
+    },
+    {
+      "iconId": "icenarwhal",
+      "sourceTableId": "IceNarwhal",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceNarwhal_icon_normal.T_IceNarwhal_icon_normal",
+      "outputPath": "assets/pal-icons/icenarwhal.png",
+      "palIds": [
+        "icenarwhal"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c494c13496df6bb8e5b7d47640edd8d01add3296f752112c279b1971efc55952",
+      "pngBytes": 17964,
+      "pngSha256": "daf2c7b6d0efc35b0b5b6e53bb6ce249c5fce76e4a207ea9d438450cdbe2447d"
+    },
+    {
+      "iconId": "icenarwhal_fire",
+      "sourceTableId": "IceNarwhal_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceNarwhal_Fire_icon_normal.T_IceNarwhal_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/icenarwhal_fire.png",
+      "palIds": [
+        "icenarwhal_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "06b2e2b79831ef2efa4132edb4ff6d2d722eddaf05c1f9133a8e251f59f6b74d",
+      "pngBytes": 17345,
+      "pngSha256": "d1d7255cde7f15c170ff677d3573f7aef26cfe234982db1c51ebccdd6f283f9c"
+    },
+    {
+      "iconId": "iceseal",
+      "sourceTableId": "IceSeal",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceSeal_icon_normal.T_IceSeal_icon_normal",
+      "outputPath": "assets/pal-icons/iceseal.png",
+      "palIds": [
+        "iceseal"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "49a1482feafd14ac6e6efaf3ee8150eb379c2fc0cac4cd6ebc49c6f3d9c8ec09",
+      "pngBytes": 11173,
+      "pngSha256": "38256b678b4497b518581ec3f038dcbd800cac9c736d2b7b6bf9a9c3546998b9"
+    },
+    {
+      "iconId": "iceseal_ground",
+      "sourceTableId": "IceSeal_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceSeal_Ground_icon_normal.T_IceSeal_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/iceseal_ground.png",
+      "palIds": [
+        "iceseal_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "30a33a7c43a4a2ed5d4e10f0a671fa2f4727b2640f94cfe73af948b796a7f24d",
+      "pngBytes": 11816,
+      "pngSha256": "5f8ab0e3c63d5f5814b39d85dc7e52d3c9ba8670e64dfef97608d98bf1458114"
+    },
+    {
+      "iconId": "icewitch",
+      "sourceTableId": "IceWitch",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_IceWitch_icon_normal.T_IceWitch_icon_normal",
+      "outputPath": "assets/pal-icons/icewitch.png",
+      "palIds": [
+        "icewitch"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c820f57fbca9749311e0255ef79bfa64c0892be9cf99edeaf0cd2cc966cbb494",
+      "pngBytes": 16266,
+      "pngSha256": "24077288ad36304aab024599e9a748d696e6910c93990b688883a80c3e63d0a7"
+    },
+    {
+      "iconId": "jellyfishfairy",
+      "sourceTableId": "JellyfishFairy",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_JellyfishFairy_icon_normal.T_JellyfishFairy_icon_normal",
+      "outputPath": "assets/pal-icons/jellyfishfairy.png",
+      "palIds": [
+        "jellyfishfairy"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "9e8df7d2f7331a9b3f06a2deef2f13e6757f149b6b93ff89fe01ba060e983379",
+      "pngBytes": 18200,
+      "pngSha256": "82b890ba1ec84cdae2aa89c8815c8f1a7cef3deb2bd0aefb930821e5beb50b33"
+    },
+    {
+      "iconId": "jellyfishghost",
+      "sourceTableId": "JellyfishGhost",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_JellyfishGhost_icon_normal.T_JellyfishGhost_icon_normal",
+      "outputPath": "assets/pal-icons/jellyfishghost.png",
+      "palIds": [
+        "jellyfishghost"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "11c45a7fe0d6b337202c676ef774ffbdb910830583e08b6caa5e221ffdbffd03",
+      "pngBytes": 14920,
+      "pngSha256": "4db6aff403e47d98804e51c29cbd6333498937972d1d7f2de0d8b43771df48eb"
+    },
+    {
+      "iconId": "jetdragon",
+      "sourceTableId": "JetDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_JetDragon_icon_normal.T_JetDragon_icon_normal",
+      "outputPath": "assets/pal-icons/jetdragon.png",
+      "palIds": [
+        "jetdragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3f7370a6ad1e6a4ecdf3ba178b9b349fe78bb27d5fa5fccdec841727b076284b",
+      "pngBytes": 11373,
+      "pngSha256": "69ac99eeb0223c1493b4e67cfff6beed8ec973bab3c96d96ff2a15779ca7c63f"
+    },
+    {
+      "iconId": "kabukiman",
+      "sourceTableId": "KabukiMan",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KabukiMan_icon_normal.T_KabukiMan_icon_normal",
+      "outputPath": "assets/pal-icons/kabukiman.png",
+      "palIds": [
+        "kabukiman"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "322dc479dbf13938cd232a2a72fb5c9e19ba4dce30cdefb0158d5cfd2aa08c48",
+      "pngBytes": 20336,
+      "pngSha256": "d8379cc77157021819df494c49018bf27a346687840566da61b67c6ca12e9339"
+    },
+    {
+      "iconId": "kelpie",
+      "sourceTableId": "Kelpie",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Kelpie_icon_normal.T_Kelpie_icon_normal",
+      "outputPath": "assets/pal-icons/kelpie.png",
+      "palIds": [
+        "kelpie"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "27ade4674adf7d051de1986dcd273c8a816f1ada4672a36e0d8ae397755bf6b0",
+      "pngBytes": 9847,
+      "pngSha256": "cea847a35e7a01c49bd46c3abfde6ee7c742b2a5920878e965bfad08d448ea9a"
+    },
+    {
+      "iconId": "kelpie_fire",
+      "sourceTableId": "Kelpie_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Kelpie_Fire_icon_normal.T_Kelpie_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/kelpie_fire.png",
+      "palIds": [
+        "kelpie_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "928b0f58cbec3d00be7dd8f0ff68f5e09449b410a9285276667f9433fe4d0170",
+      "pngBytes": 9656,
+      "pngSha256": "91acacf18271a8a83397338bd7ae8f02f7196c94f75c04bb22209ef6d6e1beb2"
+    },
+    {
+      "iconId": "kendofrog",
+      "sourceTableId": "KendoFrog",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KendoFrog_icon_normal.T_KendoFrog_icon_normal",
+      "outputPath": "assets/pal-icons/kendofrog.png",
+      "palIds": [
+        "kendofrog"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "53cbc9e6841cc64595f7c47bcd17fb09f0b9ee6aae53dd0fe74cdcdf77df1735",
+      "pngBytes": 13175,
+      "pngSha256": "543d92d45c5db67d4d148747515d11177fc74e215c123f466fae39e68544256f"
+    },
+    {
+      "iconId": "kendofrog_dark",
+      "sourceTableId": "KendoFrog_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KendoFrog_Dark_icon_normal.T_KendoFrog_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/kendofrog_dark.png",
+      "palIds": [
+        "kendofrog_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6e082501ed136af9b6b8f22371d921af65c5391fb070a61ea1cd636c2ab871ea",
+      "pngBytes": 13021,
+      "pngSha256": "d65b57728ea84210188abfc16b7819e900ed955272551e50d184bc5da104cea3"
+    },
+    {
+      "iconId": "kingalpaca",
+      "sourceTableId": "KingAlpaca",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KingAlpaca_icon_normal.T_KingAlpaca_icon_normal",
+      "outputPath": "assets/pal-icons/kingalpaca.png",
+      "palIds": [
+        "kingalpaca"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d80b75f4aad924b4822be0e065aa66d73ee164e2c333a7d22b8a2ce854fa1b3c",
+      "pngBytes": 11312,
+      "pngSha256": "4701088982d2aec04fe8d7f5b967a9dd07ec0c7bb15054934dc96b4654aa09b6"
+    },
+    {
+      "iconId": "kingalpaca_ice",
+      "sourceTableId": "KingAlpaca_ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KingAlpaca_Ice_icon_normal.T_KingAlpaca_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/kingalpaca_ice.png",
+      "palIds": [
+        "kingalpaca_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "03a6340117fa0d9f386eeb0b0798869dacc5a4865668addff0345d4a94415581",
+      "pngBytes": 12233,
+      "pngSha256": "cb7688ad13f01ab773e3395c24c4427705fe7f7f69e414fefdfe6beb76d91bec"
+    },
+    {
+      "iconId": "kingbahamut",
+      "sourceTableId": "KingBahamut",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KingBahamut_icon_normal.T_KingBahamut_icon_normal",
+      "outputPath": "assets/pal-icons/kingbahamut.png",
+      "palIds": [
+        "kingbahamut"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "529b185170f82523316cfca14f161e3a41254fe0bda3fcfd07b5e39b8338acce",
+      "pngBytes": 20469,
+      "pngSha256": "a4c166ba060f6e0e54c0aecd52ef1a9d6c62f0fdce822fba1cd000c5311984cb"
+    },
+    {
+      "iconId": "kingbahamut_dragon",
+      "sourceTableId": "KingBahamut_Dragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KingBahamut_Dragon_icon_normal.T_KingBahamut_Dragon_icon_normal",
+      "outputPath": "assets/pal-icons/kingbahamut_dragon.png",
+      "palIds": [
+        "kingbahamut_dragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "caa94a57461c114dacc344d19cd96de3615cf0b9ac597780b46a0e5fe13a6847",
+      "pngBytes": 20746,
+      "pngSha256": "5cfdd3589ec2bac4b94f137e236f5ab0eae77398265ffa332c5aafb7573d96b0"
+    },
+    {
+      "iconId": "kingsunfish",
+      "sourceTableId": "KingSunfish",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KingSunfish_icon_normal.T_KingSunfish_icon_normal",
+      "outputPath": "assets/pal-icons/kingsunfish.png",
+      "palIds": [
+        "kingsunfish"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "5c00a743f3874f5ab89cad0fb5f822b376440baf9418ab05b408c801cc8c51bd",
+      "pngBytes": 15259,
+      "pngSha256": "f23ce4351bf8ebdc560e12ef3a48326bfc138146094e98c19fd5d3abb9e75226"
+    },
+    {
+      "iconId": "kingsunfish_thunder",
+      "sourceTableId": "KingSunfish_Thunder",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KingSunfish_Thunder_icon_normal.T_KingSunfish_Thunder_icon_normal",
+      "outputPath": "assets/pal-icons/kingsunfish_thunder.png",
+      "palIds": [
+        "kingsunfish_thunder"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e9549d6a2fc92f61d04d75026ff14069b9207e80e08f181bfbbe7082f872d3e1",
+      "pngBytes": 15767,
+      "pngSha256": "9e8d1157a0d587dd3ad7953afbed9adaf748a3819302478f1a039668ed042990"
+    },
+    {
+      "iconId": "kingwhale",
+      "sourceTableId": "KingWhale",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_KingWhale_icon_normal.T_KingWhale_icon_normal",
+      "outputPath": "assets/pal-icons/kingwhale.png",
+      "palIds": [
+        "kingwhale"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "aeca94846c3cfbbc614c68fcf66ccd55da05a6d564477b69949705c4a5bd4f5a",
+      "pngBytes": 15932,
+      "pngSha256": "2d7c794f631e64df164ef7c2213b02c130398fb6b0df8e79947ec14bcb3bea6c"
+    },
+    {
+      "iconId": "kirin",
+      "sourceTableId": "Kirin",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Kirin_icon_normal.T_Kirin_icon_normal",
+      "outputPath": "assets/pal-icons/kirin.png",
+      "palIds": [
+        "kirin"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "5fda4fd34b1cc1d805ab4862aacd8986a310961f48b64e2c3b365a2099ba3da1",
+      "pngBytes": 12133,
+      "pngSha256": "9ac96c6c6cfdee75e21fca876c706772a7e32d30eeea2a9d3cea2d739fc6d203"
+    },
+    {
+      "iconId": "kirin_ice",
+      "sourceTableId": "Kirin_ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Kirin_Ice_icon_normal.T_Kirin_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/kirin_ice.png",
+      "palIds": [
+        "kirin_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "61bf334b873a0fcc94220a71e10e09fdeea19aa28daf49315871827afc4bcd18",
+      "pngBytes": 13314,
+      "pngSha256": "a1b9a627ecdae7c0fa01911b5d46835944076c47c95cab47cb9f972d6f95ce33"
+    },
+    {
+      "iconId": "kitsunebi",
+      "sourceTableId": "Kitsunebi",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Kitsunebi_icon_normal.T_Kitsunebi_icon_normal",
+      "outputPath": "assets/pal-icons/kitsunebi.png",
+      "palIds": [
+        "kitsunebi"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "aeaa183613a495e6a5dc9d47b4f93490c78d57ea9585d93600875c7d3d4b9a96",
+      "pngBytes": 12094,
+      "pngSha256": "5c5d54d2227decddc5e5dfe82fde04486c1921349dbef0f83719588c5ab04e37"
+    },
+    {
+      "iconId": "kitsunebi_ice",
+      "sourceTableId": "Kitsunebi_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Kitsunebi_Ice_icon_normal.T_Kitsunebi_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/kitsunebi_ice.png",
+      "palIds": [
+        "kitsunebi_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "94bc8bd5ff25b73ff3a368624e0691907af3a85543c287835edef38e205f15d8",
+      "pngBytes": 12822,
+      "pngSha256": "dbe4b98cb3e3540ff4c453a196eaba698e779c8e8485d2acd2f0e41e0a7b2c81"
+    },
+    {
+      "iconId": "lanternbutler",
+      "sourceTableId": "LanternButler",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LanternButler_icon_normal.T_LanternButler_icon_normal",
+      "outputPath": "assets/pal-icons/lanternbutler.png",
+      "palIds": [
+        "lanternbutler"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "99d0f297102b6627bb7e65895b2457824094b0dfce11836b15d08c20659cc1c1",
+      "pngBytes": 13198,
+      "pngSha256": "efa32a0cc0627aa483ec6cf5ed66e2f2e1a0e6c77af7cdcbe5cee113339725ae"
+    },
+    {
+      "iconId": "lavagirl",
+      "sourceTableId": "LavaGirl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LavaGirl_icon_normal.T_LavaGirl_icon_normal",
+      "outputPath": "assets/pal-icons/lavagirl.png",
+      "palIds": [
+        "lavagirl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "cf8ac701958d4c138974c84e510598c653e699f675374c35bc1a7f17a507c0fc",
+      "pngBytes": 10585,
+      "pngSha256": "13dbb6ab010bbd341453446bf0e5dee2c80464109d785e143085eb89d87a8e1e"
+    },
+    {
+      "iconId": "lazycatfish",
+      "sourceTableId": "LazyCatfish",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LazyCatfish_icon_normal.T_LazyCatfish_icon_normal",
+      "outputPath": "assets/pal-icons/lazycatfish.png",
+      "palIds": [
+        "lazycatfish"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "658ead1ac1efb2c46460f2bdf8cd2bc707d4471373c838447acd56e430e440f1",
+      "pngBytes": 13826,
+      "pngSha256": "bdd3ebcf887fa88e3cd9c572f4afb0c6030cf78951468052b304197befb8836e"
+    },
+    {
+      "iconId": "lazycatfish_gold",
+      "sourceTableId": "LazyCatfish_Gold",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LazyCatfish_Gold_icon_normal.T_LazyCatfish_Gold_icon_normal",
+      "outputPath": "assets/pal-icons/lazycatfish_gold.png",
+      "palIds": [
+        "lazycatfish_gold"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "285d8256e9065758c5bd5d7680235ae0e86a626cda464679fb065572b29d2af4",
+      "pngBytes": 14858,
+      "pngSha256": "bfe7a7abe64e3ea265a4cab7fa30a5e40175f2f07111741ce8e1c46bea81e81c"
+    },
+    {
+      "iconId": "lazydragon",
+      "sourceTableId": "LazyDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LazyDragon_icon_normal.T_LazyDragon_icon_normal",
+      "outputPath": "assets/pal-icons/lazydragon.png",
+      "palIds": [
+        "lazydragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "059c2292d920c780b3fd06697f903c9ba475d0c00313c4241d4789a8514e92b1",
+      "pngBytes": 9130,
+      "pngSha256": "0d25c4770cace5fdc8d40b873be22cf9e581a23c61acdd229ffc761b7073204c"
+    },
+    {
+      "iconId": "lazydragon_electric",
+      "sourceTableId": "LazyDragon_Electric",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LazyDragon_Electric_icon_normal.T_LazyDragon_Electric_icon_normal",
+      "outputPath": "assets/pal-icons/lazydragon_electric.png",
+      "palIds": [
+        "lazydragon_electric"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "51bb3481ef3f865538280921a69f6302433074fa39e6e49fdc564be61df307e3",
+      "pngBytes": 10026,
+      "pngSha256": "e5b4d98dad63841084a1fbe3260f1f9555b15024b7e0822c05bbbebe6956c231"
+    },
+    {
+      "iconId": "leafmomonga",
+      "sourceTableId": "LeafMomonga",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LeafMomonga_icon_normal.T_LeafMomonga_icon_normal",
+      "outputPath": "assets/pal-icons/leafmomonga.png",
+      "palIds": [
+        "leafmomonga"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e05293e29e8814540fd2709465487791028939c1bb0c4b546c3bc2f6caaab5a0",
+      "pngBytes": 18568,
+      "pngSha256": "20fac47de2a0b83075bb1d7037bd8e8fe267a8e04fe10dff29030cf06c20b795"
+    },
+    {
+      "iconId": "leafprincess",
+      "sourceTableId": "LeafPrincess",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LeafPrincess_icon_normal.T_LeafPrincess_icon_normal",
+      "outputPath": "assets/pal-icons/leafprincess.png",
+      "palIds": [
+        "leafprincess"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "a0019938b00ebae09985477c5d1d0184fcea2f34b8657d9a94b5c4e5fc3d557b",
+      "pngBytes": 14908,
+      "pngSha256": "5cff4c3c929b1a7a2e2c67338d744b104a9be24de0d6935a2fb0e4c611426ed9"
+    },
+    {
+      "iconId": "legenddeer",
+      "sourceTableId": "LegendDeer",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LegendDeer_icon_normal.T_LegendDeer_icon_normal",
+      "outputPath": "assets/pal-icons/legenddeer.png",
+      "palIds": [
+        "legenddeer"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "f09a38927934e387d04d1dd5df5c578e8af3f77d92c45bac85897a07368056d9",
+      "pngBytes": 15231,
+      "pngSha256": "051b3057ca0b9de05a69a96d61b4cc547f1d1d2e1d9a0e6aa7e19b8a3d2c6337"
+    },
+    {
+      "iconId": "lilyqueen",
+      "sourceTableId": "LilyQueen",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LilyQueen_icon_normal.T_LilyQueen_icon_normal",
+      "outputPath": "assets/pal-icons/lilyqueen.png",
+      "palIds": [
+        "lilyqueen"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "053d4e75f54284983443fdcec5433a3e69cec1a9b30405e4abca75ffa4bac52e",
+      "pngBytes": 18720,
+      "pngSha256": "71a749b4ea4cbd8abcee4733b096794db05772e2bd180ac52cf12f3bafeeecba"
+    },
+    {
+      "iconId": "lilyqueen_dark",
+      "sourceTableId": "LilyQueen_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LilyQueen_Dark_icon_normal.T_LilyQueen_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/lilyqueen_dark.png",
+      "palIds": [
+        "lilyqueen_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ffd1360c2c44a4f1fa4a9f67e23f7b25992d6ba5e36c52175059a0c48103e1e3",
+      "pngBytes": 20219,
+      "pngSha256": "85262ae123b622f5f1566d3438b6c373948737ca18e1d4928890a140a586835d"
+    },
+    {
+      "iconId": "littlebriarrose",
+      "sourceTableId": "LittleBriarRose",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LittleBriarRose_icon_normal.T_LittleBriarRose_icon_normal",
+      "outputPath": "assets/pal-icons/littlebriarrose.png",
+      "palIds": [
+        "littlebriarrose"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "cf30545f1c380e5f76a98fb078f72c8a1ff61534dde572dc569e2c88e523d4c4",
+      "pngBytes": 19133,
+      "pngSha256": "d8e1c477bf3fe1b9eafe193dfd1b8b53b23886315b0f8f2fa989a19ac9751189"
+    },
+    {
+      "iconId": "lizardman",
+      "sourceTableId": "LizardMan",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LizardMan_icon_normal.T_LizardMan_icon_normal",
+      "outputPath": "assets/pal-icons/lizardman.png",
+      "palIds": [
+        "lizardman"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ff6e9b6ffa8e6fea0f3a142f268787b502e3122032af216048d5242b3de7c1e4",
+      "pngBytes": 13529,
+      "pngSha256": "cb7a7e56eea748fde5fb9358b64c16c8400d3528664bd94e2b694c886f123eaa"
+    },
+    {
+      "iconId": "lizardman_fire",
+      "sourceTableId": "LizardMan_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LizardMan_Fire_icon_normal.T_LizardMan_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/lizardman_fire.png",
+      "palIds": [
+        "lizardman_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "f3326d217a61f3cbd61391f8f161d2bf156e858ff43ea51d2791d6e84f29428e",
+      "pngBytes": 13995,
+      "pngSha256": "e5ba177386e0cc315fb6a871f942abe1f33fe3e21ab3002bee2fde6a514bb505"
+    },
+    {
+      "iconId": "longcat",
+      "sourceTableId": "LongCat",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LongCat_icon_normal.T_LongCat_icon_normal",
+      "outputPath": "assets/pal-icons/longcat.png",
+      "palIds": [
+        "longcat"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d567bbfe9da0a39fd021f7c5256d6e591d8fd9cc887fd9da7141069639db2312",
+      "pngBytes": 15220,
+      "pngSha256": "11f362707aeeb6f5bc9dd2bfe59ddda225da487a9192197aea6e0680834bed0e"
+    },
+    {
+      "iconId": "lotusdragon",
+      "sourceTableId": "LotusDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_LotusDragon_icon_normal.T_LotusDragon_icon_normal",
+      "outputPath": "assets/pal-icons/lotusdragon.png",
+      "palIds": [
+        "lotusdragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "90ddcf1ee1b36d3f801f40fd50aeedcfbbc00ebb1ef60cd02ace2c5d9017b6a0",
+      "pngBytes": 15298,
+      "pngSha256": "5640db80ba35f0b638718735385074ee26320d2f2e19bfe376ebae0b2ac18144"
+    },
+    {
+      "iconId": "manticore",
+      "sourceTableId": "Manticore",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Manticore_icon_normal.T_Manticore_icon_normal",
+      "outputPath": "assets/pal-icons/manticore.png",
+      "palIds": [
+        "manticore"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "a9c8b353dec263693a89e50019672a3aaf72515891a6fab14593718dad7bc3db",
+      "pngBytes": 18520,
+      "pngSha256": "c46cda99b2976f31f030f64d27a0a5ba50852ea019d1c1651ba35009b8ed6934"
+    },
+    {
+      "iconId": "manticore_dark",
+      "sourceTableId": "Manticore_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Manticore_Dark_icon_normal.T_Manticore_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/manticore_dark.png",
+      "palIds": [
+        "manticore_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "248b9c01663d4c115f66452abd0461a9a6674045867a804e2bd957617c676f80",
+      "pngBytes": 19855,
+      "pngSha256": "b6ea777909e88b010f4fcd7061dccd6f07a4d5caaab964bbbb6a201b3c0d7f43"
+    },
+    {
+      "iconId": "mimicdog",
+      "sourceTableId": "MimicDog",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MimicDog_icon_normal.T_MimicDog_icon_normal",
+      "outputPath": "assets/pal-icons/mimicdog.png",
+      "palIds": [
+        "mimicdog"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b4815a1a226ba902688240a7253973f0494a65d4066f33cdeb69af4b1cd03cc9",
+      "pngBytes": 15995,
+      "pngSha256": "a113755f05d02d33b20b59e66edee16d76e3a5e7eda4f74539252440adc82627"
+    },
+    {
+      "iconId": "monkey",
+      "sourceTableId": "Monkey",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Monkey_icon_normal.T_Monkey_icon_normal",
+      "outputPath": "assets/pal-icons/monkey.png",
+      "palIds": [
+        "monkey"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "5f9863eb63154020fe131039ce96d9fc11fdc82734d61d0cb96a82134879c728",
+      "pngBytes": 15845,
+      "pngSha256": "e75cc0f81923ea831c4c0f3adf0f4b7071806dae906f3894632a8e117a7db61f"
+    },
+    {
+      "iconId": "monkey_fire",
+      "sourceTableId": "Monkey_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Monkey_Fire_icon_normal.T_Monkey_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/monkey_fire.png",
+      "palIds": [
+        "monkey_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "436230c1cad64e0c6550545741c710b54d2c9c30d1144b1cab21b6ba8916a667",
+      "pngBytes": 16174,
+      "pngSha256": "1939eb8eb6eac3d29f387e3da11424ee5e9ca4311a46cbb54d1bdb1322f272ce"
+    },
+    {
+      "iconId": "monochromequeen",
+      "sourceTableId": "MonochromeQueen",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MonochromeQueen_icon_normal.T_MonochromeQueen_icon_normal",
+      "outputPath": "assets/pal-icons/monochromequeen.png",
+      "palIds": [
+        "monochromequeen"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "863f71d243e9d23504c0daf5e186fed267e3aa2163dd9d1c82571e9d97fd6279",
+      "pngBytes": 15423,
+      "pngSha256": "f07f861d286b1745bedcc8f2a639b34538fcc7b835b73733d20476dadb7b1283"
+    },
+    {
+      "iconId": "moonchild",
+      "sourceTableId": "MoonChild",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MoonChild_icon_normal.T_MoonChild_icon_normal",
+      "outputPath": "assets/pal-icons/moonchild.png",
+      "palIds": [
+        "moonchild"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b8683baa902effe799e890cdc949641b732af72b0857c60e7aa43467329c716f",
+      "pngBytes": 18469,
+      "pngSha256": "03ea292abb78dc6b0ff7a7c688e4ed4b0a683384de63f5bb5d4831b1cc0578e0"
+    },
+    {
+      "iconId": "moonqueen",
+      "sourceTableId": "MoonQueen",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MoonQueen_icon_normal.T_MoonQueen_icon_normal",
+      "outputPath": "assets/pal-icons/moonqueen.png",
+      "palIds": [
+        "moonqueen"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b6082c782a1566cc766dd5b242f27aa0cedc96158de9d803a7492bab906071c4",
+      "pngBytes": 14428,
+      "pngSha256": "b092f12ad053aea347e9f9d658781391bd41d973edae58cc44bcc6c8e1e2a957"
+    },
+    {
+      "iconId": "mopbaby",
+      "sourceTableId": "MopBaby",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MopBaby_icon_normal.T_MopBaby_icon_normal",
+      "outputPath": "assets/pal-icons/mopbaby.png",
+      "palIds": [
+        "mopbaby"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b6782a6d0b5446432486a351ed4409faeb823ede396a721316b403ccafa53903",
+      "pngBytes": 13732,
+      "pngSha256": "4438fe20a89bd198c44435beebe3f9bc17f9fe75afc8b956e67e753b50fb6d04"
+    },
+    {
+      "iconId": "mopking",
+      "sourceTableId": "MopKing",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MopKing_icon_normal.T_MopKing_icon_normal",
+      "outputPath": "assets/pal-icons/mopking.png",
+      "palIds": [
+        "mopking"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "1c789c8edf67811d230524d146135f171c633ad6e841044c419a889f682002b1",
+      "pngBytes": 16308,
+      "pngSha256": "289c292cbca235c1d1b91b6864e173742bf4a2fd0f1955b1e272293d9493dbc3"
+    },
+    {
+      "iconId": "mothman",
+      "sourceTableId": "Mothman",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Mothman_icon_normal.T_Mothman_icon_normal",
+      "outputPath": "assets/pal-icons/mothman.png",
+      "palIds": [
+        "mothman"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "0a88d7cf96769057a107b526d9e133be2901115f43673ed932e8943b8dd1345e",
+      "pngBytes": 16149,
+      "pngSha256": "3b69b96cbb50ae954aae9d0add161b901fe785509b11142d2ee36dd8f3471065"
+    },
+    {
+      "iconId": "mummypal",
+      "sourceTableId": "MummyPal",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MummyPal_icon_normal.T_MummyPal_icon_normal",
+      "outputPath": "assets/pal-icons/mummypal.png",
+      "palIds": [
+        "mummypal"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "75fb990c50757aaff0949822e88f8d320e945f6df13d2b17e408cd21f97cb6de",
+      "pngBytes": 20889,
+      "pngSha256": "40bf7b28af9aa34287c646e9ffa869bf4aaa78422288233dd99e9ccdd85e958d"
+    },
+    {
+      "iconId": "mushroomdragon",
+      "sourceTableId": "MushroomDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MushroomDragon_icon_normal.T_MushroomDragon_icon_normal",
+      "outputPath": "assets/pal-icons/mushroomdragon.png",
+      "palIds": [
+        "mushroomdragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "a2290543946dfa04b91c34a0124fbb769cf22b4008adf9f4e128a23dd1a4483c",
+      "pngBytes": 10147,
+      "pngSha256": "b96ccccab6dbc37929e83e2c48b9e198bb5638e9f4d8ea8cb12edc5e45ac5987"
+    },
+    {
+      "iconId": "mushroomdragon_dark",
+      "sourceTableId": "MushroomDragon_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MushroomDragon_Dark_icon_normal.T_MushroomDragon_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/mushroomdragon_dark.png",
+      "palIds": [
+        "mushroomdragon_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "147a592531c2630ae7becdb32da1a578310bd37305d394aa747a456d90ea8bf2",
+      "pngBytes": 10105,
+      "pngSha256": "16fb08a854285b10602160e688e6814b084b3b70086c29b0a50a81a1231586ec"
+    },
+    {
+      "iconId": "mushroomlady",
+      "sourceTableId": "MushroomLady",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MushroomLady_icon_normal.T_MushroomLady_icon_normal",
+      "outputPath": "assets/pal-icons/mushroomlady.png",
+      "palIds": [
+        "mushroomlady"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "53ee9045e3580acc0215f1f1a20499c147fb15a507bb05efbdab272bd793d6cd",
+      "pngBytes": 21713,
+      "pngSha256": "a165f65406fee39fca7ac8e6f9737448b36f04a0d01e54faf685289057c6e027"
+    },
+    {
+      "iconId": "mutant",
+      "sourceTableId": "Mutant",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Mutant_icon_normal.T_Mutant_icon_normal",
+      "outputPath": "assets/pal-icons/mutant.png",
+      "palIds": [
+        "mutant"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "598bbd2f2e6653c1292e18ff780de3b45054ba5c1d1b6d70c78950213a141807",
+      "pngBytes": 14236,
+      "pngSha256": "9e7e1956300bc838c9ad67777687d6672b147ad3e7acb1a13c8280abce20ba14"
+    },
+    {
+      "iconId": "mysterymask",
+      "sourceTableId": "MysteryMask",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_MysteryMask_icon_normal.T_MysteryMask_icon_normal",
+      "outputPath": "assets/pal-icons/mysterymask.png",
+      "palIds": [
+        "mysterymask"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d871ec69477b613b09d9632bce97771634de0dc9278a2a179020748edb41e25f",
+      "pngBytes": 13866,
+      "pngSha256": "02de23ebdb428e1182c79dd9e594698e3db3de52555a48be048748123650931f"
+    },
+    {
+      "iconId": "naughtycat",
+      "sourceTableId": "NaughtyCat",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_NaughtyCat_icon_normal.T_NaughtyCat_icon_normal",
+      "outputPath": "assets/pal-icons/naughtycat.png",
+      "palIds": [
+        "naughtycat"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "72cdaeaa3dd82c7b8f9b8cec2cd82d8d7e53be75b114a60bc22ffe043c6e6532",
+      "pngBytes": 15827,
+      "pngSha256": "d319eb2138d01ffea86b61f3aad879e22fa81c13424b8ff057ff11e53cfac616"
+    },
+    {
+      "iconId": "negativekoala",
+      "sourceTableId": "NegativeKoala",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_NegativeKoala_icon_normal.T_NegativeKoala_icon_normal",
+      "outputPath": "assets/pal-icons/negativekoala.png",
+      "palIds": [
+        "negativekoala"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ad08f4aa70f590bbee696eee794eac48118a8ccfd9c6a791f2b6580a2252eaaa",
+      "pngBytes": 14973,
+      "pngSha256": "30e0a76475867451db20fbcef44423f73f0fa96446d22521a59e1ee730843649"
+    },
+    {
+      "iconId": "negativeoctopus",
+      "sourceTableId": "NegativeOctopus",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_NegativeOctopus_icon_normal.T_NegativeOctopus_icon_normal",
+      "outputPath": "assets/pal-icons/negativeoctopus.png",
+      "palIds": [
+        "negativeoctopus"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "0b8bee49a09666ecaab0527153683ae424e496c1c3527171d111125032204efa",
+      "pngBytes": 13088,
+      "pngSha256": "52cde5016ff3c9eaa8b0d24605f0099b0fc2175c851bff60b2d87c448683a542"
+    },
+    {
+      "iconId": "negativeoctopus_neutral",
+      "sourceTableId": "NegativeOctopus_Neutral",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_NegativeOctopus_Neutral_icon_normal.T_NegativeOctopus_Neutral_icon_normal",
+      "outputPath": "assets/pal-icons/negativeoctopus_neutral.png",
+      "palIds": [
+        "negativeoctopus_neutral"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "33472edb036fda17b7b899418074625780d5d11d01fc454bf98ac7a70b9150de",
+      "pngBytes": 12964,
+      "pngSha256": "9dfbf95d4d3153657fc3d8aa4e1a7f058df5bc694f639018e05554e0f686daac"
+    },
+    {
+      "iconId": "nightbluehorse",
+      "sourceTableId": "NightBlueHorse",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_NightBlueHorse_icon_normal.T_NightBlueHorse_icon_normal",
+      "outputPath": "assets/pal-icons/nightbluehorse.png",
+      "palIds": [
+        "nightbluehorse"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "329d165457d083c24bcf20f40d1aa5e0aad147a4f0ab20592f8a904b1ce58696",
+      "pngBytes": 14510,
+      "pngSha256": "d52f54bf11ca9758c4d773dd9121b97d24fe83e45906cc927522e34eada26989"
+    },
+    {
+      "iconId": "nightbluehorse_neutral",
+      "sourceTableId": "NightBlueHorse_Neutral",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_NightBlueHorse_Neutral_icon_normal.T_NightBlueHorse_Neutral_icon_normal",
+      "outputPath": "assets/pal-icons/nightbluehorse_neutral.png",
+      "palIds": [
+        "nightbluehorse_neutral"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e15f0b2e92754b8c84a2fc8f2b6e0c27de1259286e30dae89dc3d5baf60f7ed1",
+      "pngBytes": 14914,
+      "pngSha256": "0e1745f81730749f3578f81dfc568e90e355fba5178cda40f8884547d487b725"
+    },
+    {
+      "iconId": "nightfox",
+      "sourceTableId": "NightFox",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_NightFox_icon_normal.T_NightFox_icon_normal",
+      "outputPath": "assets/pal-icons/nightfox.png",
+      "palIds": [
+        "nightfox"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "0d2d6ea9c01fbfceb156abe4e3c0353398c8c15f591f4f00cd661fccb41b5637",
+      "pngBytes": 15515,
+      "pngSha256": "0a327e24a014df5db597a4e20c05dc13ae408274a3116724291842479ef75e91"
+    },
+    {
+      "iconId": "nightlady",
+      "sourceTableId": "NightLady",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_NightLady_icon_normal.T_NightLady_icon_normal",
+      "outputPath": "assets/pal-icons/nightlady.png",
+      "palIds": [
+        "nightlady"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "a456ad8c615fa58e42404eb86d3dab80496764dc183f0888a07a0e0482ff2168",
+      "pngBytes": 15175,
+      "pngSha256": "526f8f017dbbe00822f50e0cd79164bc36eb343df9185436715a47b08c2a9391"
+    },
+    {
+      "iconId": "nightlady_dark",
+      "sourceTableId": "NightLady_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_NightLady_Dark_icon_normal.T_NightLady_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/nightlady_dark.png",
+      "palIds": [
+        "nightlady_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "8e942e5f3af0163b3696509ca1bad79051833f4ec3e137b0cfdfb8514364be68",
+      "pngBytes": 15459,
+      "pngSha256": "10a3cc3bf31e211c6742a277cd1b4d3026a17dcb2e6443b63108e18b70e4b889"
+    },
+    {
+      "iconId": "octopusgirl",
+      "sourceTableId": "OctopusGIrl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_OctopusGirl_icon_normal.T_OctopusGirl_icon_normal",
+      "outputPath": "assets/pal-icons/octopusgirl.png",
+      "palIds": [
+        "octopusgirl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ec38813a0312d7399921c0f182cb32cd5ad3277064646f0420541b4d4d9deb89",
+      "pngBytes": 14118,
+      "pngSha256": "b672fba690446225ef05f1378cb071b36de66d702c47a794ed1447d17b0a3de2"
+    },
+    {
+      "iconId": "octopusgirl_neutral",
+      "sourceTableId": "OctopusGirl_Neutral",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_OctopusGirl_Neutral_icon_normal.T_OctopusGirl_Neutral_icon_normal",
+      "outputPath": "assets/pal-icons/octopusgirl_neutral.png",
+      "palIds": [
+        "octopusgirl_neutral"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "391c547b9d7c3641145737eeb0f839980498713b16602c6e1bf1d1c17c149e9e",
+      "pngBytes": 15450,
+      "pngSha256": "df29c55e8634006a512a4e17f2fedd22a91b49f779c23cfd1a318d5d316da7f9"
+    },
+    {
+      "iconId": "onighostgirl",
+      "sourceTableId": "OniGhostGirl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_OniGhostGirl_icon_normal.T_OniGhostGirl_icon_normal",
+      "outputPath": "assets/pal-icons/onighostgirl.png",
+      "palIds": [
+        "onighostgirl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3274250aeb925047630096f57bf43990bad6b414f941454ee00ff62bb858a3f5",
+      "pngBytes": 14026,
+      "pngSha256": "a35bea1e405ad5271dabea9b7299f293b1d7fc71322d5925a4b4fef4727740b7"
+    },
+    {
+      "iconId": "pandagirl",
+      "sourceTableId": "PandaGirl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_PandaGirl_icon_normal.T_PandaGirl_icon_normal",
+      "outputPath": "assets/pal-icons/pandagirl.png",
+      "palIds": [
+        "pandagirl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "2dd75fe886119421c74ec2e2044360528398a97a65c5bbd33c3413989be1a407",
+      "pngBytes": 15640,
+      "pngSha256": "9b4384bfae8b226441efef3343d2cb7e4f60131e259165a4f30a36c1360da65c"
+    },
+    {
+      "iconId": "penguin",
+      "sourceTableId": "Penguin",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Penguin_icon_normal.T_Penguin_icon_normal",
+      "outputPath": "assets/pal-icons/penguin.png",
+      "palIds": [
+        "penguin"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6d325128d82e57f1c0b78f9e028871dcb4d93b4d9db40376adcd08a46d0ee6e2",
+      "pngBytes": 12223,
+      "pngSha256": "e40193a758ecd8463f72fcc2eb565d7cf2577b1ccf76a1b3cc975da8232f23ee"
+    },
+    {
+      "iconId": "penguin_electric",
+      "sourceTableId": "Penguin_Electric",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Penguin_Electric_icon_normal.T_Penguin_Electric_icon_normal",
+      "outputPath": "assets/pal-icons/penguin_electric.png",
+      "palIds": [
+        "penguin_electric"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "cdc88d7aaf29dfae0b0d8ef2e4d4f6f93cb88e7afd8def3f7c86cd74ec08e482",
+      "pngBytes": 12030,
+      "pngSha256": "507185ea8e0e12055f06488a950ed3ec322bac65a82d38cb7331d99ff6a3659e"
+    },
+    {
+      "iconId": "pinkcat",
+      "sourceTableId": "PinkCat",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_PinkCat_icon_normal.T_PinkCat_icon_normal",
+      "outputPath": "assets/pal-icons/pinkcat.png",
+      "palIds": [
+        "pinkcat"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "eead0f4ee4a44d8e488a5433ecc9d9031a416c5177893d42276ab82dba4d50e5",
+      "pngBytes": 15267,
+      "pngSha256": "d9078bdeb0bd4f330bd56bf096209d15a7b69a012ee0a113b63422c059ce74e5"
+    },
+    {
+      "iconId": "pinklizard",
+      "sourceTableId": "PinkLizard",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_PinkLizard_icon_normal.T_PinkLizard_icon_normal",
+      "outputPath": "assets/pal-icons/pinklizard.png",
+      "palIds": [
+        "pinklizard"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "5d1dc0fd7482803eb3961575d819fa284bcc436badbfeeef9bb5a83a8f182fee",
+      "pngBytes": 15446,
+      "pngSha256": "acd14a5c27417e8cad16d03d17d966b055015c98e5f85922362962eb8d22ea25"
+    },
+    {
+      "iconId": "pinkrabbit",
+      "sourceTableId": "PinkRabbit",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_PinkRabbit_icon_normal.T_PinkRabbit_icon_normal",
+      "outputPath": "assets/pal-icons/pinkrabbit.png",
+      "palIds": [
+        "pinkrabbit"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ff8b49eeeae328e4c2a39271cb6b7eac30e4cc2ec4ebd7e388966540a37bc2c1",
+      "pngBytes": 14162,
+      "pngSha256": "68bcec81070c0b44f69353d45e05caef7a94de5097c30b7606e8992ab4e90689"
+    },
+    {
+      "iconId": "pinkrabbit_grass",
+      "sourceTableId": "PinkRabbit_Grass",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_PinkRabbit_Grass_icon_normal.T_PinkRabbit_Grass_icon_normal",
+      "outputPath": "assets/pal-icons/pinkrabbit_grass.png",
+      "palIds": [
+        "pinkrabbit_grass"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "40277613f68f97ef570b0387dba2434f04c6dc93d0c92bdddfc3d12d6f4e135a",
+      "pngBytes": 13571,
+      "pngSha256": "e47777c4496d790884afa8e49751dd0a343c4fa6368f64c340cfe3d1f8c04d08"
+    },
+    {
+      "iconId": "plantslime",
+      "sourceTableId": "PlantSlime",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_PlantSlime_icon_normal.T_PlantSlime_icon_normal",
+      "outputPath": "assets/pal-icons/plantslime.png",
+      "palIds": [
+        "plantslime",
+        "plantslime_flower"
+      ],
+      "shared": true,
+      "tribeFallbackPalIds": [
+        "plantslime_flower"
+      ],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d05e9b9705746011b44ea5cb38580b63ababf23ca52414b74a5c8a119f017ef9",
+      "pngBytes": 16049,
+      "pngSha256": "11ab4eeb87501f77463681f8c74a2785d422ffe4db9c1024659c49eee41d11e4"
+    },
+    {
+      "iconId": "plesiosaur",
+      "sourceTableId": "Plesiosaur",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Plesiosaur_icon_normal.T_Plesiosaur_icon_normal",
+      "outputPath": "assets/pal-icons/plesiosaur.png",
+      "palIds": [
+        "plesiosaur"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c2a9dfe359762e4ef86438ae2c8a8ccc382b7189b2a5e8b833f92752706ccf4b",
+      "pngBytes": 9158,
+      "pngSha256": "ff441254225a20eff2c49f8227f6a96440db290c41f9921f44557ce73cae468f"
+    },
+    {
+      "iconId": "poseidonorca",
+      "sourceTableId": "PoseidonOrca",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_PoseidonOrca_icon_normal.T_PoseidonOrca_icon_normal",
+      "outputPath": "assets/pal-icons/poseidonorca.png",
+      "palIds": [
+        "poseidonorca"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "4b9e4ca4207689aa1b3a308c345fb7a0a75c1ea7a3cf9b5a35bf9e0ef498e3c5",
+      "pngBytes": 18131,
+      "pngSha256": "bcd365f02b5f648a442797caec59ffdf59ffca53660bde2e88149459e0ffe281"
+    },
+    {
+      "iconId": "purplespider",
+      "sourceTableId": "PurpleSpider",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_PurpleSpider_icon_normal.T_PurpleSpider_icon_normal",
+      "outputPath": "assets/pal-icons/purplespider.png",
+      "palIds": [
+        "purplespider"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "cbd109f4a062c1a60de1bb6c346632af8dfe21c6b2383df440e124479182e01b",
+      "pngBytes": 18543,
+      "pngSha256": "6fe845cf627d747310ef31f978b42244bc57325b7014fe39f3986577e7dabc22"
+    },
+    {
+      "iconId": "queenbee",
+      "sourceTableId": "QueenBee",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_QueenBee_icon_normal.T_QueenBee_icon_normal",
+      "outputPath": "assets/pal-icons/queenbee.png",
+      "palIds": [
+        "queenbee"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "991d1dd559b7c015f4d4e6ef85e97ab2760dd7d2b7e641ea3241c5b58950578b",
+      "pngBytes": 14686,
+      "pngSha256": "028863c3f0dd446d5e5289cbb30ff4c1c24305429e771f04774d7acf9015f356"
+    },
+    {
+      "iconId": "raijindaughter",
+      "sourceTableId": "RaijinDaughter",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_RaijinDaughter_icon_normal.T_RaijinDaughter_icon_normal",
+      "outputPath": "assets/pal-icons/raijindaughter.png",
+      "palIds": [
+        "raijindaughter"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "8918556df41eb1f24dd471965c9ed872ae00532e82307ec8ba0f40de13f4fca4",
+      "pngBytes": 15373,
+      "pngSha256": "e8141ddd3ca8ed44d576191681a9b1dad795b324ce6d79a0f87c727a2bb201d2"
+    },
+    {
+      "iconId": "raijindaughter_water",
+      "sourceTableId": "RaijinDaughter_Water",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_RaijinDaughter_Water_icon_normal.T_RaijinDaughter_Water_icon_normal",
+      "outputPath": "assets/pal-icons/raijindaughter_water.png",
+      "palIds": [
+        "raijindaughter_water"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "cb07c4f3ab0f2e2b3cb53f04cfaaff3dc05e06bcd977b98ce9c14f427c336814",
+      "pngBytes": 11857,
+      "pngSha256": "712d6072208498483711a588d96ef1fc8cde999df55519d0a81da00af0ca92f6"
+    },
+    {
+      "iconId": "redarmorbird",
+      "sourceTableId": "RedArmorBird",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_RedArmorBird_icon_normal.T_RedArmorBird_icon_normal",
+      "outputPath": "assets/pal-icons/redarmorbird.png",
+      "palIds": [
+        "redarmorbird"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e7d63876ce3b8ec9530e4b0ccf92d791eb5573322ff35bddd6707001a5d88db2",
+      "pngBytes": 15904,
+      "pngSha256": "9e4df976c2eda80b5beb1bc2d9cd9f2374feaafdc5b85fd42a06cd1ccd8dc7ec"
+    },
+    {
+      "iconId": "redflowerbird",
+      "sourceTableId": "RedFlowerBird",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_RedFlowerBird_icon_normal.T_RedFlowerBird_icon_normal",
+      "outputPath": "assets/pal-icons/redflowerbird.png",
+      "palIds": [
+        "redflowerbird"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "37765a107cbd9c14e59d99d17d13dda7cdf279ab48b793b20bc73ef1738efa43",
+      "pngBytes": 14194,
+      "pngSha256": "e7e152328ec26d18c78915d96301e4ead9ce462405bbba244875a8acf67e3460"
+    },
+    {
+      "iconId": "robinhood",
+      "sourceTableId": "RobinHood",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_RobinHood_icon_normal.T_RobinHood_icon_normal",
+      "outputPath": "assets/pal-icons/robinhood.png",
+      "palIds": [
+        "robinhood"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "284ed98e00eee1369182b3b9b78d5f363e029b5cc302a17003ddc8712f2f0a97",
+      "pngBytes": 12238,
+      "pngSha256": "baf64a7d4c86c9416c2a32a8767f3e5a0f7a10d9285dddb5966dd8d4a3652f25"
+    },
+    {
+      "iconId": "robinhood_ground",
+      "sourceTableId": "RobinHood_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_RobinHood_Ground_icon_normal.T_RobinHood_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/robinhood_ground.png",
+      "palIds": [
+        "robinhood_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "31c1c25764ef5b15ca4484d7897693a77c4b2f9fdccd79c8d3db6629f5f91f53",
+      "pngBytes": 12598,
+      "pngSha256": "c656fc3487c09446aecf3559d637dab52907a30e7d99127294d16a165772f1b8"
+    },
+    {
+      "iconId": "rockbeast",
+      "sourceTableId": "RockBeast",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_RockBeast_icon_normal.T_RockBeast_icon_normal",
+      "outputPath": "assets/pal-icons/rockbeast.png",
+      "palIds": [
+        "rockbeast"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "398af9acbbbe3ce450770ca8c15ed61951e5bd808ec117fc14956e44162ecad9",
+      "pngBytes": 20844,
+      "pngSha256": "07b0b2a8568c81b7044c4627ffb3aeb376750939096bdb590d097c776d6f7d35"
+    },
+    {
+      "iconId": "rockbeast_ice",
+      "sourceTableId": "RockBeast_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_RockBeast_Ice_icon_normal.T_RockBeast_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/rockbeast_ice.png",
+      "palIds": [
+        "rockbeast_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "1f88407b91802859e65780de4fb07559dc7bb33dc6640d39e7de28390c3110f5",
+      "pngBytes": 19954,
+      "pngSha256": "fdec483c5a9ee0949d1709261aed071d61412e4cacb0238d90d52fcc8f1e6248"
+    },
+    {
+      "iconId": "ronin",
+      "sourceTableId": "Ronin",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Ronin_icon_normal.T_Ronin_icon_normal",
+      "outputPath": "assets/pal-icons/ronin.png",
+      "palIds": [
+        "ronin"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "f067873ddf44701dce01584565154a2ef705a9372f808d05cd6d96010409f489",
+      "pngBytes": 18087,
+      "pngSha256": "e5642f5ff1b57b2f22aa98e3e039b725e4dbacc0a69506d221316bd197900c2b"
+    },
+    {
+      "iconId": "ronin_dark",
+      "sourceTableId": "Ronin_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Ronin_Dark_icon_normal.T_Ronin_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/ronin_dark.png",
+      "palIds": [
+        "ronin_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "9403b2a2ec212557204d76d5c5bbfccae614b2548a7e2dd6d9ddba30a4c3df86",
+      "pngBytes": 18014,
+      "pngSha256": "ceb01f8f5a4407bbb35aee66b0d3238fd59a0096a89ae2baa3b37f4636b00941"
+    },
+    {
+      "iconId": "saintcentaur",
+      "sourceTableId": "SaintCentaur",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SaintCentaur_icon_normal.T_SaintCentaur_icon_normal",
+      "outputPath": "assets/pal-icons/saintcentaur.png",
+      "palIds": [
+        "saintcentaur"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "7c87ae5344de1c9d1f2172c663011bfa8e3c844db5c7259b7293eb2a7093763e",
+      "pngBytes": 20146,
+      "pngSha256": "c985c43d64100fa87b2c5ec680ba983d2e02e8bc784cad831b5de3d14510f803"
+    },
+    {
+      "iconId": "sakurasaurus",
+      "sourceTableId": "SakuraSaurus",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SakuraSaurus_icon_normal.T_SakuraSaurus_icon_normal",
+      "outputPath": "assets/pal-icons/sakurasaurus.png",
+      "palIds": [
+        "sakurasaurus"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "17c41fe7e60317f1790e553f251dc6fd8986c5c017827d1dca11e902fd0ebb8a",
+      "pngBytes": 13446,
+      "pngSha256": "d2968ceb50fa3aaa56446602dcda714682b26078766695a68da6d5e37997483c"
+    },
+    {
+      "iconId": "sakurasaurus_water",
+      "sourceTableId": "SakuraSaurus_Water",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SakuraSaurus_Water_icon_normal.T_SakuraSaurus_Water_icon_normal",
+      "outputPath": "assets/pal-icons/sakurasaurus_water.png",
+      "palIds": [
+        "sakurasaurus_water"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "68beffd81faf1eb8016753800b4bd5a51ee61775e2c344efc5dc4894c70e49c3",
+      "pngBytes": 13308,
+      "pngSha256": "a8cf6f99084ddc21e9a30bbb9ae6280c85b9cacfbbc4c4ed01995c3dcf10ed3b"
+    },
+    {
+      "iconId": "samuraidog",
+      "sourceTableId": "SamuraiDog",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SamuraiDog_icon_normal.T_SamuraiDog_icon_normal",
+      "outputPath": "assets/pal-icons/samuraidog.png",
+      "palIds": [
+        "samuraidog"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ae7181fb4efdeb45ef0848fa12436e9c3f341ce7462ecce3e78db0d9077be13d",
+      "pngBytes": 13701,
+      "pngSha256": "b4dcb02af3ca3ad9312ce399b2c992c3f90de4f6810d599da1c531e386f7542c"
+    },
+    {
+      "iconId": "scorpionman",
+      "sourceTableId": "ScorpionMan",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ScorpionMan_icon_normal.T_ScorpionMan_icon_normal",
+      "outputPath": "assets/pal-icons/scorpionman.png",
+      "palIds": [
+        "scorpionman"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3aaf4daad8b8ccfca6ccd31131a43f2cd9910f3ce1dd0836aaa6bf69ba827644",
+      "pngBytes": 17800,
+      "pngSha256": "d33ddaad1365c8f8c150ba76f120515d1d451d8f6a2aed6a087b455594434f6b"
+    },
+    {
+      "iconId": "scorpionman_electric",
+      "sourceTableId": "ScorpionMan_Electric",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ScorpionMan_Electric_icon_normal.T_ScorpionMan_Electric_icon_normal",
+      "outputPath": "assets/pal-icons/scorpionman_electric.png",
+      "palIds": [
+        "scorpionman_electric"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "dff5aedeeb1aae80cf7b2fc73e3e94285548d244516b3f3b560c0b1f3ceb9505",
+      "pngBytes": 17715,
+      "pngSha256": "0ce1b89c945e54a5efa5c77bd8fd7023b6fda692ca86f4e008cbd7d97180fbfc"
+    },
+    {
+      "iconId": "sekhmet",
+      "sourceTableId": "Sekhmet",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Sekhmet_icon_normal.T_Sekhmet_icon_normal",
+      "outputPath": "assets/pal-icons/sekhmet.png",
+      "palIds": [
+        "sekhmet"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ea0b90004abba173367edceff9d10c7e9fd9e4683b8f26077a3ad1ab3099bd13",
+      "pngBytes": 13919,
+      "pngSha256": "93d32e881c9106fcc84732f0f2e1c6ac184693a69f2dd0e6a25f7f72bc7cb951"
+    },
+    {
+      "iconId": "serpent",
+      "sourceTableId": "Serpent",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Serpent_icon_normal.T_Serpent_icon_normal",
+      "outputPath": "assets/pal-icons/serpent.png",
+      "palIds": [
+        "serpent"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "96221e8d8d63bc5556df8615cb0dcd5c9c6caa25e5bb0d8e9b4893a39b2d1649",
+      "pngBytes": 11132,
+      "pngSha256": "fe5e9b878b15549da3e2b3764f6b9365a1a93dd6bf9f71ceb7425dbc27529409"
+    },
+    {
+      "iconId": "serpent_ground",
+      "sourceTableId": "Serpent_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Serpent_Ground_icon_normal.T_Serpent_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/serpent_ground.png",
+      "palIds": [
+        "serpent_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "23a7d0d41b7cdfbfc371381285d1c6afbc33570bb08fd75464e30ef8cbed9804",
+      "pngBytes": 13308,
+      "pngSha256": "fa8bc8d7a900a10e00978c2be17997c15f67faa7057d754594c9b58b788b4969"
+    },
+    {
+      "iconId": "sharkkid",
+      "sourceTableId": "SharkKid",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SharkKid_icon_normal.T_SharkKid_icon_normal",
+      "outputPath": "assets/pal-icons/sharkkid.png",
+      "palIds": [
+        "sharkkid"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "67ec43dd80904d1087abe8ea93372a182592cd6c6285b9b26c4a2db019552df7",
+      "pngBytes": 14594,
+      "pngSha256": "1aece6233fd37a14f6a60f562cdf16e35820a5a6754a50774266acf3aa6c65ec"
+    },
+    {
+      "iconId": "sharkkid_fire",
+      "sourceTableId": "SharkKid_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SharkKid_Fire_icon_normal.T_SharkKid_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/sharkkid_fire.png",
+      "palIds": [
+        "sharkkid_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "80b8b6e26383f1fb7d201de2687684e5199ae06c4e1280e1429883d51bcfb635",
+      "pngBytes": 14328,
+      "pngSha256": "f819442761c7088cb81aac42d17391259cc55fb9ba390d13815f0ec9de23bf30"
+    },
+    {
+      "iconId": "sheepball",
+      "sourceTableId": "SheepBall",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SheepBall_icon_normal.T_SheepBall_icon_normal",
+      "outputPath": "assets/pal-icons/sheepball.png",
+      "palIds": [
+        "sheepball"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "33356b9d7d5571db540738d453232625bc2788a7b7b25270eaf0a4231951c80f",
+      "pngBytes": 17222,
+      "pngSha256": "91f33538a06908fb630b967f672a607b60cc3e947b172a61aec541843eef42e6"
+    },
+    {
+      "iconId": "sifudog",
+      "sourceTableId": "SifuDog",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SifuDog_icon_normal.T_SifuDog_icon_normal",
+      "outputPath": "assets/pal-icons/sifudog.png",
+      "palIds": [
+        "sifudog"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "4d313340587ed740674542293585653451815e57b608b683e29b640be3690d2a",
+      "pngBytes": 16849,
+      "pngSha256": "f489d1684af315f23389f076557d6280d38bfcb058eeef3409fa203ca967b95d"
+    },
+    {
+      "iconId": "skydragon",
+      "sourceTableId": "SkyDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SkyDragon_icon_normal.T_SkyDragon_icon_normal",
+      "outputPath": "assets/pal-icons/skydragon.png",
+      "palIds": [
+        "skydragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "17085d37365a311edb4db30d4b202cfd7094646b902f1a5f220b6ff17bc6b18a",
+      "pngBytes": 17123,
+      "pngSha256": "95964ed4220b6f9f2b470f377e42b92a927754a2d1101bfcdf5314c214697d0e"
+    },
+    {
+      "iconId": "skydragon_grass",
+      "sourceTableId": "SkyDragon_Grass",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SkyDragon_Grass_icon_normal.T_SkyDragon_Grass_icon_normal",
+      "outputPath": "assets/pal-icons/skydragon_grass.png",
+      "palIds": [
+        "skydragon_grass"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "500ac5b7d4acba8b849e42f6cc4e7e65d7b775d10d841a9443188db99fad33c4",
+      "pngBytes": 16991,
+      "pngSha256": "6e330573b1df24eb6ccb65f37d4da82ab72abe1f9a794c54b36395ca6d1267a3"
+    },
+    {
+      "iconId": "sleeverabbit",
+      "sourceTableId": "SleeveRabbit",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SleeveRabbit_icon_normal.T_SleeveRabbit_icon_normal",
+      "outputPath": "assets/pal-icons/sleeverabbit.png",
+      "palIds": [
+        "sleeverabbit"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d2e5e041d8202c7c777b8a5f000c4158e600983160f9a32c172771278bdc28ac",
+      "pngBytes": 18617,
+      "pngSha256": "5799f8a6ac1a1968abb26b8a337b178fdfb2aa2a2f07e59a2ebfbac1ed37112f"
+    },
+    {
+      "iconId": "smallarmadillo",
+      "sourceTableId": "SmallArmadillo",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SmallArmadillo_icon_normal.T_SmallArmadillo_icon_normal",
+      "outputPath": "assets/pal-icons/smallarmadillo.png",
+      "palIds": [
+        "smallarmadillo"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "867f9270cd97e7cd95b171bebf922e238c747ad5d3d4a2eab8353f60424f917b",
+      "pngBytes": 10936,
+      "pngSha256": "7ef047fec1f503acd5cdb6e49dc64f16e53fd37cc73647aafb830d3ed065047a"
+    },
+    {
+      "iconId": "smallyeti",
+      "sourceTableId": "SmallYeti",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SmallYeti_icon_normal.T_SmallYeti_icon_normal",
+      "outputPath": "assets/pal-icons/smallyeti.png",
+      "palIds": [
+        "smallyeti"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "6887fcebecc71dd7fa045885bb4b5d6e72f9d927013dbdad4fa7df615a2c6ee9",
+      "pngBytes": 20200,
+      "pngSha256": "38711fda8e5d279b0a6d0af1a12d41dcdc9cdbdfa403818641546e64984f72f6"
+    },
+    {
+      "iconId": "snakegirl",
+      "sourceTableId": "SnakeGirl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SnakeGirl_icon_normal.T_SnakeGirl_icon_normal",
+      "outputPath": "assets/pal-icons/snakegirl.png",
+      "palIds": [
+        "snakegirl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "dd77913edad5256674973a7dcbd07890ba055561693452d7d9c20bf807a58d37",
+      "pngBytes": 18500,
+      "pngSha256": "7308f0db97f88fb112216b9405b2431348e87384e79f649d14d2024a0cb3ac24"
+    },
+    {
+      "iconId": "snowpeafowl",
+      "sourceTableId": "SnowPeafowl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SnowPeafowl_icon_normal.T_SnowPeafowl_icon_normal",
+      "outputPath": "assets/pal-icons/snowpeafowl.png",
+      "palIds": [
+        "snowpeafowl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "8dd292cacb64b73da6072b94ab2901b4426b6297c78eae69f8e7bae24076b648",
+      "pngBytes": 6874,
+      "pngSha256": "ac7bb5ef661ea584e97f2af17b76c6be0bcb554cc64ece8c40f165540ad31260"
+    },
+    {
+      "iconId": "snowtigerbeastman",
+      "sourceTableId": "SnowTigerBeastMan",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SnowTigerBeastman_icon_normal.T_SnowTigerBeastman_icon_normal",
+      "outputPath": "assets/pal-icons/snowtigerbeastman.png",
+      "palIds": [
+        "snowtigerbeastman"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 512,
+      "height": 512,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 1048576,
+      "decodedPixelSha256": "a70d4d3a580e2267500ad6da06f4c625c3c7a03db107e272ab7da63ed2acf3da",
+      "pngBytes": 161993,
+      "pngSha256": "24fffc2212eb130fccead1bc558ee213ca8531190463888215adee6155211a41"
+    },
+    {
+      "iconId": "soldierbee",
+      "sourceTableId": "SoldierBee",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SoldierBee_icon_normal.T_SoldierBee_icon_normal",
+      "outputPath": "assets/pal-icons/soldierbee.png",
+      "palIds": [
+        "soldierbee"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "df64dad60cf35284e1d1338afa4c856be5dc5e7ce05ab6388bfa505aeeab107c",
+      "pngBytes": 14286,
+      "pngSha256": "a40010d22c150ed46b68a60c8cd003bc653bd50b96b0f3adb1487ef4d233bb64"
+    },
+    {
+      "iconId": "stuffedshark",
+      "sourceTableId": "StuffedShark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_StuffedShark_icon_normal.T_StuffedShark_icon_normal",
+      "outputPath": "assets/pal-icons/stuffedshark.png",
+      "palIds": [
+        "stuffedshark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "1880a76408dd22a45a739734e83d9b28d11ce346fc9b51af71aac4525384629b",
+      "pngBytes": 10989,
+      "pngSha256": "16f9310131077640ee5318456b8263d8762e72eebe02bbaf2b54a3f3087b139e"
+    },
+    {
+      "iconId": "stuffedshark_fire",
+      "sourceTableId": "StuffedShark_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_StuffedShark_Fire_icon_normal.T_StuffedShark_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/stuffedshark_fire.png",
+      "palIds": [
+        "stuffedshark_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "3fb280b3f964b8ee6a73ba2a97a2e57c8277b364ad89423eeb351cc9f3183c51",
+      "pngBytes": 11419,
+      "pngSha256": "284d7927e84c538ad146414ac8ae66ef483f68f5e3699b0635ec570345bce53d"
+    },
+    {
+      "iconId": "sumodog",
+      "sourceTableId": "SumoDog",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SumoDog_icon_normal.T_SumoDog_icon_normal",
+      "outputPath": "assets/pal-icons/sumodog.png",
+      "palIds": [
+        "sumodog"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "01f89df3c78fcb23214ee940889426268ea89238f5a0f698c4a6d9747010b0d1",
+      "pngBytes": 20333,
+      "pngSha256": "887457216d9b46cc629ca88c9a1783fc56208b7e47f784c9637513ff780da6b7"
+    },
+    {
+      "iconId": "suzaku",
+      "sourceTableId": "Suzaku",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Suzaku_icon_normal.T_Suzaku_icon_normal",
+      "outputPath": "assets/pal-icons/suzaku.png",
+      "palIds": [
+        "suzaku"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d4f36db0adee635731814b78b797948dc5f86bfc432da187608805ba0e768af1",
+      "pngBytes": 13293,
+      "pngSha256": "1c17b1c376bb014a1fb545f30d7d02422b43dd2e558398ecbad00a5671a61a0a"
+    },
+    {
+      "iconId": "suzaku_water",
+      "sourceTableId": "Suzaku_Water",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Suzaku_Water_icon_normal.T_Suzaku_Water_icon_normal",
+      "outputPath": "assets/pal-icons/suzaku_water.png",
+      "palIds": [
+        "suzaku_water"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "06074d26527f8f73dd7f39ede16fa8d8f16e0d67d80de7eb3eef566da9f2f5d4",
+      "pngBytes": 13676,
+      "pngSha256": "420a43910445cd8854ff1c99a800980b9473ead05874079b5f624c9f76fd3b57"
+    },
+    {
+      "iconId": "sweetssheep",
+      "sourceTableId": "SweetsSheep",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SweetsSheep_icon_normal.T_SweetsSheep_icon_normal",
+      "outputPath": "assets/pal-icons/sweetssheep.png",
+      "palIds": [
+        "sweetssheep"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b23f0f78c7a00b8575de2ae9f5f3ccd69d74bf1a21e32bd89f68a594bc804b65",
+      "pngBytes": 17127,
+      "pngSha256": "eaf4c965736dd1202f090a309f478fc60f57a2c2006e2753812bce1d864355be"
+    },
+    {
+      "iconId": "sweetssheep_ground",
+      "sourceTableId": "SweetsSheep_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SweetsSheep_Ground_icon_normal.T_SweetsSheep_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/sweetssheep_ground.png",
+      "palIds": [
+        "sweetssheep_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "a051f0756361e6fc453679e4a8d268ba36e398903756e946f70dea0881423fa3",
+      "pngBytes": 18544,
+      "pngSha256": "56ecf9af25512574814338e4f809a6d035f36b4fe6eb0851afff0fe85c8c1278"
+    },
+    {
+      "iconId": "swordcutlassfish",
+      "sourceTableId": "SwordCutlassFish",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SwordCutlassfish_icon_normal.T_SwordCutlassfish_icon_normal",
+      "outputPath": "assets/pal-icons/swordcutlassfish.png",
+      "palIds": [
+        "swordcutlassfish"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "53a812699a7ac64b1ea7bf750838cbb78d84ec4fb39196811abd87fdbae34eaf",
+      "pngBytes": 13865,
+      "pngSha256": "5f29084e6e16d4325e9aad81a02cd21bfdd9d5748b84db450b6be4bb186b8f71"
+    },
+    {
+      "iconId": "swordcutlassfish_fire",
+      "sourceTableId": "SwordCutlassFish_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_SwordCutlassfish_Fire_icon_normal.T_SwordCutlassfish_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/swordcutlassfish_fire.png",
+      "palIds": [
+        "swordcutlassfish_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c43ab81875c607bab9c7773896e64ce115f87abd4516b8e890b08862ac7d9c29",
+      "pngBytes": 13618,
+      "pngSha256": "b8ab06ad59f6441b0559581da6612b35bc18d6c7a57b09c3750d9eb0ffd32c28"
+    },
+    {
+      "iconId": "tentacleturtle",
+      "sourceTableId": "TentacleTurtle",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_TentacleTurtle_icon_normal.T_TentacleTurtle_icon_normal",
+      "outputPath": "assets/pal-icons/tentacleturtle.png",
+      "palIds": [
+        "tentacleturtle"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ad4f68893f53ba0c6077c32d04bb4621c2d155068c13f359da7804a1766df603",
+      "pngBytes": 17972,
+      "pngSha256": "c3aaa819e6fe33d0bad86139088ea639df56c089998d5f3d901c92a53947149a"
+    },
+    {
+      "iconId": "tentacleturtle_ground",
+      "sourceTableId": "TentacleTurtle_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_TentacleTurtle_Ground_icon_normal.T_TentacleTurtle_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/tentacleturtle_ground.png",
+      "palIds": [
+        "tentacleturtle_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "2d288a7ec1cc1f79ea92713546b07ca5b35c6d81e7de01c568a1cb575f9ff5e2",
+      "pngBytes": 19747,
+      "pngSha256": "32f33d5fa799f40dbbfacddb1c522059219e6e90a23a11a536c815b363d1409a"
+    },
+    {
+      "iconId": "thiefbird",
+      "sourceTableId": "ThiefBird",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ThiefBird_icon_normal.T_ThiefBird_icon_normal",
+      "outputPath": "assets/pal-icons/thiefbird.png",
+      "palIds": [
+        "thiefbird"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "54accb697ea968a1062069096df3287b8471cbf0371bbb71258a5844e5c7f421",
+      "pngBytes": 12496,
+      "pngSha256": "677870b9a13583c5ede7b663d2ca6a93fb3e315bff68731502e410a685c2e106"
+    },
+    {
+      "iconId": "thunderbird",
+      "sourceTableId": "ThunderBird",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ThunderBird_icon_normal.T_ThunderBird_icon_normal",
+      "outputPath": "assets/pal-icons/thunderbird.png",
+      "palIds": [
+        "thunderbird"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "f913704ff082708e3ba1f2b757ae78d5ea1b61e75e99729656e9d18d64d2f421",
+      "pngBytes": 12808,
+      "pngSha256": "053cacae707a14007f9b70553d8dd6aaf4a5ecad1066b5d5c7abd223035fed43"
+    },
+    {
+      "iconId": "thunderbird_ice",
+      "sourceTableId": "ThunderBird_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ThunderBird_Ice_icon_normal.T_ThunderBird_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/thunderbird_ice.png",
+      "palIds": [
+        "thunderbird_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "fcd29021e32c5de06cf6b3f859553beec955dc8ab2a8f00621290d4684ffbaf5",
+      "pngBytes": 13597,
+      "pngSha256": "fabffc26b3dff812ec67de20dbe12bf8873e5af365e589cab749173e88fbb409"
+    },
+    {
+      "iconId": "thunderdog",
+      "sourceTableId": "ThunderDog",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ThunderDog_icon_normal.T_ThunderDog_icon_normal",
+      "outputPath": "assets/pal-icons/thunderdog.png",
+      "palIds": [
+        "thunderdog"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "533b86fdabe5e1d3cb802a928c9a9ca5cf1b4f10badcf44f4ba019df27c0faf5",
+      "pngBytes": 13515,
+      "pngSha256": "f2444c412397bd6002498b4b08c799d9ba00e4692c8ac39ffa7fb443f32d85fb"
+    },
+    {
+      "iconId": "thunderdog_ice",
+      "sourceTableId": "ThunderDog_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ThunderDog_Ice_icon_normal.T_ThunderDog_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/thunderdog_ice.png",
+      "palIds": [
+        "thunderdog_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "c7c64174470de3a1c67110c05a77161036c8e910a0c7e60dd939b767bb520223",
+      "pngBytes": 13631,
+      "pngSha256": "e6ba6d358b162d491bc063977f75df33f122ee165a5c3ff08057b03ab3bd28a2"
+    },
+    {
+      "iconId": "thunderdragonman",
+      "sourceTableId": "ThunderDragonMan",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ThunderDragonMan_icon_normal.T_ThunderDragonMan_icon_normal",
+      "outputPath": "assets/pal-icons/thunderdragonman.png",
+      "palIds": [
+        "thunderdragonman"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "89a68a253b42256fe4af9b94b8e89128466e6d3f50c7d387ba49e693ef4ada69",
+      "pngBytes": 12287,
+      "pngSha256": "b726625c31e3e5c06f52e4efdfc0997921b21bd8bb92efa047b9dd07a759a77f"
+    },
+    {
+      "iconId": "thunderfluffybird",
+      "sourceTableId": "ThunderFluffyBird",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_ThunderFluffyBird_icon_normal.T_ThunderFluffyBird_icon_normal",
+      "outputPath": "assets/pal-icons/thunderfluffybird.png",
+      "palIds": [
+        "thunderfluffybird"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "d4a88699224de2174d923e425e60acb413d956043e50e63e460f292aaa49303f",
+      "pngBytes": 11342,
+      "pngSha256": "ab652efa9eba5cfc0199456d3d89b19f0783fca76df3b8ed11e27fd41dbda160"
+    },
+    {
+      "iconId": "tropicalostrich",
+      "sourceTableId": "TropicalOstrich",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_TropicalOstrich_icon_normal.T_TropicalOstrich_icon_normal",
+      "outputPath": "assets/pal-icons/tropicalostrich.png",
+      "palIds": [
+        "tropicalostrich"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "92e508ce0d73ff5507f08428abd0aea6c8e84917a5602a8a5ba4f9872608cf3e",
+      "pngBytes": 15577,
+      "pngSha256": "fb6fe866ffc444d55123f090267df8a530972c45a1354534e9d7c2f85903098c"
+    },
+    {
+      "iconId": "umihebi",
+      "sourceTableId": "Umihebi",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Umihebi_icon_normal.T_Umihebi_icon_normal",
+      "outputPath": "assets/pal-icons/umihebi.png",
+      "palIds": [
+        "umihebi"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "08213aaab82a21ca5acdb37b9f5c34158667ee8edc491fb94ae7858bbee882a5",
+      "pngBytes": 17317,
+      "pngSha256": "c7972b23c71ee300ea6b803872a7261191ab0a4ad81c5fc9db7b45e1ab54df18"
+    },
+    {
+      "iconId": "umihebi_fire",
+      "sourceTableId": "Umihebi_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Umihebi_Fire_icon_normal.T_Umihebi_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/umihebi_fire.png",
+      "palIds": [
+        "umihebi_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "978627ec3d744388031a9a517215e4d3c9717e52a3c1f4e4c4a92646cf58b17a",
+      "pngBytes": 16438,
+      "pngSha256": "eb6e47dad90edd871bf3ddc0c1fbee2708b27b23615e20317e3d22a251a51d5c"
+    },
+    {
+      "iconId": "venusflytrap",
+      "sourceTableId": "VenusFlytrap",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_VenusFlytrap_icon_normal.T_VenusFlytrap_icon_normal",
+      "outputPath": "assets/pal-icons/venusflytrap.png",
+      "palIds": [
+        "venusflytrap"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "a03957f88af21293d6c9a76ded5f54b630d4ed6a8bff56c8681afc15d86002e3",
+      "pngBytes": 16492,
+      "pngSha256": "ab5cfc4946e80e6e1cdf87350a15f2195126931d81cf34f670c1616035a4e1ee"
+    },
+    {
+      "iconId": "violetfairy",
+      "sourceTableId": "VioletFairy",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_VioletFairy_icon_normal.T_VioletFairy_icon_normal",
+      "outputPath": "assets/pal-icons/violetfairy.png",
+      "palIds": [
+        "violetfairy"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e999cbdfc1e7e1d567ae3a0c1a8984cbda98795c24d6a77109ad6b84dcba7f39",
+      "pngBytes": 18579,
+      "pngSha256": "df3b58ad7d001d247eb97fb7197632e8744c0f901f9c56c20d1bc15f480c6e60"
+    },
+    {
+      "iconId": "volcanicmonster",
+      "sourceTableId": "Volcanicmonster",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_VolcanicMonster_icon_normal.T_VolcanicMonster_icon_normal",
+      "outputPath": "assets/pal-icons/volcanicmonster.png",
+      "palIds": [
+        "volcanicmonster"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b2ae91d4d5d40aaa4e07c6538cbca009291a914be3a5de6653604b8e13533452",
+      "pngBytes": 15723,
+      "pngSha256": "af6beae15bf011698222cdbca024eeefd609255928317927419cbba1660b802d"
+    },
+    {
+      "iconId": "volcanicmonster_ice",
+      "sourceTableId": "VolcanicMonster_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_VolcanicMonster_Ice_icon_normal.T_VolcanicMonster_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/volcanicmonster_ice.png",
+      "palIds": [
+        "volcanicmonster_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e68bd1da576a79fa98e98207e1b6073076694523aa1a74ad8f28512f3935cbfe",
+      "pngBytes": 16019,
+      "pngSha256": "ee7e01fcf8cffda05c973bad0a074aeb5bea7a51aa1a76f67f37d653ce60f640"
+    },
+    {
+      "iconId": "volcanodragon",
+      "sourceTableId": "VolcanoDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_VolcanoDragon_icon_normal.T_VolcanoDragon_icon_normal",
+      "outputPath": "assets/pal-icons/volcanodragon.png",
+      "palIds": [
+        "volcanodragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "90d77f9ffe4548d6fd58378891061789e8b34e711b8aebc709090b38364300dc",
+      "pngBytes": 17873,
+      "pngSha256": "942df9de3179f70d98ce2a9f086c7ca013b3ab074e971a0fd48a4fb10a6a518a"
+    },
+    {
+      "iconId": "volcanodragon_ice",
+      "sourceTableId": "VolcanoDragon_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_VolcanoDragon_Ice_icon_normal.T_VolcanoDragon_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/volcanodragon_ice.png",
+      "palIds": [
+        "volcanodragon_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "413c1f2ddf9d8314eb572dd6ebb10efeb16aff2fabf3cb783042f2a8b0308a99",
+      "pngBytes": 18555,
+      "pngSha256": "6cf48b800fd910155845d14aa0f607f75eebe240e712f6ed3d35ed10e3709e24"
+    },
+    {
+      "iconId": "weaseldragon",
+      "sourceTableId": "WeaselDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WeaselDragon_icon_normal.T_WeaselDragon_icon_normal",
+      "outputPath": "assets/pal-icons/weaseldragon.png",
+      "palIds": [
+        "weaseldragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b5d05718db95519bec2e4129da2df9fac752de38566aacbce38eef1eabd05a3a",
+      "pngBytes": 12198,
+      "pngSha256": "7cd4d763e83ef08be4711db68edc7f21073d0e8dc08669af43e5904daea8072b"
+    },
+    {
+      "iconId": "weaseldragon_fire",
+      "sourceTableId": "WeaselDragon_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WeaselDragon_Fire_icon_normal.T_WeaselDragon_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/weaseldragon_fire.png",
+      "palIds": [
+        "weaseldragon_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "188571465a86fa404aafb9f3d254cd8ab1ebdd81e65ba575229c643353e64d5a",
+      "pngBytes": 11879,
+      "pngSha256": "c6402ec7ac8379fd1f3e471254850803bcfb9948ef5ddb25919537bb0f803aa7"
+    },
+    {
+      "iconId": "werewolf",
+      "sourceTableId": "Werewolf",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Werewolf_icon_normal.T_Werewolf_icon_normal",
+      "outputPath": "assets/pal-icons/werewolf.png",
+      "palIds": [
+        "werewolf"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "f095a02809a5c8b3e0ad6ad1a3aa0cf561fc0dc9f0b22b020856d365e557147a",
+      "pngBytes": 16397,
+      "pngSha256": "cb1615d69df367cf8feebd57cc90aad32ac891404dcc861d682c121f1ea45418"
+    },
+    {
+      "iconId": "werewolf_ice",
+      "sourceTableId": "Werewolf_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Werewolf_Ice_icon_normal.T_Werewolf_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/werewolf_ice.png",
+      "palIds": [
+        "werewolf_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "a97dcc68b97d40c727b735a1d4070c27217bd4e054aea59d91379b3e24c78f1c",
+      "pngBytes": 18763,
+      "pngSha256": "d05dd19b00f22d609b23c08a623b48c071d59d64ecf717d29aeb4fbfa833a20c"
+    },
+    {
+      "iconId": "whitealiendragon",
+      "sourceTableId": "WhiteAlienDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WhiteAlienDragon_icon_normal.T_WhiteAlienDragon_icon_normal",
+      "outputPath": "assets/pal-icons/whitealiendragon.png",
+      "palIds": [
+        "whitealiendragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "27840fc7fb2fd944010cac209fcde5d981eca2417bbf160327b07dd62dc4d00a",
+      "pngBytes": 11608,
+      "pngSha256": "ef20426cd0e665ab3a31de5ce53267856194fe89a7e01b62ea0734e3d72eb71a"
+    },
+    {
+      "iconId": "whitedeer",
+      "sourceTableId": "WhiteDeer",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WhiteDeer_icon_normal.T_WhiteDeer_icon_normal",
+      "outputPath": "assets/pal-icons/whitedeer.png",
+      "palIds": [
+        "whitedeer"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "602ef3345e7e4bd92842b7a10a17bbd2d18ec516c942d4af773525cd3836a3e1",
+      "pngBytes": 15393,
+      "pngSha256": "83881cb087fdcae55b267720f638ca2c5821899276bc9301683d770f0b150266"
+    },
+    {
+      "iconId": "whitedeer_dark",
+      "sourceTableId": "WhiteDeer_Dark",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WhiteDeer_Dark_icon_normal.T_WhiteDeer_Dark_icon_normal",
+      "outputPath": "assets/pal-icons/whitedeer_dark.png",
+      "palIds": [
+        "whitedeer_dark"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "b7fb75cb09daefbe4684d75e1d43d21d1185d53bea9a4b46dd843b5f39d1508d",
+      "pngBytes": 14839,
+      "pngSha256": "361bd90c69f6a95407e0d7f5d656c45d5132281dff14b8212dbb397bc57a1023"
+    },
+    {
+      "iconId": "whitemoth",
+      "sourceTableId": "WhiteMoth",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WhiteMoth_icon_normal.T_WhiteMoth_icon_normal",
+      "outputPath": "assets/pal-icons/whitemoth.png",
+      "palIds": [
+        "whitemoth"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "487810623f46ccd9d0bfc1c7a644e285a679088e046e912f84135023c101d006",
+      "pngBytes": 16387,
+      "pngSha256": "e2563dbc9d95ed454b42a8fb0d524e83ccd041ace24672a10c32ad5a7af4d685"
+    },
+    {
+      "iconId": "whitemoth_neutral",
+      "sourceTableId": "WhiteMoth_Neutral",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WhiteMoth_Neutral_icon_normal.T_WhiteMoth_Neutral_icon_normal",
+      "outputPath": "assets/pal-icons/whitemoth_neutral.png",
+      "palIds": [
+        "whitemoth_neutral"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "e338e51b99cb44aad0e995228a442c4db6cc17c158ac633130dfd793340f2be2",
+      "pngBytes": 16668,
+      "pngSha256": "8f348fe043c6c6822f9d300f3ddcda8e1ae588ca919f373beafb2c8ee9c8c5b2"
+    },
+    {
+      "iconId": "whiteshielddragon",
+      "sourceTableId": "WhiteShieldDragon",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WhiteShieldDragon_icon_normal.T_WhiteShieldDragon_icon_normal",
+      "outputPath": "assets/pal-icons/whiteshielddragon.png",
+      "palIds": [
+        "whiteshielddragon"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "fb5e7e8cd86f87be1174349329d8d51e1344dbcb5e87c1a4613338cc2cdcc581",
+      "pngBytes": 14077,
+      "pngSha256": "d9732a23fee0ded98af8a4cd9edd535c45d4948bd57e5f71f00b627810283340"
+    },
+    {
+      "iconId": "whitetiger",
+      "sourceTableId": "WhiteTiger",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WhiteTiger_icon_normal.T_WhiteTiger_icon_normal",
+      "outputPath": "assets/pal-icons/whitetiger.png",
+      "palIds": [
+        "whitetiger"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "bc0985525f03e272174decc6b1d320104ad8f879b3672384b816811acff441ee",
+      "pngBytes": 13823,
+      "pngSha256": "37b3df63b31f3af0213dda7ce5fe7e74a3d6f0c86b26be2da672d6596b642795"
+    },
+    {
+      "iconId": "whitetiger_ground",
+      "sourceTableId": "WhiteTiger_Ground",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WhiteTiger_Ground_icon_normal.T_WhiteTiger_Ground_icon_normal",
+      "outputPath": "assets/pal-icons/whitetiger_ground.png",
+      "palIds": [
+        "whitetiger_ground"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "69557b681d67d2c3f8f0f502d7949ee36d83147428d0d0bbc9bd3449cdc8b669",
+      "pngBytes": 13696,
+      "pngSha256": "a55191b65cab3967a1d82d06320efd287ff8463dea13dd9a9df3e4682f3d21d4"
+    },
+    {
+      "iconId": "windchimes",
+      "sourceTableId": "WindChimes",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WindChimes_icon_normal.T_WindChimes_icon_normal",
+      "outputPath": "assets/pal-icons/windchimes.png",
+      "palIds": [
+        "windchimes"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "280c977cc4043a9bbbdb34978487d6fbbaeb6f37e628d005075d4d27c5946b3b",
+      "pngBytes": 9314,
+      "pngSha256": "96ec61b6eb4c944892a33d87f3802798d22e03823038891c162e75184f679bb3"
+    },
+    {
+      "iconId": "windchimes_ice",
+      "sourceTableId": "WindChimes_Ice",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WindChimes_Ice_icon_normal.T_WindChimes_Ice_icon_normal",
+      "outputPath": "assets/pal-icons/windchimes_ice.png",
+      "palIds": [
+        "windchimes_ice"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "83df3e5d886a688c1af40d4844eb20f4511795e6b9dacc1565bedb517b49844a",
+      "pngBytes": 9471,
+      "pngSha256": "d27be53714470804119985e62acda826fda24aee49319e215dda8fa71ce88682"
+    },
+    {
+      "iconId": "winggolem",
+      "sourceTableId": "WingGolem",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WingGolem_icon_normal.T_WingGolem_icon_normal",
+      "outputPath": "assets/pal-icons/winggolem.png",
+      "palIds": [
+        "winggolem"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "304ca82b4a0841ba743897def85f584abeb68e2225b87340ca619e7533b80286",
+      "pngBytes": 17940,
+      "pngSha256": "a767bdee0ac125693f2b8325d18a7430c414757250e0d838ca0061d78b8e7b45"
+    },
+    {
+      "iconId": "winggolem_fire",
+      "sourceTableId": "WingGolem_Fire",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WingGolem_Fire_icon_normal.T_WingGolem_Fire_icon_normal",
+      "outputPath": "assets/pal-icons/winggolem_fire.png",
+      "palIds": [
+        "winggolem_fire"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "0572bf8f5386373217a742d7dd52f06464f8d96808dbe18f865496a3d883f2d6",
+      "pngBytes": 17797,
+      "pngSha256": "0064956c7d54cbf73a192b244f6553a67560057255b1abc8b59eb094d7a95a28"
+    },
+    {
+      "iconId": "wizardowl",
+      "sourceTableId": "WizardOwl",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WizardOwl_icon_normal.T_WizardOwl_icon_normal",
+      "outputPath": "assets/pal-icons/wizardowl.png",
+      "palIds": [
+        "wizardowl"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "ae06c15f4f0bdb52092aa40d874709bc07d7ce929fd5b748d702b03ee8b0f201",
+      "pngBytes": 16896,
+      "pngSha256": "edfaacaa11077c407aa37d6ea18aab62ddacb0f35ee699d4a3ece6378f3f9a13"
+    },
+    {
+      "iconId": "woolfox",
+      "sourceTableId": "WoolFox",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_WoolFox_icon_normal.T_WoolFox_icon_normal",
+      "outputPath": "assets/pal-icons/woolfox.png",
+      "palIds": [
+        "woolfox"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "aeeff9749761287176fd85480e6c3230a4667ba8bc6161908b1798a59eeb52ef",
+      "pngBytes": 15242,
+      "pngSha256": "f2e100980b4b8b3890f96513281515ecc5ee31a597857379b61eb321e515746e"
+    },
+    {
+      "iconId": "yeti",
+      "sourceTableId": "Yeti",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Yeti_icon_normal.T_Yeti_icon_normal",
+      "outputPath": "assets/pal-icons/yeti.png",
+      "palIds": [
+        "yeti"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "367eea392a41f2a68b0166331107e60d426760e4b94d33513c18967c3614327a",
+      "pngBytes": 14308,
+      "pngSha256": "5e80d88337e3821fdecd0b2ba32e83f2d4deb33b548049753634ef7c0a1cf862"
+    },
+    {
+      "iconId": "yeti_grass",
+      "sourceTableId": "Yeti_Grass",
+      "objectPath": "/Game/Pal/Texture/PalIcon/Normal/T_Yeti_Grass_icon_normal.T_Yeti_Grass_icon_normal",
+      "outputPath": "assets/pal-icons/yeti_grass.png",
+      "palIds": [
+        "yeti_grass"
+      ],
+      "shared": false,
+      "tribeFallbackPalIds": [],
+      "width": 128,
+      "height": 128,
+      "pixelFormat": "PF_R8G8B8A8",
+      "decodedPixelBytes": 65536,
+      "decodedPixelSha256": "de4f2b280eef4091b6d9a506802d846dd3740e45ea5b76b71d532bf043c561a7",
+      "pngBytes": 15586,
+      "pngSha256": "744906410f05b985d7eaed2f7a66041ed64a3ac0e52414e020451c0f9d08cf67"
+    }
+  ]
+}

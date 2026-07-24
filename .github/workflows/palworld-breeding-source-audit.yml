@@ -79,16 +79,27 @@ jobs:
         with:
           node-version: "22"
           cache: npm
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+      - name: Reject private game inputs and compiled artifacts
+        run: python tools/check_repository_hygiene.py
       - name: Compile deterministic generators
-        run: python -m py_compile tools/audit_breeding_sources.py tools/validate_exact_build_evidence.py tools/build_verified_dataset.py tools/verify_native_breeding_binary.py tools/verify_native_breeding_runtime.py
+        run: python -m py_compile tools/audit_breeding_sources.py tools/validate_exact_build_evidence.py tools/build_verified_dataset.py tools/check_repository_hygiene.py tools/test_pal_icon_extractor_isolation.py tools/verify_native_breeding_binary.py tools/verify_native_breeding_runtime.py
+      - name: Restore and compile the pinned icon extractor
+        run: |
+          dotnet restore tools/pal-icon-extractor/PalIconExtractor.csproj --locked-mode
+          dotnet build tools/pal-icon-extractor/PalIconExtractor.csproj --configuration Release --no-restore
+      - name: Verify the icon extractor rejects ambiguous container roots
+        run: python tools/test_pal_icon_extractor_isolation.py
       - name: Rebuild from fixed-build asset evidence
         run: python tools/build_verified_dataset.py
       - name: Enforce comparison-only auxiliary source policy
         run: python tools/audit_breeding_sources.py
       - name: Reject generated drift
         run: git diff --exit-code -- data audit
-      - name: Run exhaustive data, reverse-index, parent-list, and tree tests
-        run: python -m unittest -v tests.test_verified_dataset
+      - name: Run exhaustive data, icon, reverse-index, parent-list, and tree tests
+        run: python -m unittest -v tests.test_verified_dataset tests.test_pal_icons
       - name: Install browser test dependency
         run: npm ci
       - name: Install Chromium

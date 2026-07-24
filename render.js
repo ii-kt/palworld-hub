@@ -11,17 +11,34 @@ function displayNo(p,padded=false){
  if(!padded)return raw;
  const match=raw.match(/^(\d+)(.*)$/);return match?match[1].padStart(3,"0")+match[2]:raw;
 }
-function mark(p,sm=false){
+function mark(p,sm=false,informative=false){
  if(!p)return `<span class="palmark ${sm?"sm":""} placeholder" aria-hidden="true"><span class="palmark-fallback">?</span></span>`;
- return `<span class="palmark ${sm?"sm":""}" aria-hidden="true"><span class="palmark-fallback">${esc(initials(p))}</span></span>`;
+ const alt=informative?`${p.jp}（${p.en}）のアイコン`:"";
+ return `<span class="palmark ${sm?"sm":""}"${informative?"":' aria-hidden="true"'}><img class="palmark-image" src="${esc(p.icon)}" alt="${esc(alt)}" loading="lazy" decoding="async"><span class="palmark-fallback" hidden aria-hidden="true">${esc(initials(p))}</span></span>`;
 }
+function showPalIconFallback(image){
+ image.hidden=true;
+ const fallback=image.nextElementSibling;
+ if(!fallback?.classList.contains("palmark-fallback"))return;
+ fallback.hidden=false;
+ if(image.alt){
+  fallback.removeAttribute("aria-hidden");
+  fallback.setAttribute("role","img");
+  fallback.setAttribute("aria-label",image.alt);
+ }
+ image.closest(".palmark")?.classList.add("icon-error");
+}
+document.addEventListener("error",event=>{
+ const image=event.target;
+ if(image instanceof HTMLImageElement&&image.classList.contains("palmark-image"))showPalIconFallback(image);
+},true);
 function palHTML(p,sm=true){return `<div class="pal-inline">${mark(p,sm)}<div style="min-width:0"><strong>${esc(p.jp)}</strong><div class="enname">${esc(p.en)} · No.${esc(displayNo(p,true))}</div>${formIdHTML(p)}</div></div>`}
 function slotHTML(p,label){
  return p?`${mark(p)}<div class="jpname">${esc(p.jp)}</div><div class="enname">${esc(p.en)}</div><div class="no">No.${esc(displayNo(p,true))}　配合値 ${p.power}</div>${formIdHTML(p)}`
  :`${mark(null)}<div class="jpname">${label}</div><div class="enname">タップして検索</div>`;
 }
 function multiResultSlotHTML(results){
- const icons=results.map(r=>mark(r.child,true)).join("");
+ const icons=results.map(r=>mark(r.child,true,true)).join("");
  return `<div style="display:flex;gap:8px;justify-content:center;align-items:center">${icons}</div><div class="jpname">性別で${results.length}通り</div><div class="enname">下の条件別結果を確認してください</div>`;
 }
 function pickButtonHTML(p,label){return p?`${mark(p,true)}<span class="grow"><small>${label}</small><strong>${esc(p.jp)}</strong><small>${esc(p.en)} · No.${esc(displayNo(p))}</small><small class="form-id">形態ID ${esc(formId(p))}</small></span><b>変更</b>`:`${mark(null,true)}<span class="grow"><small>${label}</small><strong>パルを選択</strong><small>日本語名・英語名・番号・形態IDで検索</small></span><b>選択</b>`}

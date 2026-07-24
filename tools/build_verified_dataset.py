@@ -599,11 +599,19 @@ def main() -> None:
         "duplicatePriorityAssetRead": "CombiDuplicatePriority" in reader_source,
     }
 
-    icon_ids = {
-        pal_id(item["id"])
-        for item in raw["icons"]
+    usable_icon_rows = [
+        item for item in raw["icons"]
         if "t_dummy_icon" not in str(item["path"]).lower()
+    ]
+    icon_rows = {
+        pal_id(item["id"]): item
+        for item in usable_icon_rows
     }
+    require(
+        len(icon_rows) == len(usable_icon_rows),
+        "Duplicate non-dummy fixed-build icon IDs",
+    )
+    icon_ids = set(icon_rows)
     exclusions: list[dict[str, str]] = []
     individually_eligible_rows: list[dict[str, Any]] = []
     for row in raw["pals"]:
@@ -682,6 +690,16 @@ def main() -> None:
         japanese = display_name(row, japanese_names)
         require(english and japanese and elements, f"Released Pal metadata is incomplete: {row['rowName']}")
         work = {str(key).lower(): int(value) for key, value in row["workSuitability"].items() if int(value) > 0}
+        icon_id = identifier if identifier in icon_rows else enum_tail(row["tribe"]).lower()
+        icon_row = icon_rows.get(icon_id)
+        require(icon_row is not None, f"Released Pal icon mapping is missing: {row['rowName']}")
+        icon_source_path = str(icon_row["path"])
+        require(
+            icon_source_path.startswith("/Game/Pal/Texture/PalIcon/Normal/")
+            and icon_source_path.endswith(f".{icon_source_path.rsplit('/', 1)[-1].split('.', 1)[0]}")
+            and "t_dummy_icon" not in icon_source_path.lower(),
+            f"Released Pal icon source path is invalid: {row['rowName']}: {icon_source_path}",
+        )
         model = {
             "id": identifier,
             "sourceId": row["rowName"],
@@ -705,7 +723,7 @@ def main() -> None:
             "sourceOrder": int(row["sourceOrder"]),
             "elements": elements,
             "work": work,
-            "icon": "",
+            "icon": f"assets/pal-icons/{icon_id}.png",
         }
         source_rows[identifier] = model
         released.append(model)
@@ -1106,8 +1124,18 @@ def main() -> None:
     pals_bytes = (json.dumps(pals_payload, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
     breeding_bytes = (json.dumps(compact, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8")
     generated_data_sha256 = stable_digest({"pals": released, "rows": row_objects(authoritative_rows)})
+    runtime_pals_payload = {
+        **pals_payload,
+        # The native audit predates presentation-only image URLs. Recreate its
+        # byte-identical logical input while keeping the public dataset bound
+        # to the fixed-client icon files below.
+        "pals": [{**value, "icon": ""} for value in released],
+    }
+    runtime_pals_bytes = (
+        json.dumps(runtime_pals_payload, ensure_ascii=False, indent=2) + "\n"
+    ).encode("utf-8")
     native_runtime = validate_native_runtime_evidence(
-        runtime_bytes, pals_bytes, breeding_bytes, released, raw["pals"]
+        runtime_bytes, runtime_pals_bytes, breeding_bytes, released, raw["pals"]
     )
 
     ignore_true = sorted(value["id"] for value in released if value["ignoreCombi"])

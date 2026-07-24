@@ -631,9 +631,15 @@ class VerifiedDatasetTests(unittest.TestCase):
         inputs = self.runtime["inputs"]
         self.assertEqual(inputs["rawAssetsSha256"],
                          hashlib.sha256(self.raw_path.read_bytes()).hexdigest())
+        runtime_pals_payload = {
+            **self.pals_payload,
+            "pals": [{**pal, "icon": ""} for pal in self.pals],
+        }
+        runtime_pals_bytes = (
+            json.dumps(runtime_pals_payload, ensure_ascii=False, indent=2) + "\n"
+        ).encode("utf-8")
         self.assertEqual(inputs["palsSha256"],
-                         hashlib.sha256(repository_text_bytes(
-                             PALWORLD / "data/pals.verified.json")).hexdigest())
+                         hashlib.sha256(runtime_pals_bytes).hexdigest())
         self.assertEqual(inputs["breedingSha256"],
                          hashlib.sha256(repository_text_bytes(
                              PALWORLD / "data/breeding.verified.json")).hexdigest())

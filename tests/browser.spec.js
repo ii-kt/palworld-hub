@@ -35,6 +35,17 @@ async function selectPal(page,slot,id){
   await expect(page.locator("#pickerModal")).not.toHaveClass(/open/);
 }
 
+async function expectLoadedPalIcon(locator,{informative=false}={}){
+  await expect(locator).toHaveCount(1);
+  await locator.scrollIntoViewIfNeeded();
+  await expect(locator).toHaveAttribute("src",/^assets\/pal-icons\/[a-z0-9_]+\.png$/);
+  await expect(locator).toHaveAttribute("alt",informative?/.+のアイコン$/:"");
+  await expect(locator).toHaveAttribute("loading","lazy");
+  await expect(locator).toHaveAttribute("decoding","async");
+  await expect.poll(()=>locator.evaluate(image=>image.complete&&image.naturalWidth>0&&image.naturalHeight>0)).toBe(true);
+  await expect(locator).toBeVisible();
+}
+
 test.beforeEach(async({page})=>{
   await isolateExternalRequests(page);
 });
@@ -48,17 +59,62 @@ test("01 desktop Chromium first load shows the fixed-build counts",async({page})
   await expect(page.locator(".audit-notice")).toContainText("Palworld v1.0.1.100619");
 });
 
-test("01b rendering is local and never requests third-party Pal images",async({page})=>{
-  const thirdParty=[];
+test("01b all 288 Pal icons decode from local same-origin assets",async({page})=>{
+  const thirdPartyImages=[];
   page.on("request",request=>{
-    if(/raw\.githubusercontent\.com|palcalc/i.test(request.url()))thirdParty.push(request.url());
+    if(request.resourceType()==="image"&&new URL(request.url()).origin!=="http://127.0.0.1:4173"){
+      thirdPartyImages.push(request.url());
+    }
   });
-  await page.route("https://raw.githubusercontent.com/**",route=>route.abort("blockedbyclient"));
   await openReady(page);
   await page.locator('#tabs [data-tab="dex"]').click();
-  await expect(page.locator("#dexGrid .palmark")).toHaveCount(288);
-  await expect(page.locator(".palmark img")).toHaveCount(0);
-  expect(thirdParty).toEqual([]);
+  const icons=page.locator("#dexGrid .palmark-image");
+  await expect(icons).toHaveCount(288);
+  const attributes=await icons.evaluateAll(images=>images.map(image=>({
+    src:image.getAttribute("src"),
+    alt:image.getAttribute("alt"),
+    loading:image.getAttribute("loading"),
+    decoding:image.getAttribute("decoding"),
+    resolved:image.currentSrc||image.src
+  })));
+  expect(attributes.every(({src})=>/^assets\/pal-icons\/[a-z0-9_]+\.png$/.test(src))).toBe(true);
+  expect(attributes.every(({alt})=>alt==="")).toBe(true);
+  expect(attributes.every(({loading,decoding})=>loading==="lazy"&&decoding==="async")).toBe(true);
+  expect(attributes.every(({resolved})=>new URL(resolved).origin==="http://127.0.0.1:4173")).toBe(true);
+  expect(new Set(attributes.map(({src})=>src)).size).toBe(287);
+  await icons.evaluateAll(images=>images.forEach(image=>{image.loading="eager"}));
+  await expect.poll(
+    ()=>icons.evaluateAll(images=>images.filter(image=>image.complete&&image.naturalWidth>0&&image.naturalHeight>0).length),
+    {timeout:30000}
+  ).toBe(288);
+  await expect(page.locator("#dexGrid .palmark.icon-error")).toHaveCount(0);
+  expect(thirdPartyImages).toEqual([]);
+});
+
+test("01c icon URL validation rejects every non-local form",async({page})=>{
+  await openReady(page);
+  const result=await page.evaluate(()=>{
+    const invalid=[
+      "",
+      "/assets/pal-icons/sheepball.png",
+      "../assets/pal-icons/sheepball.png",
+      "assets/pal-icons/../sheepball.png",
+      "assets/pal-icons/SheepBall.png",
+      "assets/pal-icons/sheepball.webp",
+      "assets/pal-icons/sheepball.png?cache=1",
+      "//example.com/assets/pal-icons/sheepball.png",
+      "https://example.com/assets/pal-icons/sheepball.png",
+      "data:image/png;base64,AA=="
+    ];
+    return {
+      valid:validatedPalIcon("assets/pal-icons/sheepball.png","sheepball"),
+      rejected:invalid.map(value=>{
+        try{validatedPalIcon(value,"test");return false}catch{return true}
+      })
+    };
+  });
+  expect(result.valid).toBe("assets/pal-icons/sheepball.png");
+  expect(result.rejected.every(Boolean)).toBe(true);
 });
 
 test("02 reload reconstructs all indexes",async({page})=>{
@@ -244,6 +300,12 @@ test("12 gender-dependent breeding displays both exact conditions",async({page})
   await selectPal(page,"#parentA","catmage");
   await selectPal(page,"#parentB","foxmage");
   await expect(page.locator("#parentResults .result-row")).toHaveCount(2);
+  const summaryIcons=page.locator("#childSlot .palmark-image");
+  await expect(summaryIcons).toHaveCount(2);
+  await expectLoadedPalIcon(summaryIcons.nth(0),{informative:true});
+  await expectLoadedPalIcon(summaryIcons.nth(1),{informative:true});
+  await expect(page.locator("#childSlot .palmark").first()).not.toHaveAttribute("aria-hidden");
+  await expect(page.locator("#childSlot .palmark").last()).not.toHaveAttribute("aria-hidden");
   const dark=page.locator('#parentResults [data-child="foxmage_dark"]');
   const fire=page.locator('#parentResults [data-child="catmage_fire"]');
   await expect(dark).toContainText("フォレーオ");
@@ -334,6 +396,55 @@ test("16b parent-start tree supports depth, candidate navigation, and zoom contr
   expect(await page.locator("#treeCanvas .tree-node").count()).toBeGreaterThan(3);
 });
 
+test("16c local Pal icons are used in the picker and every main result view",async({page})=>{
+  await openReady(page);
+
+  await page.locator("#parentA").click();
+  await page.locator("#pickerSearch").fill("sheepball");
+  await expectLoadedPalIcon(page.locator('#pickerList [data-id="sheepball"] .palmark-image'));
+  await page.locator('#pickerList [data-id="sheepball"]').click();
+  await selectPal(page,"#parentB","chickenpal");
+  await expectLoadedPalIcon(page.locator("#parentA .palmark-image"));
+  await expectLoadedPalIcon(page.locator("#childSlot .palmark-image"));
+
+  await page.locator('#tabs [data-tab="target"]').click();
+  await selectPal(page,"#targetPick","sheepball");
+  await expectLoadedPalIcon(page.locator("#targetResults .result-row .palmark-image").first());
+
+  await page.locator('#tabs [data-tab="offspring"]').click();
+  await selectPal(page,"#singleParentPick","sheepball");
+  await expectLoadedPalIcon(page.locator("#offspringResults .result-row .palmark-image").first());
+
+  await page.locator('#tabs [data-tab="tree"]').click();
+  await selectPal(page,"#treePick","catmage_fire");
+  await expectLoadedPalIcon(page.locator("#treeCanvas .tree-node .palmark-image").first());
+
+  await page.locator('#tabs [data-tab="dex"]').click();
+  await page.locator("#dexSearch").fill("Katress Ignis");
+  await expectLoadedPalIcon(page.locator('#dexGrid [data-id="catmage_fire"] .palmark-image'));
+});
+
+test("16d a broken local Pal icon falls back to its name mark",async({page})=>{
+  await page.route("**/assets/pal-icons/sheepball.png",route=>route.fulfill({
+    status:200,
+    contentType:"image/png",
+    body:"not-a-png"
+  }));
+  await openReady(page);
+  await page.locator('#tabs [data-tab="dex"]').click();
+  await page.locator("#dexSearch").fill("モコロン");
+  const card=page.locator('#dexGrid [data-id="sheepball"]');
+  const image=card.locator(".palmark-image");
+  const fallback=card.locator(".palmark-fallback");
+  await expect(image).toBeHidden();
+  await expect(fallback).toBeVisible();
+  await expect(fallback).toHaveText("モコ");
+  await expect(fallback).toHaveAttribute("aria-hidden","true");
+  await expect(fallback).not.toHaveAttribute("role");
+  await expect(fallback).not.toHaveAttribute("aria-label");
+  await expect(card.locator(".palmark")).toHaveClass(/icon-error/);
+});
+
 const iphone13=devices["iPhone 13"];
 test.describe("iPhone 13 emulation on Chromium",()=>{
   test.use({
@@ -369,6 +480,7 @@ test.describe("iPhone 13 emulation on Chromium",()=>{
     await selectPal(page,"#parentA","sheepball");
     await selectPal(page,"#parentB","chickenpal");
     await expect(page.locator("#childSlot")).toContainText("チョロゾウ");
+    await expectLoadedPalIcon(page.locator("#childSlot .palmark-image"));
     await expectNoPageOverflow();
 
     await page.locator('#tabs [data-tab="target"]').click();
@@ -390,6 +502,7 @@ test.describe("iPhone 13 emulation on Chromium",()=>{
     await page.locator('#tabs [data-tab="dex"]').click();
     await page.locator("#dexSearch").fill("Katress Ignis");
     await expect(page.locator("#dexGrid .pal-card")).toHaveCount(1);
+    await expectLoadedPalIcon(page.locator('#dexGrid [data-id="catmage_fire"] .palmark-image'));
     await expectNoPageOverflow();
     await page.waitForTimeout(100);
     expect(errors).toEqual([]);
